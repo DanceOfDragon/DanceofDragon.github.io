@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="JIN Lin">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Notes: Python for Data Analysis (Part&nbsp;1) | JL-Blog | No Bullshit</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="JL-Blog | No Bullshit blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+        <style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+        <style>body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+header.main-header {
+  background: none repeat scroll 0% 0% #205F29;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #5C881C;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  color: #205F29;
+  background: #FFF;
+  border: 1px solid #205F29;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #5C881C;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #5C881C;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+        </script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-inverse bs-docs-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span> 
+		  </button>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JL-Blog | No Bullshit</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+		    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/pages/about.html" title="About">About</a></li>
+                            <li><a href="/archives.html" title="Archive">Archive</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrap">
+<div class="container post">
+    <article>
+        <header>
+            <h1>Notes: Python for Data Analysis (Part&nbsp;1)</h1>
+            <time datetime="article.date.isoformat()" pubdate>Mon 12 October 2015</time>
+        </header>
+
+        <div class="article_content">
+            <p>[<span class="caps">TOC</span>]</p>
+<p>Finished reading the book <em>Python for Data Analysis</em>. The review notes are just for my quick reference of available data processing tools with the focus on NumPy and&nbsp;Pandas. </p>
+<h3>Essential&nbsp;Libraries</h3>
+<ul>
+<li>NumPy </li>
+</ul>
+<blockquote>
+<p>ndarray; element-wise computation;&nbsp;`</p>
+</blockquote>
+<ul>
+<li>pandas</li>
+</ul>
+<blockquote>
+<p>DataFrame (time-series for financial data; reshape, slice, dice, aggregation&nbsp;etc.)</p>
+</blockquote>
+<ul>
+<li>matplotlib </li>
+</ul>
+<blockquote>
+<p>Plots. 2D data visulization; interactive within&nbsp;IPython</p>
+</blockquote>
+<ul>
+<li>IPython </li>
+</ul>
+<blockquote>
+<p>Terminal-based or <span class="caps">HTML</span>-based&nbsp;notebook </p>
+</blockquote>
+<ul>
+<li>SciPy </li>
+</ul>
+<blockquote>
+<p>packages for various scientific computing: scipy.integrate; linalg,optimize, signal,sparse,special,stats, weave,&nbsp;etc. </p>
+</blockquote>
+<h3>IPython</h3>
+<ul>
+<li>
+<p>Tab completion (methods,file directories&nbsp;etc.);</p>
+</li>
+<li>
+<p>Introspection (xx?: show general info,docstring; xx?? show source code if any; together with <em>,e.g. np.</em>load*?)</p>
+</li>
+<li>
+<p>%run: run the script; ctrl-c interrupt running&nbsp;code</p>
+</li>
+<li>
+<p>%pase,&nbsp;%cpase </p>
+</li>
+<li>
+<p>short&nbsp;cuts </p>
+</li>
+<li>
+<p>magic commands: %magic,&nbsp;%quickref</p>
+</li>
+<li>
+<p>matplotlib integration: ipython&nbsp;&#8212;pylab </p>
+</li>
+<li>
+<p>command history: up-arrow&nbsp;key </p>
+</li>
+<li>
+<p>input and output variables: _ or ___ / _iX (input) _X&nbsp;(output)</p>
+</li>
+<li>
+<p>%hist: print input&nbsp;history; </p>
+</li>
+<li>
+<p>logging the input/output: %logstart;&nbsp;%logstop</p>
+</li>
+<li>
+<p>interacting with <span class="caps">OS</span>: shell commands,&nbsp;%alias, </p>
+</li>
+<li>
+<p>%bookmark: pin the&nbsp;directory </p>
+</li>
+<li>
+<p>interactive debugger:&nbsp;%debug </p>
+</li>
+<li>
+<p>timecode: %timeit and %time; %prun, %run&nbsp;-p </p>
+</li>
+<li>
+<p>ipython notebook&nbsp;&#8212;pylab=inline</p>
+</li>
+<li>
+<p>profiles and configuration: cd&nbsp;~/.config/ipython/</p>
+</li>
+</ul>
+<h3>NumPy</h3>
+<p><strong>ndarray</strong></p>
+<ul>
+<li>multidimensional homogeneoys data: shape; dtype (arrayd.shape;&nbsp;arrayd.dtype)</li>
+<li>creating array: np.array(data) / np.zeros; np.ones; np.empty; np.arange,&nbsp;np.eye </li>
+<li>
+<p>data types: int8/16/32/64, float16/32/64/128,complex64/128/256, bool, object, string_, unicode_ (e.g.&nbsp;np.float64)</p>
+</li>
+<li>
+<p>convert dtype: <em>astype</em> method ,creating a new&nbsp;array</p>
+</li>
+<li>vectorization: element-wise,&nbsp;broadcasting </li>
+<li>indexing,slcing: single element: [1,2,&#8230;,n] for n-dimension arrays; rows; columns; boolean indexing: ==, &lt;,&gt;, etc; fancy indexing: alter the row/column order, copying the data to new&nbsp;array </li>
+<li>transposing: e.g np.arange(15).reshape((3,5)); arr.T;&nbsp;arr.transpose </li>
+<li>inner product:&nbsp;np.dot(a,b)</li>
+<li>swapaxes:&nbsp;arr.swapaxes()</li>
+<li>ufunc: universal functions, e.g. np.sqrt(arr), np.exp(arr),np.maximum(x,y),abs, fabs, square, exp, log, log10,log2,sign,ceil,floor, rint, modf, isnan,isfinte, isinf, cos, sosh,sin,sinh,tan, tanh,arccos,logical_note;  add, subtract, multiply,divide,floor_divide,power, maximum, fmin, mod,&nbsp;copysign, </li>
+<li>stats: arr.mean(axis=1), np.mean(arr),  sum, std, var, min, max, argmin, argmax, cumsum,&nbsp;cumprod, </li>
+<li>methods of boolean arrays: arr.any(),&nbsp;arr.all()</li>
+<li>sorting:&nbsp;arr.sort()</li>
+<li>unique:&nbsp;np.unique(arr);</li>
+<li>np.save, np.load ;&nbsp;np.loadtxt(&#8216;filepath&#8217;,delimiter=&#8217;,&#8217;)</li>
+<li>np.linalg: diag, dot, trace, det, eig, inv, pinv, qr, svd, solve,&nbsp;lstsq </li>
+<li>random number generation: np.random.seed/permutation,shuffle, rand, randint, randn, binominal, normal, beta, chisquare, gama,&nbsp;uniform, </li>
+</ul>
+<h3>pandas</h3>
+<p><strong>Series</strong></p>
+<hr>
+<p>A Series is a one-dimensional array-like object containing an array of data (of any NumPy data type) and an associated array of data labels, called its&nbsp;index.</p>
+<hr>
+<ul>
+<li>Series (array,&nbsp;index)</li>
+<li>convert dict to Series:&nbsp;Series(dict)</li>
+<li>pd.isnull(series),pd.notnull(series)</li>
+<li>obj.name = &#8221; / obj.index.name = &#8216;&nbsp;&#8216;</li>
+</ul>
+<p><strong>DataFrame</strong></p>
+<hr>
+<p>A DataFrame represents a tabular, spreadsheet-like data structure containing an or- dered collection of columns, each of which can be a different value type (numeric, string, boolean, etc.). The DataFrame has both a row and column index; it can be thought of as a dict of&nbsp;Series </p>
+<hr>
+<ul>
+<li>DataFrame(data, columns,index): df.a /df[&#8216;a&#8217;] ;&nbsp;df.ix[x]</li>
+<li>Convert dic to DataFrame:&nbsp;DataFrame(dict)</li>
+<li>df.values,&nbsp;df.index </li>
+<li>pd.Index: create index;&nbsp;pd.Int64Index/MultiIndex/DatetimeIndex/PeriodIndex</li>
+<li>Index methods: append, diff, intersection, union, isin, delete,drop,insert,&nbsp;is_monotoinc/is_unique/unique</li>
+</ul>
+<p><strong>Essential&nbsp;Functionality</strong></p>
+<ul>
+<li>reindex:&nbsp;df.reindex([],method=&#8217;ffill/pad/bfill/backfill&#8217;)</li>
+<li>drop entries: obj.drop(&#8216;x&#8217;),x could be from either&nbsp;axis </li>
+<li>indexing, selection, slicing:&nbsp;obj[value],obj.ix[value]</li>
+<li>arithmetic and data aignment: df1.add(df2,fill_value=x), add, sub, div,&nbsp;mul</li>
+<li>operations betwen DataFrame and&nbsp;Series </li>
+<li>functions： e.g. np.abs(df);&nbsp;df.apply(f,axis=1)</li>
+<li>df.applymap(f)</li>
+<li>sorting:&nbsp;obj.sort_index(axis=1,ascending=False,by=[value])</li>
+<li>Ranking; obj.order();&nbsp;obj.rank(ascending=False,method=&#8217;max/average/min/first&#8217;)</li>
+<li>axis indexes with duplicate values:&nbsp;obj.index.is_unique</li>
+<li>reductions/ summary statistics: <em>e.g.</em> count,describe,min,max,sum,mean,median, mad, var, std, skew,kurt, cumsum, cummin,cummax,cumprod,diff,pct_change, <em>methods</em>:axis, skipna,&nbsp;level(MultiIndex), </li>
+<li>df.idxmax(); df.cumsum();&nbsp;df.describe();</li>
+<li>correlation, covariance: Series: a.corr/cov(b);DataFrame: df.corr() ;&nbsp;df.corrwith(df.x) </li>
+<li>unque values:&nbsp;obj.unique()</li>
+<li>values count: obj.value_counts();&nbsp;pd.value_counts(obj.values,sort=False)</li>
+<li>handling missing data: dropna, fillna, isnull,&nbsp;notnull</li>
+<li>filtering missing data:&nbsp;obj.dropna(how=&#8217;all&#8217;)</li>
+<li>filling missing data: df.fillna({1: 0.5, 3: -1}) or&nbsp;df.fillna(method=&#8217;ffill/&#8217;)</li>
+<li>hierarchical&nbsp;indexing: </li>
+<li>reording/sorting levels:&nbsp;df.swaplevel(leve1,level2)</li>
+<li>summary sttats by level: e.g.&nbsp;df.sum(level=&#8217;xx&#8217;)</li>
+</ul>
+<p><strong>Data Loading/Storage,File&nbsp;Formats</strong></p>
+<ul>
+<li>reading:&nbsp;read_csv/table/fwf/clipboard/(sep=&#8217;x&#8217;)</li>
+<li>reading fraction of files: nrows,&nbsp;chunksize, </li>
+<li>writing data to text format:&nbsp;to_csv</li>
+<li>csv&nbsp;module: </li>
+<li><span class="caps">JSON</span> data: <em>json</em> module, json.loads(obj),&nbsp;json.dumps(obj),</li>
+<li><span class="caps">XML</span>,<span class="caps">HTML</span> web scraping: from lxml.html import parse, from urllib2 import&nbsp;urlopen,</li>
+<li>binary data&nbsp;formats: </li>
+<li><span class="caps">MS</span> Excel: xls_file = pd.ExcelFile(&#8216;xx.xls&#8217;); table =&nbsp;xls_file.parse(&#8216;sheet1&#8217;)</li>
+<li>Interacting with <span class="caps">HTML</span> / Web APIs: import <em>requests</em></li>
+<li>interacting with DataBases:<span class="caps">SQL</span>,&nbsp;NoSQL, </li>
+</ul>
+<h3>Data Wrangling: clean,transform, merge,&nbsp;reshape</h3>
+<p><strong>Rearranging</strong></p>
+<ul>
+<li>combining&amp; merging:&nbsp;pandas.merge/concat</li>
+<li>pd.merge(df1,df2,how=&#8217;inner/outter/left/right&#8217;); other arguments: left, right, on, left_on, right_on, left_index,right_index, sort, suffixes,&nbsp;copy</li>
+<li><em>concat</em>: e.g. pd.concat([S1,S2,S3],axis=1); other arguments: objs, axis, join, join_axes, keys, levels, names, verify_integrity, ignore_index; when axis=1, <em>keys</em> becomes column&nbsp;headers  </li>
+<li>combing data with overlap: <em>where</em>:e.g np.where(pd.isnull(a),b,a); <em>combine_first</em> :e.g.&nbsp;a.combine_first(b)</li>
+<li>reshape: stack/unstack,By default the innermost level is unstacked (same with&nbsp;stack). </li>
+<li>pivot: e.g.  pivoted = ldata.pivot(&#8216;date&#8217;, &#8216;item&#8217;,&nbsp;&#8216;value&#8217;)</li>
+</ul>
+<p><strong>Transformation</strong></p>
+<ul>
+<li>removing duplicates: e.g.&nbsp;data.drop_duplicates();</li>
+<li>functions/map: e.g.  data[&#8216;animal&#8217;] = data[&#8216;food&#8217;].map(str.lower).map(meat_to_animal) or  data[&#8216;food&#8217;].map(lambda x: meat_to_animal[x.lower()]) /useful for&nbsp;categorizing/ </li>
+<li>replacing values: e.g data.repalce(a,b) #replace a with&nbsp;b;</li>
+<li>renaming axis index: e.g. data.index =&nbsp;data.index.map(str.upper)</li>
+<li>discretization and binning: e.g. cats= pd.cut(data,bins), methods: <em>lables,levels</em>; pd.value_counts(cats); e.g. pd.qcut(data,4) #cut througn&nbsp;quantile </li>
+<li>detecting and filtering&nbsp;outliers: </li>
+<li>permutation and random sampling: np.random.permutation, e.g.&nbsp;df.take(np.random.permutation(len(df)))</li>
+<li>string manipulation: more on <em>regex</em></li>
+</ul>
+<p>&#8212;to be&nbsp;continued&#8212;</p>
+        </div>
+
+        <div class="meta">
+            <div>
+                    <a href="../../../../../tag/tech-it.html" class="tag">tech-iT</a>
+            </div>
+        </div>
+    </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'linnus';
+      var disqus_identifier = '/posts/2015/Oct/12/notes python for data analysis/';
+      var disqus_url = '../../../../../posts/2015/Oct/12/notes python for data analysis/';
+      var disqus_title = 'Notes: Python for Data Analysis (Part&nbsp;1)';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  </section>
+
+</div>
+
+<style type="text/css">
+{
+    max-width: 700px;
+}
+
+.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+    max-width: 580px;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}
+
+pre code {
+    background-color: inherit;
+}</style>
+
+        </div>
+<!--
+    <footer>
+      <p>
+        © 2012-2017 JIN Lin, license <a href=""> </a>
+        unless otherwise noted.
+        Generated by <a href= "http://docs.getpelican.com/">Pelican</a>.
+      </p>
+    </footer>
+-->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-64765479-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64765479-1');
+    ga('send', 'pageview');
+</script>
+    </body>
+</html>

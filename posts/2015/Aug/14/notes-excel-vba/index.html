@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="JIN Lin">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Notes:Excel <span class="caps">VBA</span> | JL-Blog | No Bullshit</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="JL-Blog | No Bullshit blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+        <style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+        <style>body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+header.main-header {
+  background: none repeat scroll 0% 0% #205F29;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #5C881C;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  color: #205F29;
+  background: #FFF;
+  border: 1px solid #205F29;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #5C881C;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #5C881C;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+        </script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-inverse bs-docs-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span> 
+		  </button>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JL-Blog | No Bullshit</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+		    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/pages/about.html" title="About">About</a></li>
+                            <li><a href="/archives.html" title="Archive">Archive</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrap">
+<div class="container post">
+    <article>
+        <header>
+            <h1>Notes:Excel <span class="caps">VBA</span></h1>
+            <time datetime="article.date.isoformat()" pubdate>Fri 14 August 2015</time>
+        </header>
+
+        <div class="article_content">
+            <p>[<span class="caps">TOC</span>]</p>
+<h3>1. Macros vs. <span class="caps">VBA</span></h3>
+<ul>
+<li><span class="caps">VBA</span>- Visual Basic&nbsp;Applications </li>
+<li>Essentially, both are realised by some codes except that Macros requires only a few clikcs while <span class="caps">VBA</span> requires requires  you to type down the&nbsp;codes. </li>
+<li>It is faster and easier to create Macros but it also means less flexibility. <span class="caps">VBA</span> in this case offers much flexibile and powerful options through which you can call APIs, read and write all kinds of files, access other databases, and create dashboards or userforms&nbsp;etc. </li>
+<li>It is probably enough to eliminate minor repetitions by just using Macros,or functions. Of course <span class="caps">VBA</span> is&nbsp;cooler. </li>
+</ul>
+<h3>2.&nbsp;Terminology</h3>
+<ul>
+<li><strong><span class="dquo">&#8220;</span>Procedure&#8221;</strong>: Procedures, which might include multiple actions, is to do one task. <em>Sub</em> and <em>Functions</em> are used most&nbsp;often. </li>
+<li><strong><span class="dquo">&#8220;</span>Module&#8221;</strong>: A module is where the procedures are&nbsp;stored. </li>
+<li><strong><span class="dquo">&#8220;</span>Object&#8221;</strong>: Objects are the items to be controlled. They include <em>Workbook</em>,<em>Worksheet</em>,<em>Range</em>,<em>Cell</em>,<em>Charts</em>&nbsp;etc. </li>
+<li><strong><span class="dquo">&#8220;</span>Property&#8221;</strong>: Properties are the characteristics of an Objects which can be measured and quantified.e.g. Range(&#8220;A1&#8221;).Value, here <em>value</em> is the property of <em>Range(&#8220;A1&#8221;)</em>. A property could become an object. e.g. Range(&#8220;A1&#8221;).Font.Size. <em>Font</em> is the property of <em>Range</em> meanwhile the object of its property <em>Size</em>.</li>
+<li><strong><span class="dquo">&#8220;</span>Method&#8221;</strong>:Methods are the actions that can be performed by an Object or on an Object.e.g.Range(&#8220;A1&#8221;).Select. <em>Select</em> is the action on <em>Range</em>. Obejects, and their Methods and Properties could be browsed in the <span class="caps">VBE</span> (integrated <span class="caps">VB</span>&nbsp;Editor).</li>
+<li><strong><span class="dquo">&#8220;</span>Event&#8221;</strong>Events are actions performed by users which trigger Excel <span class="caps">VBA</span> to execute&nbsp;code. </li>
+</ul>
+<h3>3. <span class="caps">VBE</span></h3>
+<p>Just an example window. It can be adjusted to suit your favor. This is where codes are written and&nbsp;editted. </p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19923031923/in/dateposted-public/" title="vbe-init"><img src="https://farm6.staticflickr.com/5689/19923031923_f355f31837_n.jpg" width="279" height="320" alt="vbe-init"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>It&nbsp;includes:</p>
+<ul>
+<li>Menu&nbsp;bar  </li>
+<li>Tool&nbsp;bar </li>
+<li>Project window:including <em>Excel Objects</em>(Sheets and ThisWorkbook),<em>Forms</em>, <em>Modules</em>&nbsp;and </li>
+<li>Properties window: press F4 to&nbsp;open. </li>
+<li>Code&nbsp;window</li>
+<li>Immdiate window. <span class="caps">CTRL</span> + <span class="caps">ALT</span> + I to open. Write code and press Return to&nbsp;excute. </li>
+<li>F1: <span class="caps">HELP</span>. Who knows better than those developed the <span class="caps">VBA</span>? </li>
+</ul>
+<h3>4.&nbsp;Basics</h3>
+<h4>4.1&nbsp;Varaibles</h4>
+<h5>4.1.1 Variables: Name&nbsp;Convention</h5>
+<ul>
+<li>Less than 255&nbsp;characters;</li>
+<li>No&nbsp;spacing;</li>
+<li>It must not begin with a&nbsp;number;</li>
+<li>Period is not&nbsp;permitted;</li>
+<li>Do not use key syntax defined by <span class="caps">VBA</span>, e.g. Workbook,&nbsp;Range</li>
+</ul>
+<h5>4.1.2 Variables: Data&nbsp;Types</h5>
+<p>Excel is like a grocery store where all types of things are sold. To lump the same types of things under one label is easier to manage and&nbsp;search. </p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/20518360866/in/dateposted-public/" title="Excel-VBA-Variable-Types"><img src="https://farm6.staticflickr.com/5697/20518360866_2e9a660209.jpg" width="500" height="443" alt="Excel-VBA-Variable-Types"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>By default, the type is <em>Variant</em>.</p>
+<h5>4.1.3 Variables:&nbsp;Declaration</h5>
+<p><strong>Syntax</strong>:</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Dim (Variable_Name) As (Data Type)</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">    Dim str As String</span>
+<span class="code-line">    Dim Birthdate As Date</span>
+<span class="code-line">    Dim x As Integer </span>
+<span class="code-line">or multiple variables </span>
+<span class="code-line">    Dim str As String, x As Integer  &#39;in one line</span>
+</pre></div>
+
+
+<p><strong>Option&nbsp;Explicit</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>Option Explicit { On | Off }</span>
+<span class="code-line"></span>
+<span class="code-line">&#39;by default is On. Force explicit delcaration of all variables.</span>
+</pre></div>
+
+
+<p>Since it is more efficient if <span class="caps">EXCEL</span> knows exactly what type of the variable is, you can force to declare the data types(in case you forget) rather than use the default one by turning on the <em>option explicit</em>.It can be set in the tool&nbsp;bar.</p>
+<p><strong>Scope</strong> </p>
+<div class="highlight"><pre><span class="code-line"><span></span>Public (Variable_Name) As (Data_Type) </span>
+<span class="code-line">    &#39;used across all modules</span>
+<span class="code-line"></span>
+<span class="code-line">Private (Variable_Name) As (Data_Type)</span>
+<span class="code-line">    &#39;used in single module,(Dim does so)</span>
+<span class="code-line"></span>
+<span class="code-line">Static (Variable_Name) As (Data_Type)</span>
+<span class="code-line">    &#39;used in single procedure such as *Sub* or *Functions* (as Dim)</span>
+</pre></div>
+
+
+<p><strong>Assignment</strong></p>
+<p><span class="caps">LET</span> </p>
+<div class="highlight"><pre><span class="code-line"><span></span>[Let] Variable_Name = data </span>
+<span class="code-line">    &#39;Let could be implicit</span>
+<span class="code-line">    &#39;data are mumberic such as date, integer</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">    [Let] str = &quot;Hello, World!&quot; </span>
+<span class="code-line">    Range(&quot;A1&quot;).Value = str</span>
+</pre></div>
+
+
+<p><span class="caps">SET</span></p>
+<div class="highlight"><pre><span class="code-line"><span></span>Set Variable_Name = data </span>
+<span class="code-line">    &#39; Set is a must</span>
+<span class="code-line">    &#39; data is Object such Range,Cells etc.</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">Sub ass1()</span>
+<span class="code-line">    Dim rng As Range</span>
+<span class="code-line">    Set rng = Worksheets(&quot;sheet1&quot;).Range(&quot;A1&quot;)</span>
+<span class="code-line">    rng.value = &quot;Welcome to My Blog!&quot;</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p><strong>Constant</strong></p>
+<p>Constants like pi, tax rate are better represented by a constant&nbsp;variable.</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Const   (Variable_Name) As (Data_Type) = data</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">    Const pi As Single = 3.14</span>
+<span class="code-line">    &#39; either declare within a procedure or a module</span>
+</pre></div>
+
+
+<p><strong>Array</strong></p>
+<p>This is where a matrix of different types of data could be&nbsp;manipulated. </p>
+<p>Declaration</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Public|Dim (Array_Name(a to b)) As (Data_Type) </span>
+<span class="code-line">    &#39;either use Public or Dim</span>
+<span class="code-line">    &#39;a to b is the starting and ending index number; or use one number to indicate the largest index number</span>
+<span class="code-line">    &#39;Option Base {0 | 1} by default the numbering starts from 0</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">    Dim Class1(1 To 50) As String</span>
+</pre></div>
+
+
+<p>Assignment</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Class1(1) = &quot;David&quot;</span>
+<span class="code-line">.</span>
+<span class="code-line">.</span>
+<span class="code-line">.</span>
+<span class="code-line">Class1(50) = &quot;Lily&quot;</span>
+</pre></div>
+
+
+<p>Dimension</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Dim Dim (Array_Name(a to b, c to d)) As (Data_Type)</span>
+<span class="code-line">    &#39; a to b - rows </span>
+<span class="code-line">    &#39; c to d - columns</span>
+<span class="code-line">    &#39; could expand to even more dimensions</span>
+</pre></div>
+
+
+<p>Dynamic&nbsp;Array</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Dim arr() As String </span>
+<span class="code-line">    &#39;together with ReDim to better accommondate unknown number of data</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">Sub countempty()</span>
+<span class="code-line">    Dim arr() As String</span>
+<span class="code-line">    Dim n As Long</span>
+<span class="code-line">    n = Application.WorksheetFunction.CountA(Range(&quot;A:A&quot;))</span>
+<span class="code-line">    ReDim arr(1 To n) As String</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p>Other Ways to Create&nbsp;Array</p>
+<p><em>Array</em>&nbsp;Function</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Dim arr As Variant </span>
+<span class="code-line">arr = Array(1,3,4,5,7)</span>
+</pre></div>
+
+
+<p><em>Split</em>&nbsp;Function</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Dim arr As Variant </span>
+<span class="code-line">arr = Array(&quot;David,Tony,Tome,Lily,Lucy&quot;,&quot;,&quot;)</span>
+</pre></div>
+
+
+<p><em>Range</em>&nbsp;Object</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Dim arr As Variant</span>
+<span class="code-line">arr = Range(&quot;A1:G3&quot;).Value</span>
+</pre></div>
+
+
+<p><em>Bound</em></p>
+<div class="highlight"><pre><span class="code-line"><span></span>UBound(arr) &#39; return maximum index number </span>
+<span class="code-line">LBound(arr) &#39; return minimum index number</span>
+<span class="code-line"></span>
+<span class="code-line">the number of elements in the array is therefore </span>
+<span class="code-line">UBound(arr) - LBound(arr) +1</span>
+</pre></div>
+
+
+<p><em>Joint</em></p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span></span>
+<span class="code-line">    <span class="n">arr</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span></span>
+<span class="code-line">    <span class="n">txt</span> <span class="o">=</span> <span class="n">Joint</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="s">&quot;@&quot;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">return</span> </span>
+<span class="code-line">    <span class="n">txt</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1@3@5</span><span class="p">)</span></span>
+</pre></div>
+
+
+<p><em>Write into&nbsp;Cells</em> </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">    arr = Array(1,3,5,7,9)</span>
+<span class="code-line">    Range(&quot;A1:A5&quot;)= Application.WorksheetFunction.Transpose(arr)</span>
+<span class="code-line">    &#39;size and dimension of the range should be the same as the array</span>
+</pre></div>
+
+
+<h4>4.2&nbsp;Objects/Properties/Methods</h4>
+<p>Obejcts</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">    Application.Workbooks(&quot;Book1&quot;).Worksheets(&quot;sheet1&quot;).Range(&quot;A2&quot;)</span>
+<span class="code-line">If sheet1 is the active worksheet,simply write the relative address</span>
+<span class="code-line">    Range(&quot;A2&quot;)</span>
+</pre></div>
+
+
+<p>Properties</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Application.Workbooks(&quot;Book1&quot;).Worksheets(&quot;sheet1&quot;).Range(&quot;A2&quot;).Font.Color</span>
+</pre></div>
+
+
+<p>Methods</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Methods are about what is done by the object or to the object, properties are about what the object has/includes.</span>
+</pre></div>
+
+
+<h4>4.3&nbsp;Operators</h4>
+<p>The precedence of all these operators is the same as other language such as Python. A full list could be found here <a href="http://onlinelibrary.wiley.com/store/10.1002/9781118390405.app4/asset/app4.pdf?v=1&amp;t=idbb6bev&amp;s=faca84fd5f25030d9d227a960f362715cc8093d9"><span class="caps">VBA</span> Operators Summary</a>. </p>
+<p><em>Arithmetic</em>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19938771784/in/dateposted-public/" title="VBA-arithmetic operators"><img src="https://farm6.staticflickr.com/5758/19938771784_e6e0824144.jpg" width="500" height="481" alt="VBA-arithmetic operators"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><em>Comparison</em></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19940509343/in/dateposted-public/" title="VBA-comparison operators"><img src="https://farm6.staticflickr.com/5668/19940509343_03790c7ea7.jpg" width="500" height="467" alt="VBA-comparison operators"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><em>Logical</em></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19938771584/in/dateposted-public/" title="VBA-logic operators 1"><img src="https://farm6.staticflickr.com/5689/19938771584_bd8d791d9b.jpg" width="500" height="258" alt="VBA-logic operators 1"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/20373375110/in/dateposted-public/" title="VBA-logic operators 2"><img src="https://farm6.staticflickr.com/5788/20373375110_4a5db544a4.jpg" width="500" height="188" alt="VBA-logic operators 2"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><em>Others</em></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/20373375120/in/dateposted-public/" title="VBA-Miscellaneous Operators"><img src="https://farm6.staticflickr.com/5625/20373375120_e9601d5e82.jpg" width="500" height="442" alt="VBA-Miscellaneous Operators"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<h4>4.4 Built-in&nbsp;Functions</h4>
+<p>Employ these readily available functions to save&nbsp;time. </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">    Time() &#39; return system time</span>
+<span class="code-line">    Date()  &#39; return system date</span>
+<span class="code-line">    Abs(a) &#39; return the absolute number </span>
+<span class="code-line">more on HELP</span>
+</pre></div>
+
+
+<h4>4.5&nbsp;Syntaxes</h4>
+<h5>4.5.1&nbsp;If&#8230;Then</h5>
+<div class="highlight"><pre><span class="code-line"><span></span>If (conditional statement) Then (action) Else (xx)</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">    If Time&lt;0.5 Then MsgBox &quot;Good Morning!&quot; Else MsgBox &quot;Good afternoon&quot;</span>
+<span class="code-line"></span>
+<span class="code-line">OR In block form </span>
+<span class="code-line">    If Time&lt;0.5 Then</span>
+<span class="code-line">    MsgBox &quot;Good Morning!&quot;</span>
+<span class="code-line">    Else</span>
+<span class="code-line">    MsgBox &quot;Good afternoon&quot;</span>
+<span class="code-line">    End If     &#39;must end with End If</span>
+</pre></div>
+
+
+<p>multiple&nbsp;choices</p>
+<div class="highlight"><pre><span class="code-line"><span></span>If ... Then</span>
+<span class="code-line">...</span>
+<span class="code-line">ElseIf... Then</span>
+<span class="code-line">...</span>
+<span class="code-line">Else </span>
+<span class="code-line">...</span>
+<span class="code-line">End If</span>
+</pre></div>
+
+
+<h5>4.5.2&nbsp;Select&#8230;Case</h5>
+<p>This is more suitable when more than 3 choices are to be determined. Once Select finds the matched condition, it will executes under that condition and jump off the the Select process. Put the most likely condition foremost to increase&nbsp;efficiency.  </p>
+<div class="highlight"><pre><span class="code-line"><span></span>Select Case (Variable_Name)</span>
+<span class="code-line">    Case &lt;condition1&gt;</span>
+<span class="code-line">        ...</span>
+<span class="code-line">    Case &lt;condition2&gt;</span>
+<span class="code-line">        ...</span>
+<span class="code-line">    ...</span>
+<span class="code-line">End Select</span>
+</pre></div>
+
+
+<h5>4.5.3&nbsp;For&#8230;Next</h5>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">For</span> <span class="p">(</span><span class="n">iteration_variable</span><span class="o">=&lt;</span><span class="n">initial</span> <span class="n">value</span><span class="o">&gt;</span> <span class="n">To</span> <span class="o">&lt;</span><span class="n">end</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)[</span><span class="n">Step</span> <span class="n">size</span><span class="p">]</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">For</span><span class="p">]</span>  <span class="err">&#39;</span><span class="n">when</span> <span class="n">encounter</span> <span class="n">this</span> <span class="n">sentence</span><span class="p">,</span> <span class="n">exit</span> <span class="n">the</span> <span class="n">loop</span><span class="p">.</span> </span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line"><span class="n">Next</span> <span class="p">[</span><span class="n">iteration_variable</span><span class="p">]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">write</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span> <span class="n">to</span> <span class="n">column</span> <span class="n">A</span></span>
+<span class="code-line"><span class="n">Sub</span> <span class="n">ex2</span><span class="p">()</span></span>
+<span class="code-line">    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span></span>
+<span class="code-line">    <span class="n">xrow</span> <span class="o">=</span> <span class="mi">1</span></span>
+<span class="code-line">    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">To</span> <span class="mi">100</span>  <span class="err">&#39;</span><span class="n">by</span> <span class="k">default</span><span class="p">,</span> <span class="n">step</span> <span class="n">size</span> <span class="n">is</span> <span class="mi">1</span></span>
+<span class="code-line">        <span class="n">Cells</span><span class="p">(</span><span class="n">xrow</span><span class="p">,</span><span class="s">&quot;A&quot;</span><span class="p">).</span><span class="n">Value</span> <span class="o">=</span> <span class="n">i</span> </span>
+<span class="code-line">        <span class="n">xrow</span> <span class="o">=</span> <span class="n">xrow</span> <span class="o">+</span> <span class="mi">1</span></span>
+<span class="code-line">    <span class="n">Next</span>              <span class="err">&#39;</span><span class="n">iteration_variable</span> <span class="n">can</span> <span class="n">be</span> <span class="n">ignored</span> </span>
+<span class="code-line"><span class="n">End</span> <span class="n">Sub</span></span>
+</pre></div>
+
+
+<h5>4.5.4 Do&#8230;&nbsp;While</h5>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">Do</span> <span class="o">&lt;</span><span class="n">While</span> <span class="n">logical</span> <span class="n">statements</span><span class="o">&gt;</span>    <span class="err">&#39;</span> <span class="n">when</span> <span class="n">True</span><span class="p">,</span><span class="n">execute</span> <span class="n">until</span> <span class="n">it</span> <span class="n">returns</span> <span class="n">False</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Do</span><span class="p">]</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line"><span class="n">Loop</span></span>
+</pre></div>
+
+
+<p><span class="caps">OR</span> </p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">Do</span> </span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Do</span><span class="p">]</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line"><span class="n">Loop</span> <span class="o">&lt;</span><span class="n">While</span> <span class="n">logical</span> <span class="n">statements</span><span class="o">&gt;</span>  <span class="err">&#39;</span> <span class="n">When</span> <span class="n">False</span> <span class="n">exit</span> <span class="n">the</span> <span class="n">iteration</span></span>
+</pre></div>
+
+
+<h5>4.5.5&nbsp;Do&#8230;Until</h5>
+<p>Contrary to Do&#8230;While, Do Until executes when the Logical statement is False, and exits when it is&nbsp;True. </p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">Do</span> <span class="o">&lt;</span><span class="n">Until</span> <span class="n">logical</span> <span class="n">statements</span><span class="o">&gt;</span>    <span class="err">&#39;</span> <span class="n">when</span> <span class="n">False</span><span class="p">,</span><span class="n">execute</span> <span class="n">until</span> <span class="n">it</span> <span class="n">returns</span> <span class="n">True</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Do</span><span class="p">]</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line"><span class="n">Loop</span></span>
+</pre></div>
+
+
+<p><span class="caps">OR</span></p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">Do</span> </span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Do</span><span class="p">]</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line"><span class="n">Loop</span> <span class="o">&lt;</span><span class="n">Until</span> <span class="n">logical</span> <span class="n">statements</span><span class="o">&gt;</span>  <span class="err">&#39;</span> <span class="n">When</span> <span class="n">True</span> <span class="n">exit</span> <span class="n">the</span> <span class="n">iteration</span></span>
+</pre></div>
+
+
+<h5>4.5.6 For&nbsp;Each&#8230;Next</h5>
+<p>When the number of iterations is unknown, For&#8230; Next is a bit&nbsp;problematic. </p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">For</span> <span class="n">Each</span> <span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="n">In</span> <span class="p">(</span><span class="n">objects</span><span class="o">/</span><span class="n">arrays</span><span class="p">)</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">For</span><span class="p">]</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line"><span class="n">Next</span> <span class="o">&lt;</span><span class="n">variable</span><span class="o">&gt;</span></span>
+</pre></div>
+
+
+<p>e.g.</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Sub ex3()</span>
+<span class="code-line">    Dim sht As Worksheet, i As Integer</span>
+<span class="code-line">    i = 1</span>
+<span class="code-line">    For Each sht In Worksheets &#39;all worksheets in current workbooks </span>
+<span class="code-line">        Cells(i,&quot;A&quot;)=sht.Name &#39;write the sheet name to cell (1,A)</span>
+<span class="code-line">        i = i +1</span>
+<span class="code-line">    Next sht</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<h5>4.5.7 Other Common&nbsp;Syntaxes</h5>
+<p><strong>GoTo</strong> </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line"></span>
+<span class="code-line">Sub he()</span>
+<span class="code-line">Dim mysum as long, i as integer </span>
+<span class="code-line">i = 1 </span>
+<span class="code-line">X: mysum = mysum + 1  &#39;X label</span>
+<span class="code-line">    i = i + 1</span>
+<span class="code-line">    If i&lt;=100 Then GoTo X  &#39;when i&lt;=100, go back to X label</span>
+<span class="code-line">    MsgBox &quot;sum of natural number 1 to 100&quot; &amp; mysum</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p><strong>With</strong></p>
+<p>It helps remove the repetition of the codes with the same&nbsp;structure.</p>
+<p>e.g.</p>
+<div class="highlight"><pre><span class="code-line"><span></span>With Worksheet(&quot;sheet1&quot;).Range(&quot;A1&quot;).Font</span>
+<span class="code-line">    .Name = &quot;Times&quot;</span>
+<span class="code-line">    .Size = 12</span>
+<span class="code-line">    .ColorIndex = 3</span>
+<span class="code-line">    .Bold = True</span>
+<span class="code-line">End With</span>
+</pre></div>
+
+
+<h4>4.6&nbsp;Procedures</h4>
+<h5>4.6.1&nbsp;Sub</h5>
+<p>Sub is a set of actions to do certain task. When recording a Macro, it creates a Sub procedure which is stored in a&nbsp;moudule.</p>
+<p>Declare a&nbsp;Sub </p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="p">[</span><span class="n">Public</span><span class="o">|</span><span class="n">Private</span><span class="o">|</span><span class="n">Static</span><span class="p">]</span> <span class="n">Sub</span> <span class="n">sub_name</span><span class="p">()</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Sub</span><span class="p">]</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line"><span class="n">End</span> <span class="n">Sub</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="err">&#39;</span><span class="n">Private</span> <span class="n">Subs</span> <span class="n">can</span> <span class="n">only</span> <span class="n">be</span> <span class="n">used</span> <span class="n">within</span> <span class="k">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">Module</span></span>
+</pre></div>
+
+
+<p>Run Sub_a in&nbsp;Sub_b</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Sub Sub_b()</span>
+<span class="code-line">    Call Sub_a[(variable1,variable2...)]</span>
+<span class="code-line">    &#39;or Application.Run &quot;Sub_a[(variable1,variable2...)]&quot;</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<h5>4.6.2&nbsp;Function</h5>
+<p>Excel has quite a lot basic yet powerful functions but still might not solve particular problems faced with. For instance, counting the yellow box in one sheet. The customer function could be used in either <span class="caps">VBA</span> or Excel&nbsp;Spreadsheets.</p>
+<p>Declare a&nbsp;Function </p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="p">[</span><span class="n">Public</span><span class="o">|</span><span class="n">Private</span><span class="o">|</span><span class="n">Static</span><span class="p">]</span> <span class="n">Function</span> <span class="n">function_name</span><span class="p">([</span><span class="n">variable</span> <span class="n">list</span><span class="p">])[</span><span class="n">As</span> <span class="n">data</span> <span class="n">type</span><span class="p">]</span> <span class="err">&#39;</span><span class="n">returned</span> <span class="n">data</span> <span class="n">type</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Function</span><span class="p">]</span></span>
+<span class="code-line">    <span class="p">...</span></span>
+<span class="code-line">    <span class="n">function_name</span> <span class="o">=</span> <span class="n">results</span> <span class="err">&#39;</span><span class="n">a</span> <span class="n">must</span></span>
+<span class="code-line"><span class="n">End</span> <span class="n">Function</span></span>
+</pre></div>
+
+
+<h4>4.7 Better&nbsp;Code</h4>
+<ul>
+<li>Indent&nbsp;properly</li>
+<li>Avoid long&nbsp;sentence</li>
+<li>Combine trivial&nbsp;lines</li>
+<li>Write clear&nbsp;comments </li>
+</ul>
+<h3>5.&nbsp;Objects</h3>
+<p>The following chapters expand above subjects with more&nbsp;details.</p>
+<h4>5.1 Common&nbsp;Objects</h4>
+<p>Object&nbsp;Hierarchy</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/20563347155/in/dateposted-public/" title="excelobjectchart"><img src="https://farm6.staticflickr.com/5637/20563347155_9d5876520b.jpg" width="500" height="183" alt="excelobjectchart"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<h5>5.1.1&nbsp;Application</h5>
+<p>Property: <code>ScreenUpdating</code></p>
+<div class="highlight"><pre><span class="code-line"><span></span>Application.ScreenUpdating = True | False </span>
+<span class="code-line">&#39;by default True, results will be shown on screen.</span>
+<span class="code-line"></span>
+<span class="code-line">e.g.</span>
+<span class="code-line">Sub ex4()</span>
+<span class="code-line">    Cells.ClearContents</span>
+<span class="code-line">    Application.ScreenUpdating = False</span>
+<span class="code-line">    Range(&quot;A1:A10&quot;) = 100            &#39; intermediate results won&#39;t be shown on screen.</span>
+<span class="code-line">    MsgBox &quot;can you see the results?&quot;</span>
+<span class="code-line">    Range(&quot;B1:B10&quot;) = 200</span>
+<span class="code-line">    MsgBox &quot;can you see the results?&quot; </span>
+<span class="code-line">    Application.ScreenUpdating = True</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p>Property: <code>DisplayAlerts</code></p>
+<div class="highlight"><pre><span class="code-line"><span></span>Application.DisplayAlerts = True | False</span>
+</pre></div>
+
+
+<p>Property: <code>EnableEvents</code></p>
+<p>Event, e.g. open/close the workbook,select a cell&nbsp;etc.</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">Private Sub Workbook_SelectionChange(ByVal,Target As Range)</span>
+<span class="code-line">    Target.Value = Target.Address</span>
+<span class="code-line">End Sub</span>
+<span class="code-line">&#39;select one cell and it will automatically reutrn the cell address.</span>
+</pre></div>
+
+
+<p>Disable an&nbsp;Event</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Private Sub Workbook_SelectionChange(ByVal,Target As Range)</span>
+<span class="code-line">    Target.Value = Target.Address</span>
+<span class="code-line">    Target.Offset(1,0).Select    &#39;it will again return an address and select another cell, resulting an endless process. </span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p>To prevent&nbsp;this:</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Private Sub Workbook_SelectionChange(ByVal,Target As Range)</span>
+<span class="code-line">    Target.Value = Target.Address</span>
+<span class="code-line">    Application.EnableEvents = False  &#39;it will offset by one cell but wont return an address and offset onemore time</span>
+<span class="code-line">    Target.Offset(1,0).Select    </span>
+<span class="code-line">    Application.EnableEvents = True</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p>Property: <code>WorksheetFunction</code></p>
+<p>In <span class="caps">VBA</span>, there is no <span class="caps">COUNTIF</span>,<span class="caps">SUMIF</span>,<span class="caps">TRANSPOSE</span>,or <span class="caps">VLOOKUP</span> etc. To use them, call them by using the following&nbsp;syntax:</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Application.WorksheetFunction.CountIf(...)</span>
+<span class="code-line"></span>
+<span class="code-line">&#39;if VBA already has the function,say fun_a, same as that in Excel, use fun_a() instead of WorksheetFunction.fun_a()</span>
+</pre></div>
+
+
+<p>Other&nbsp;Properties:</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Application</span>
+<span class="code-line">    .Caption          &#39;Excel title</span>
+<span class="code-line">    .DisplayFormulaBar&#39;</span>
+<span class="code-line">    .StatusBar      (True|False)</span>
+<span class="code-line">    .DisplayHeadings</span>
+<span class="code-line"></span>
+<span class="code-line">    .ActiveCell    &#39;Application can be ignored</span>
+<span class="code-line">    .ActiveChart</span>
+<span class="code-line">    .ActiveSheet</span>
+<span class="code-line">    .ActiveWindow</span>
+<span class="code-line">    .ActiveWorkbook</span>
+<span class="code-line">    .Charts   &#39;all charts in the active window</span>
+<span class="code-line">    .Selection</span>
+<span class="code-line">    .Sheets</span>
+<span class="code-line">    .Worksheets</span>
+<span class="code-line">    .Workbooks</span>
+</pre></div>
+
+
+<h5>5.1.2&nbsp;Workbook</h5>
+<p>Call&nbsp;Workbook</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Workbooks.Item(1)</span>
+<span class="code-line">Workbooks(1)</span>
+<span class="code-line">Workbooks(&quot;Book1.xls&quot;)</span>
+</pre></div>
+
+
+<p>Create&nbsp;Workbook</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Workbooks.Add &#39;blank excel&#39;</span>
+<span class="code-line">Workbooks.Add(&quot;full name&quot;)</span>
+<span class="code-line">Workbooks.Add xlWBATCHART</span>
+</pre></div>
+
+
+<p>Open&nbsp;Workbook</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Workboos.Open Filename :=&quot;E:\Book1.xls&quot;</span>
+<span class="code-line">or </span>
+<span class="code-line">Workboos.Open &quot;E:\Book1.xls&quot;</span>
+</pre></div>
+
+
+<p>Acitivate&nbsp;Workbook</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Workbooks(&quot;Book1.xls&quot;).Active</span>
+</pre></div>
+
+
+<p>Save&nbsp;Workbook</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Workbooks(&quot;Book1&quot;).Save</span>
+<span class="code-line">Workbooks(&quot;Book1&quot;).SaveAs Filename :=&quot;full name&quot; &#39;close original file,open new</span>
+<span class="code-line">Workbooks(&quot;Book1&quot;).SaveCopyAs Filename :=&quot;full name&quot; &#39;keep original file,do not open new&#39;</span>
+</pre></div>
+
+
+<p>Close&nbsp;Workbook</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Workbooks.Close  &#39;close all files</span>
+<span class="code-line">Workbooks(&quot;Book1&quot;).Close</span>
+<span class="code-line">Workbooks(&quot;Book1&quot;).Close savechanges :=True</span>
+</pre></div>
+
+
+<h5>5.1.3&nbsp;Worksheet</h5>
+<p>Call&nbsp;Worksheet</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets.Item()</span>
+<span class="code-line">Worksheets()</span>
+<span class="code-line">Worksheets(&quot;&quot;)</span>
+</pre></div>
+
+
+<p>Create&nbsp;Worksheet</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets.add</span>
+<span class="code-line">Worksheets.add Before := Worksheets(1) &#39;insert one before sheet1&#39;</span>
+<span class="code-line">Worksheets.add After := Worksheets(1)</span>
+<span class="code-line">Worksheets.add Count:=3 &#39;inset 3 worksheets&#39;</span>
+<span class="code-line">Worksheets.add After := Worksheets(1),Count := 3 &#39;inset 3 after sheet1</span>
+</pre></div>
+
+
+<p>Edit Worksheet&nbsp;Name</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Nmae = &quot;salary sheet&quot;</span>
+<span class="code-line">ActiveSheet.Name = &quot;salary sheet&quot;</span>
+<span class="code-line">Worksheets.add(Before := Worksheets(1)).Name = &quot;salary sheet&quot;</span>
+</pre></div>
+
+
+<p>Delete&nbsp;Worksheet</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Delete</span>
+</pre></div>
+
+
+<p>Activate&nbsp;Worksheet</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Activate</span>
+<span class="code-line">Worksheets(1).Select</span>
+</pre></div>
+
+
+<p>Copy&nbsp;Worksheet</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Copy</span>
+</pre></div>
+
+
+<p>Move&nbsp;Worksheet</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Move before := Worksheets(&quot;salary sheet&quot;)</span>
+</pre></div>
+
+
+<p>Display&nbsp;Worksheet</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Visible = True</span>
+</pre></div>
+
+
+<p>Count&nbsp;Worksheets</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets.Count</span>
+</pre></div>
+
+
+<p>Sheets vs.&nbsp;Worksheets</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">Sheets</span><span class="o">:</span> <span class="k">include</span> <span class="n">all</span> <span class="n">types</span> <span class="n">of</span> <span class="n">worksheets</span><span class="o">,</span> <span class="n">charts</span><span class="o">,</span><span class="n">macro</span><span class="o">,</span><span class="n">normal</span></span>
+<span class="code-line"><span class="n">Worksheets</span><span class="o">:</span> <span class="n">normal</span> <span class="n">spreadsheet</span></span>
+</pre></div>
+
+
+<h5>5.1.4 Range&nbsp;(essential)</h5>
+<p>Basic&nbsp;actions</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line"></span>
+<span class="code-line">Worksheets(&quot;Sheet1&quot;).Range(&quot;A1&quot;).Value = 50 </span>
+<span class="code-line">Range(&quot;A1:B10&quot;).Value = 100</span>
+<span class="code-line">Range(&quot;date&quot;).Value =100   &#39;Define date as A1:B10&#39;</span>
+<span class="code-line">Range(&quot;A1:B10,E1:F5&quot;).Select</span>
+<span class="code-line"></span>
+<span class="code-line">Range(&quot;A1:B10 B1:F5&quot;).Select </span>
+<span class="code-line">    &#39;choose the common area</span>
+<span class="code-line"></span>
+<span class="code-line">Range(&quot;B6:B10&quot;,&quot;D2:D8&quot;).Select  </span>
+<span class="code-line">    &#39;return the smallest rectangle encompassing both regions.</span>
+</pre></div>
+
+
+<p>Cells </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line"></span>
+<span class="code-line">ActiveSheet.Cells(3,4).Value = 100  &#39;row 3 column 4/D</span>
+<span class="code-line">ActiveSheet.Cells(3,&quot;D&quot;).Value = 100</span>
+<span class="code-line">...................</span>
+<span class="code-line">Range(&quot;B3:F9&quot;).Cells(2,3).Value = 100   .................</span>
+<span class="code-line"></span>
+<span class="code-line">Rnage(Cells(1,1),Cells(10,5)).Select   </span>
+<span class="code-line">=</span>
+<span class="code-line">Range(&quot;A1&quot;,&quot;E10&quot;).Select </span>
+<span class="code-line">=</span>
+<span class="code-line">Range(Range(&quot;A1&quot;),Range(&quot;E10&quot;)).Select</span>
+</pre></div>
+
+
+<p>Rows</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line"></span>
+<span class="code-line">ActiveSheet.Rows(&quot;3:5&quot;).Select &#39;row3 to row5&#39;</span>
+<span class="code-line">ActiveSheet.Rows.Select  </span>
+<span class="code-line">Rows(&quot;3:10&quot;).Rows(1).Select    &#39;row3</span>
+</pre></div>
+
+
+<p>Columns </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">ActiveSheet.Columns(&quot;E:F&quot;).Select</span>
+</pre></div>
+
+
+<p>Union</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Application.Union(Range(&quot;A1:A10&quot;),Range(&quot;e1:e5&quot;)).Select </span>
+<span class="code-line">&#39;link discrete sections and select together</span>
+</pre></div>
+
+
+<p>Offset </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">Range(&quot;A1&quot;).Offset(2,3).Value = 50 &#39;down 2 rows, right 3 columns&#39;</span>
+<span class="code-line"></span>
+<span class="code-line">Range(&quot;A1&quot;).Offset(-2,3).Value = 50  &#39;up 2 rows</span>
+</pre></div>
+
+
+<p>Resize</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">Range(&quot;A1&quot;).Resize(5,4).Select  &#39;expand one cell to one region </span>
+<span class="code-line">Range(&quot;B2:E6&quot;).Resize(2,1).Select &#39;contract one region to one cell</span>
+</pre></div>
+
+
+<p>UsedRange</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">Worksheets.UsedRange.Select </span>
+<span class="code-line">&#39;return one rectangle box including all  used region including empty rows or columns if regions are seperated.</span>
+</pre></div>
+
+
+<p>CurrentRegion</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheets.Range(&quot;A1&quot;).CurrentRegion.Select </span>
+<span class="code-line">&#39;bordered with empty rows or columns, A1 is in the region.F5</span>
+</pre></div>
+
+
+<p>End</p>
+<div class="highlight"><pre><span class="code-line"><span></span>return the end cell in the specified direction of current region. It is very useful when we need to append / replace data to current table.</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">Range(&quot;C5&quot;).End(xlUP/xlDown/xlToLeft/xlToRight)</span>
+<span class="code-line"></span>
+<span class="code-line">Range(&quot;A6536&quot;).End(xlUP).Offset(1,0).Value=&quot;Tom&quot; </span>
+<span class="code-line">    &#39;Range(&quot;A6536&quot;).End(xlUP) goes to last filled cell  </span>
+<span class="code-line">    &#39;append new data &#39;Tom&#39; to current table,</span>
+</pre></div>
+
+
+<p>Value</p>
+<div class="highlight"><pre><span class="code-line"><span></span>value is the default property of Range, so </span>
+<span class="code-line">Range(&quot;A1&quot;) = &quot;SB&quot; is valid.</span>
+</pre></div>
+
+
+<p>Count</p>
+<div class="highlight"><pre><span class="code-line"><span></span>ActiveSheet.UsedRegion.Rows.Count</span>
+<span class="code-line">ActiveSheet.UsedRegion.Columns.Count</span>
+</pre></div>
+
+
+<p>Address</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">Selection.Address</span>
+</pre></div>
+
+
+<p>Select <span class="amp">&amp;</span>&nbsp;Activate</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Range(&quot;A1:A10&quot;).Select</span>
+<span class="code-line">    equivalent to</span>
+<span class="code-line">Range(&quot;A1;A10&quot;).Activate</span>
+</pre></div>
+
+
+<p>Clear </p>
+<div class="highlight"><pre><span class="code-line"><span></span>A cell contains data,format,comments etc.</span>
+<span class="code-line">Range(&quot;A1&quot;).Clear &#39;clear all, contents, formats,and comments</span>
+<span class="code-line">           .ClearComments</span>
+<span class="code-line">           .ClearContents</span>
+<span class="code-line">           .ClearFormats</span>
+</pre></div>
+
+
+<p>Copy</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> </span>
+<span class="code-line"><span class="n">Range</span><span class="p">(</span><span class="s">&quot;A1&quot;</span><span class="p">).</span><span class="n">Copy</span> <span class="p">[</span><span class="nl">Destination</span> <span class="p">:</span><span class="o">=</span><span class="p">]</span> <span class="n">Range</span><span class="p">(</span><span class="s">&quot;C1&quot;</span><span class="p">)</span> </span>
+<span class="code-line">    <span class="err">&#39;</span><span class="p">[]</span> <span class="n">could</span> <span class="n">be</span> <span class="n">ignored</span><span class="p">.</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">Range</span><span class="p">(</span><span class="s">&quot;A1&quot;</span><span class="p">).</span><span class="n">CurrentRegion</span><span class="p">.</span><span class="n">Copy</span> <span class="n">Range</span><span class="p">(</span><span class="s">&quot;C1&#39;)</span></span>
+<span class="code-line">    <span class="err">&#39;</span><span class="n">C1</span> <span class="n">is</span> <span class="n">the</span> <span class="n">upper</span> <span class="n">left</span> <span class="n">corner</span> <span class="n">of</span> <span class="n">the</span> <span class="n">region</span></span>
+</pre></div>
+
+
+<p>Cut</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span></span>
+<span class="code-line"><span class="n">Range</span><span class="p">(</span><span class="s">&quot;A1&quot;</span><span class="p">).</span><span class="n">Cut</span> <span class="p">[</span><span class="nl">Destination</span> <span class="p">:</span><span class="o">=</span><span class="p">]</span> <span class="n">Range</span><span class="p">(</span><span class="s">&quot;C1&quot;</span><span class="p">)</span></span>
+</pre></div>
+
+
+<p>Delete</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Different from clear, delete remove the cells rather than only the contents etc.</span>
+<span class="code-line">e.g.</span>
+<span class="code-line"></span>
+<span class="code-line">Range(&quot;A5&quot;).Delete Shift:= xlToLeft  &#39;delete A5 and shift to left&#39;</span>
+<span class="code-line">Range(&quot;A5&quot;).Delete Shift:= xlUp  &#39;delete A5 and cells move up&#39;</span>
+<span class="code-line">Range(&quot;A5&quot;).EntireRow.Delete  </span>
+<span class="code-line">Range(&quot;A5&quot;).EntireColumn.Delete</span>
+</pre></div>
+
+
+<p>Names</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">ActiveWorkbook.Names.Add Name := &quot;date&quot; , RefersToR1C1 := &quot;=Sheet1!R5C[-2]&quot; </span>
+<span class="code-line">    &#39;R-ROW;C-COLUMN, [] indicates relative position,no [] means absolute position.</span>
+<span class="code-line"></span>
+<span class="code-line">OR A1 format</span>
+<span class="code-line"></span>
+<span class="code-line">ActiveWorkbook.Names.Add Name := &quot;date&quot; , RefersTo := &quot;=Sheet1!$B$4&quot;</span>
+<span class="code-line"></span>
+<span class="code-line">OR Simply</span>
+<span class="code-line"></span>
+<span class="code-line">Range(&quot;A1:A10&quot;).Name = &#39;date&#39;</span>
+</pre></div>
+
+
+<p>Comment</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">Range(&quot;A1&quot;).AddComment Text := &quot;This is cool!&quot;</span>
+<span class="code-line">OR</span>
+<span class="code-line">Range(&quot;A1&quot;).Comment.Text = &quot;comment&quot;</span>
+<span class="code-line"></span>
+<span class="code-line">Range(&quot;A1&quot;).Comment.Visible = False </span>
+<span class="code-line">Range(&quot;A1&quot;).Comment.Delete</span>
+</pre></div>
+
+
+<p>Font</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">With Range(&quot;A1&quot;).Font</span>
+<span class="code-line">    .Name = &quot;宋体&quot;</span>
+<span class="code-line">    .Size = 12 </span>
+<span class="code-line">    .Color = RGB(225,225,0)</span>
+<span class="code-line">    .Bold = True </span>
+<span class="code-line">    .Italic = True</span>
+<span class="code-line">    .Underline = xlUnderlineStyleDouble </span>
+<span class="code-line">End With</span>
+</pre></div>
+
+
+<p>Interior</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">Range(&quot;A1&quot;).Interior.Color = RGB(225,225,0)</span>
+</pre></div>
+
+
+<p>Border</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">With Range(&quot;A1&quot;).CurrentRegion.Borders</span>
+<span class="code-line">    .LineStyle = xlContinuous </span>
+<span class="code-line">    .Color = RGB(0,0,225)</span>
+<span class="code-line">    .Weight = xlHairline</span>
+<span class="code-line">End With</span>
+</pre></div>
+
+
+<p>Others on <span class="caps">HELP</span></p>
+<h3>6.&nbsp;Events</h3>
+<p>Automatic response to some&nbsp;actions.</p>
+<p>Worksheet_Change() </p>
+<div class="highlight"><pre><span class="code-line"><span></span>When data in cells are changed,Return message</span>
+<span class="code-line">e.g.</span>
+<span class="code-line">Private Sub Worksheet_Change(ByVal Target As Range)</span>
+<span class="code-line">    Application.EnableEvents = False</span>
+<span class="code-line">    MsgBox Target.Value =  &quot;version1：&quot; &amp; Target.Value </span>
+<span class="code-line">    Application.EnableEvents = True</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p>Worksheet_SelectionChange()</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">Private Sub Worksheet_SelectionChange(ByVal Target As Range)</span>
+<span class="code-line"></span>
+<span class="code-line">    If Target.column &lt;&gt; 1 Then</span>
+<span class="code-line">        Cells(Target.Row,&quot;A&quot;).Select   </span>
+<span class="code-line">    End If </span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p>Worksheet_Activate()</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. show worksheet name</span>
+<span class="code-line"></span>
+<span class="code-line">Private Sub Worksheet_Activate(ByVal Target As Range)</span>
+<span class="code-line">    MsgBox &quot;the current worksheet name is：&quot; &amp; ActiveSheet.Name</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p>Worksheet_Deactivate()</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. deactivate other sheets except Sheet1</span>
+<span class="code-line"></span>
+<span class="code-line">Private Sub Worksheet_Deactivate(ByVal Target As Range)</span>
+<span class="code-line">    MsgBox &quot;choose only sheet1！&quot;</span>
+<span class="code-line">    Worksheets(&quot;Sheet1&quot;).Select</span>
+<span class="code-line">End Sub</span>
+</pre></div>
+
+
+<p>Other&nbsp;events:</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Worksheet_BeforeDoubleClick</span>
+<span class="code-line">Worksheet_Calculate </span>
+<span class="code-line">Worksheet_BeforeRightClick</span>
+<span class="code-line">Worksheet_FollowHyperlink</span>
+<span class="code-line">Worksheet_PivotTableUpdate</span>
+<span class="code-line">...</span>
+</pre></div>
+
+
+<p>Workbook Events (Just some&nbsp;examples)</p>
+<div class="highlight"><pre><span class="code-line"><span></span>Workbook_Open</span>
+<span class="code-line">Workbook_BeforeClose</span>
+<span class="code-line">Workbook_SheetChange</span>
+<span class="code-line">Workbook_AddinInstall</span>
+<span class="code-line">Workbook_AddinUnstall</span>
+<span class="code-line">Workbook_AfterXmlImport</span>
+<span class="code-line">Workbook_BeforePrint</span>
+<span class="code-line">Workbook_BeforeSave</span>
+<span class="code-line">Workbook_BeforeXmlExport</span>
+<span class="code-line">Workbook_NewSheet</span>
+<span class="code-line">Workbook_PivotTableCloseConnection</span>
+<span class="code-line">Workbook_PivotTableOpenConnection</span>
+</pre></div>
+
+
+<h3>7.&nbsp;Next</h3>
+<p>Here comes the end of some basics of the Excel <span class="caps">VBA</span>. What follows is one or more projects that build upon these basics and the <strong>Interatice UserForm</strong> as&nbsp;well. </p>
+        </div>
+
+        <div class="meta">
+            <div>
+                    <a href="../../../../../tag/tech-it.html" class="tag">tech-iT</a>
+            </div>
+        </div>
+    </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'linnus';
+      var disqus_identifier = '/posts/2015/Aug/14/notes-excel-vba/';
+      var disqus_url = '../../../../../posts/2015/Aug/14/notes-excel-vba/';
+      var disqus_title = 'Notes:Excel <span class="caps">VBA</span>';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  </section>
+
+</div>
+
+<style type="text/css">
+{
+    max-width: 700px;
+}
+
+.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+    max-width: 580px;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}
+
+pre code {
+    background-color: inherit;
+}</style>
+
+        </div>
+<!--
+    <footer>
+      <p>
+        © 2012-2017 JIN Lin, license <a href=""> </a>
+        unless otherwise noted.
+        Generated by <a href= "http://docs.getpelican.com/">Pelican</a>.
+      </p>
+    </footer>
+-->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-64765479-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64765479-1');
+    ga('send', 'pageview');
+</script>
+    </body>
+</html>

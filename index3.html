@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="JIN Lin">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Home | JL-Blog | No Bullshit</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="JL-Blog | No Bullshit blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+        <style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+        <style>body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+header.main-header {
+  background: none repeat scroll 0% 0% #205F29;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #5C881C;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  color: #205F29;
+  background: #FFF;
+  border: 1px solid #205F29;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #5C881C;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #5C881C;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+        </script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-inverse bs-docs-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span> 
+		  </button>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JL-Blog | No Bullshit</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+		    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/pages/about.html" title="About">About</a></li>
+                            <li><a href="/archives.html" title="Archive">Archive</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrap">
+<div class="container index">
+
+  <article>
+    <header>
+      <h2><a href="./posts/2016/Jan/01/2016-new-year/">2016 New&nbsp;Year</a></h2>
+      <time datetime="" title="2016-01-01T00:10:00+08:00" pubdate>Fri 01 January 2016</time>
+    </header>
+
+    <div class="article_content">
+      <p>2015 是我人生一大转折年。无论好坏，都已成风。</p>
+<p>2016，我想在这个博客里记录分享更多更有价值的文章。</p>
+<p><strong>一</strong>是写专业领域的相关文章，领域着重在移动医疗检测。这是一个综合性的领域，自己所学所做的会涉及到生物检测、设备设计、信号处理和电路设计，前期的专注点在检测与设计部分，后期视情况而定会有所调整。目前框架大致如此。为了方便使用我熟悉的专业词汇，多会以英文写作。</p>
+<p><strong>二</strong>是记录做研究的心得体会，包括如何选题，如何阅读文献，如何高效地做实验，如何处理实验物品采购，如何与导师沟通，如何与同行交流，如何寻求合作，如何写好文章等等。多会以中文写作。</p>
+<p><strong>三</strong>是个人项目，包括</p>
+<ul>
+<li>画作鉴赏，包括图书上看到的和后期自己去看的原画；</li>
+<li>以Python为工具的数据分析，因为专业原因，会让Python的应用扩展到数据处理之外；</li>
+<li>可能开辟的其他新项目。</li>
+</ul>
+<p>May Force Be With Me. </p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="./posts/2016/Jan/01/2016-new-year/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="./tag/readingcn.html" class="tag">reading/cn</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="./posts/2015/Dec/02/Scientific-Research-in-China-and-Singapore/">Scientific Research in China <span class="amp">&amp;</span>&nbsp;Singapore</a></h2>
+      <time datetime="" title="2015-12-02T10:40:00+08:00" pubdate>Wed 02 December 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p></p>
+<p>Recently Nature Publishing Group (<span class="caps">NPG</span>) released its very first report on Chinese scientific research titled as <em>Turning Point: Chinese Science in Transition</em>. Upon its release, it soon became headlines throughout many science communities and presses (e.g. <em>知识分子</em>） Here as a junior student, though outside mainland China, on my road …</p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="./posts/2015/Dec/02/Scientific-Research-in-China-and-Singapore/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="./tag/watch.html" class="tag">watch</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="./posts/2015/Nov/26/SingaoreNationalGallaryWu-Guanzhong/">新加坡国家美术馆吴冠中作品展</a></h2>
+      <time datetime="" title="2015-11-26T20:40:00+08:00" pubdate>Thu 26 November 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>新加坡国家美术馆近日开始对公众开放，11月24日到12月6号免费。发现竟然有吴冠中的永久展厅，于是我呼哧呼哧（并没有）地直奔他的展厅，终于得见油/墨山水画的真迹。寥寥几笔，春风十里，很是亲切和畅快。简记几点感受：</p>
+<ul>
+<li>有机会一定要看原画。</li>
+<li>吴老画上都签有一个「荼」字，”如火如荼”的荼。然而山水画里多是平静，少见”开到荼靡”的那种悲情。这大约是感到亲切的原因。</li>
+<li>小孩子果然少束缚，硬是把一副画冰天雪地的画解剖成了燕子、鱼、虫之类的。</li>
+<li>美术馆里收集了许多东南亚国家（包括新加坡）的画作，而且规模不小，并且市政大厅那边还有许多空位置。我不清楚其他国家的馆藏如何，新加坡明显是不满足于仅仅成为东南亚经济的经济中心的。</li>
+<li>看东南亚画家的画作时的感受是就明显是很不同的，如果不是之前上过一门关于东南亚的课程，对东南亚国家的风土人情稍微有些了解，陌生感会更强。幸好，有那么一群人回归到本土，去发掘本土文化特色。</li>
+<li>废话不多说，还是要去看原画。下面的图手机拍的，可以一张一张翻过去看。</li>
+</ul>
+<p><a data-context="true" data-flickr-embed="true" data-header="true" href="https://www.flickr.com/photos/108107823@N04/22956733579/in/album-72157660989918849/" title="national-gallery"></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script></p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="./posts/2015/Nov/26/SingaoreNationalGallaryWu-Guanzhong/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="./tag/readingcn.html" class="tag">reading/cn</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="./posts/2015/Nov/20/of reading paper/">Of Reading&nbsp;Paper</a></h2>
+      <time datetime="" title="2015-11-20T19:40:00+08:00" pubdate>Fri 20 November 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>This post is mainly focused on how to eliminate distraction through two levels of control: first at micro-level always focus on the goal and gradually build missing knowledge; at macro-level filter papers through a three-pass approach. </p>
+<h4>Eliminate Distractions</h4>
+<p>Since my sophomore year, I have been reading quite a lot of …</p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="./posts/2015/Nov/20/of reading paper/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="./tag/academic-research.html" class="tag">academic-research</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="./posts/2015/Nov/07/艺术的故事插图全简析6/">插图一览《艺术的故事》（6）</a></h2>
+      <time datetime="" title="2015-11-07T21:40:00+08:00" pubdate>Sat 07 November 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>为了便于理解东罗马帝国在艺术上的源起和发展，在此先给一个罗马帝国的版图概况，</p>
+<p><a data-context="true" data-flickr-embed="true" href="https://www.flickr.com/photos/108107823@N04/22227457334/in/datetaken/" title="罗巴帝国"></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script></p>
+<p>西罗马帝国灭亡后，东罗马帝国（叶称拜占庭帝国）延续了长达十一个世纪，跨越欧亚非三大陆的统治。</p>
+<p><a data-context="true" data-flickr-embed="true" href="https://www.flickr.com/photos/108107823@N04/22850202855/in/datetaken/" title="拜占庭"></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script></p>
+<p>我们可以从很多角度去看待艺术，包括绘画和雕塑，政治和宗教无疑更能反应整个社会面貌，人之所在，人心所向。贡布里希还是从宗教和宗教艺术入手，检视了艺术的来源走向。这里有两个问题，一个是宗教在罗马帝国的正统化，另一个是制作偶像的新解读。</p>
+<p>公元331年，君士坦丁大帝确立了基督教在基督教在国家中的权利，公元380年2月27日，羅馬皇帝狄奧多西一世(東部皇帝)與格拉提安(西部皇帝)共同頒佈了〈帖撒羅尼迦敕令〉，宣佈三位一體的基督教為正統，並為羅馬帝國國教[Wiki]。之前被各种迫害，如今很政权结盟，自然获得更自由的宣传范围，更大的推广力度和更多的财产。下面的图可以给我们更直观的感受。</p>
+<p><a data-context="true" data-flickr-embed="true" href="https://www.flickr.com/photos/108107823@N04/22862258081/in/dateposted-public/" title="Spread_of_Christianity_to_AD_600_(1)"></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script></p>
+<p><em>深蓝 公元325年基督教的分佈； 浅蓝 公元600年基督教的分佈</em></p>
+<p>再看看早期的巴西利卡（Basilicas）会堂，</p>
+<p><a data-context="true" data-flickr-embed="true" href="https://www.flickr.com/photos/108107823@N04/19631106528/in/album-72157655648698450/" title="Untitled"></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script>
+086 Basilica of St. Apollinaris in Classe, Ravenna [530 …</p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="./posts/2015/Nov/07/艺术的故事插图全简析6/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="./tag/readingcn.html" class="tag">reading/cn</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="./posts/2015/Oct/23/notes python for data analysis 2/">Notes: Python for Data Analysis (Part&nbsp;2)</a></h2>
+      <time datetime="" title="2015-10-23T17:40:00+08:00" pubdate>Fri 23 October 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>[<span class="caps">TOC</span>]</p>
+<p>To continue with <a href="http://linnus.net/posts/2015/Oct/12/notes%20python%20for%20data%20analysis/">previous post</a> about the basics of NumPy and Pandas. </p>
+<h3>Plotting and Visulization</h3>
+<p><strong>matplotlib</strong></p>
+<p>It is the primary <span class="caps">MATLIB</span>-like 2D plot; add-on toolkits like <strong>mplot3d</strong> for 2D plot, and <strong>basemap</strong> for mapping and projections. </p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="c1">#launch interaction between *IPython* and *matplotlib*</span></span>
+<span class="code-line"><span class="n">ipython</span> <span class="o">--</span><span class="n">pylab</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as …</span></span></pre></div>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="./posts/2015/Oct/23/notes python for data analysis 2/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="./tag/tech-it.html" class="tag">tech-iT</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="./posts/2015/Oct/18/how to tell tear-dring funny story/">如何讲潸泪的喜剧</a></h2>
+      <time datetime="" title="2015-10-18T11:50:00+08:00" pubdate>Sun 18 October 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p><del><a href="http://www.bilibili.com/video/av3052119/index_5.html">B站上最近UP了一个豆瓣高分电影合集</a></del>, 许久未看，趁此周末,洒了好几把鼻涕几把泪，竟有一种去了庙堂的感觉。不管别人如何评说，我觉得能催人泪下的电影一定不会太差。</p>
+<p>两个电影都讲的是平凡人的小故事，如果不是被置于更大的主题，比如宗教战争，之下， 断然不至于这么催泪。为何？ 当我说这些是更大的主题时，也许我暗示它们距普通人的生活很遥远，其实不是，正因为它们潜伏四周，它们硕大无比，才让个人觉得无助觉得人之渺小。许多人面对这些问题要么逃避了，要么放弃了，那些怀坚守信念的也就显得难能可贵了。</p>
+<p>与看《纳德与西敏：一次别离》后那种如鲠在喉的感觉不同，这两部电影可以说是畅快淋漓。前者更接近显示生活，后者是高度理想化的。所谓无巧不成书，拷问这个故事真实性是没有意义的。编剧的思（nao）路(dong)真是够灵活的。</p>
+<p>先说《小男孩》。</p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/108107823@N04/22236501486/in/dateposted-public/" title="小男孩"></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script></p>
+<p>1945年8月6日，美国在广岛投下一颗代号为Little Boy的原子弹，接着8月9号在长崎投下另一颗代号为Fat Man的原子弹，才终于把日本从疯狂中镇定下来。这是背景。现在假定Little Boy，Fat Man是唯一的线索，我们需要用各种意识流开始从这一点出发勾勒出一个完整的故事 …</p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="./posts/2015/Oct/18/how to tell tear-dring funny story/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="./tag/readingcn.html" class="tag">reading/cn</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+
+  <nav class="pagination row">
+    <div class="col-xs-6 left">
+        <a class="prev" href="./index4.html">&#8592; Past</a>
+    </div>
+    <div class="col-xs-6 right">
+        <a class="next" href="./index2.html">Future &#8594;</a>
+    </div>
+  </nav>
+
+  </div>
+
+</div>
+
+        </div>
+<!--
+    <footer>
+      <p>
+        © 2012-2017 JIN Lin, license <a href=""> </a>
+        unless otherwise noted.
+        Generated by <a href= "http://docs.getpelican.com/">Pelican</a>.
+      </p>
+    </footer>
+-->
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-64765479-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64765479-1');
+    ga('send', 'pageview');
+</script>
+    </body>
+</html>
