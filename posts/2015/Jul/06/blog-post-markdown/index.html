@@ -6,11 +6,11 @@
         <meta name="author" content="JIN Lin">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <title>Test | JL-Blog | No Bullshit</title>
+        <title>Test | JIN-LIN | Hallo Welt </title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="alternate" type="application/atom+xml" title="JL-Blog | No Bullshit blog atom feed" href="/feeds/all.atom.xml" />
+        <link rel="alternate" type="application/atom+xml" title="JIN-LIN | Hallo Welt  blog atom feed" href="/feeds/all.atom.xml" />
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -412,7 +412,7 @@ article .meta a.comments_btn:hover {
 		    <span class="icon-bar"></span>
 		    <span class="icon-bar"></span> 
 		  </button>
-                  <a class="navbar-brand" href="/" title="Home" class="title">JL-Blog | No Bullshit</a>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JIN-LIN | Hallo Welt </a>
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
 		    <ul class="nav navbar-nav navbar-right">
@@ -566,10 +566,10 @@ term/definition pair to spread things out&nbsp;more.)</p>
 | Line&nbsp;tree</p>
 <p>and images can be specified like&nbsp;so:</p>
 <p><img alt="example image" src="https://lh3.googleusercontent.com/jouWmw3uR2_L7GHsOY7uaBwdQv_18j-bQQ2QyXHENgvLVdyWR_E5-YfM8smqOYjvi8z2mtTVcnZ7iLdtmTv_hMh91J3jncviXCWPNz_b=s660"></p>
-<p>Inline math equations go in like so: $\omega = d\phi / dt$. Display
+<p>Inline math equations go in like so: <span class="math">\(\omega = d\phi / dt\)</span>. Display
 math should get its own line and be put in in&nbsp;double-dollarsigns:</p>
-<p>$$I = \int \rho R^{2}&nbsp;dV$$</p>
-<p><span class="caps">INLINE</span> <span class="caps">MATH</span>&nbsp;$e=mc^2$</p>
+<div class="math">$$I = \int \rho R^{2} dV$$</div>
+<p><span class="caps">INLINE</span> <span class="caps">MATH</span> <span class="math">\(e=mc^2\)</span></p>
 <p>..&nbsp;math::</p>
 <p>α_t(i) = P(O_1, O_2, … O_t, q_t = S_i&nbsp;λ)</p>
 <p>And note that you can backslash-escape any punctuation characters
@@ -582,6 +582,61 @@ which you wish to be displayed literally, ex.: `foo`, *bar*,&nbsp;etc.</p>
 </li>
 </ol>
 </div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
         </div>
 
         <div class="meta">
@@ -589,10 +644,11 @@ which you wish to be displayed literally, ex.: `foo`, *bar*,&nbsp;etc.</p>
                     <a href="../../../../../tag/tech-it.html" class="tag">tech-iT</a>
             </div>
         </div>
+	   <DIV style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FILTER: progid:DXImageTransform.Microsoftpadding:8px; ; LEFT: expression_r(eval_r(document.body.scrollLeft)+eval_r(document.body.clientWidth)-70); BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; POSITION: right; ; TOP: expression_r(eval_r(document.body.scrollTop)+eval_r(document.body.clientHeight)-240); TEXT-ALIGN: center"><A href="#top"><IMG src="/images/top-button.png" border=0></A></DIV>
     </article>
 
   <section>
-    <h1>Comments</h1>
+    <h2>Comments</h2>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
     <script type="text/javascript">
       var disqus_shortname = 'linnus';
@@ -656,18 +712,24 @@ table.dataframe th, td {
 
 pre code {
     background-color: inherit;
-}</style>
+}</style>   
 
         </div>
-<!--
-    <footer>
-      <p>
-        © 2012-2017 JIN Lin, license <a href=""> </a>
-        unless otherwise noted.
-        Generated by <a href= "http://docs.getpelican.com/">Pelican</a>.
-      </p>
-    </footer>
--->
+
+	   
+<footer class="row">
+	<div class="large-12 columns">
+		<hr />
+		<div class="row">
+			<center>
+			<p><a href="http://linnus.net"><font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN-LIN | Hallo Welt </font> </a>by <font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN-Lin</font></p>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+			<p>Powered by <a href="http://getpelican.com">Pelican</a>. Inspired by <a rel="bookmark" href="http://jakevdp.github.io">"Pythonic Perambulations". </a> 
+			</center>
+		</div>
+	</div>
+</footer>
+
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-64765479-1']);

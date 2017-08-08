@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JL-Blog | No Bullshit</title><link href="http://linnus.net/" rel="alternate"></link><link href="http://linnus.net/feeds/all-en.atom.xml" rel="self"></link><id>http://linnus.net/</id><updated>2017-08-05T14:40:00+08:00</updated><entry><title>Updates</title><link href="http://linnus.net/posts/2017/Aug/05/updates/" rel="alternate"></link><published>2017-08-05T14:40:00+08:00</published><updated>2017-08-05T00:00:00+08:00</updated><author><name>JIN Lin</name></author><id>tag:linnus.net,2017-08-05:/posts/2017/Aug/05/updates/</id><summary type="html">&lt;p&gt;Time&amp;nbsp;flies!&lt;/p&gt;
-&lt;p&gt;It has been over one year since my last&amp;nbsp;post. &lt;/p&gt;</summary><content type="html">&lt;p&gt;Time&amp;nbsp;flies!&lt;/p&gt;
-&lt;p&gt;It has been over one year since my last&amp;nbsp;post. &lt;/p&gt;</content><category term="random"></category></entry><entry><title>ToastMasters CC4: How to Say it</title><link href="http://linnus.net/posts/2016/Jul/23/ToastMasters-CC4-How-to-Say-it/" rel="alternate"></link><published>2016-07-23T22:40:00+08:00</published><updated>2016-07-23T00:00:00+08:00</updated><author><name>JIN Lin</name></author><id>tag:linnus.net,2016-07-23:/posts/2016/Jul/23/ToastMasters-CC4-How-to-Say-it/</id><summary type="html">&lt;p&gt;&lt;img alt="http://www.spectaclephoto.com/blog/2015/6/19/just-say-no-to-descriptive-design" src="https://www.dropbox.com/s/khyjlgq84wrc7gp/CC4-how%20to%20say%20it2.jpg?dl=0"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JIN-LIN | Hallo Welt</title><link href="http://linnus.net/" rel="alternate"></link><link href="http://linnus.net/feeds/all-en.atom.xml" rel="self"></link><id>http://linnus.net/</id><updated>2017-08-05T14:40:00+08:00</updated><entry><title>Updates</title><link href="http://linnus.net/posts/2017/Aug/05/updates/" rel="alternate"></link><published>2017-08-05T14:40:00+08:00</published><updated>2017-08-05T00:00:00+08:00</updated><author><name>JIN Lin</name></author><id>tag:linnus.net,2017-08-05:/posts/2017/Aug/05/updates/</id><summary type="html">&lt;p&gt;&lt;time datetime="article.date.isoformat()" pubdate=""&gt;Sun 06 August 2017&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/108107823@N04/35590599343/in/dateposted-public/" title="update"&gt;&lt;img alt="update" src="https://farm5.staticflickr.com/4358/35590599343_e77bef447a.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;How time&amp;nbsp;flies!&lt;/p&gt;
+&lt;p&gt;It has been over one year since my last post. Pelican, Python and all their dependencies, on which this blog has built, have been updated to their current versions. Indeed, not to advance is to fall&amp;nbsp;behind.&lt;/p&gt;
+&lt;p&gt;Updated the software and fixed the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;time datetime="article.date.isoformat()" pubdate=""&gt;Sun 06 August 2017&lt;/time&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/108107823@N04/35590599343/in/dateposted-public/" title="update"&gt;&lt;img alt="update" src="https://farm5.staticflickr.com/4358/35590599343_e77bef447a.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;How time&amp;nbsp;flies!&lt;/p&gt;
+&lt;p&gt;It has been over one year since my last post. Pelican, Python and all their dependencies, on which this blog has built, have been updated to their current versions. Indeed, not to advance is to fall&amp;nbsp;behind.&lt;/p&gt;
+&lt;p&gt;Updated the software and fixed the bugs. Meanwhile, a few updates of my&amp;nbsp;activities.&lt;/p&gt;
+&lt;h3&gt;Research&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/108107823@N04/36002583310/in/dateposted-public/" title="research_desk"&gt;&lt;img alt="research_desk" src="https://farm5.staticflickr.com/4377/36002583310_13baa2824a.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Two journal papers, Three&amp;nbsp;conferences&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Research is my primary focus. There’s a lot to say about it, the pain, the gain, the breakthrough, the stagnation, the struggle, the lost, the anxiety. Good or bad, it generally suits my life&amp;nbsp;style.&lt;/p&gt;
+&lt;p&gt;As of now, co-authored two journal papers, one is with my &lt;span class="caps"&gt;&lt;span class="caps"&gt;FYP&lt;/span&gt;&lt;/span&gt; mentor(&lt;em&gt;Bioengineering and Biotechnology&lt;/em&gt;), and the other is with my colleague (&lt;em&gt;Nature Communications&lt;/em&gt;). Interestingly, in both papers I was responsible for the computational&amp;nbsp;simulations.&lt;/p&gt;
+&lt;p&gt;Meanwhile, my research results were sent to a few local conferences(&lt;span class="caps"&gt;&lt;span class="caps"&gt;BES&lt;/span&gt;&lt;/span&gt;, &lt;span class="caps"&gt;&lt;span class="caps"&gt;SAMES&lt;/span&gt;&lt;/span&gt;, Optofluidics) and one overseas (microTAS2017). Overall the idea and results are well&amp;nbsp;accepted.&lt;/p&gt;
+&lt;p&gt;Research is a highly competitive and rapidly changing field. I need to grasp that feeling of staying on the edge, staying&amp;nbsp;ahead.&lt;/p&gt;
+&lt;h3&gt;Running&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/108107823@N04/36002583430/in/dateposted-public/" title="myrun"&gt;&lt;img alt="myrun" src="https://farm5.staticflickr.com/4338/36002583430_9cc2c6ca98.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Two&amp;nbsp;half-marathon&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Last year on December 11, I went alone to Batam Island (Indonesia) to participate the very first Barelang Bridge Marathon. Though my right knee was seriously injured midway, managed to drag myself to the end in 2hours 18min. Met a new friend, a local Indonesian Chinese, who finished in 1hr 47mins. Sometimes I do get more by going through a journey&amp;nbsp;alone.&lt;/p&gt;
+&lt;p&gt;This year on March 25, with a few friends, I participated the &lt;span class="caps"&gt;&lt;span class="caps"&gt;SUNDOWN&lt;/span&gt;&lt;/span&gt; Marathon again. Previously I did 10Km in 51min. This time I finished half-marathon in 2hr 5mins. I hated the upward bridge near the finishing&amp;nbsp;line.&lt;/p&gt;
+&lt;p&gt;Meanwhile, I have signed up for a full marathon scheduled on December 3, 2017. Recently I have become more conscious of the metrics such as heart rate, pace, etc. by following the Nike+ Running Club. Though running for speed has never been my top priority, it is helpful in strengthening my&amp;nbsp;discipline.&lt;/p&gt;
+&lt;h3&gt;Toastmasters&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/108107823@N04/36002583200/in/dateposted-public/" title="toastmasters-Review"&gt;&lt;img alt="toastmasters-Review" src="https://farm5.staticflickr.com/4430/36002583200_b78c34334b.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;&lt;span class="caps"&gt;CC&lt;/span&gt;&lt;/span&gt;, Club&amp;nbsp;President&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;By this May 2017, one year after I joined the Toastmasters Club, I completed my Competent Communicator project. About my speech quality, one senior member and my mentor said, “your speeches are full of substance”, yet I understand the underlying message is that I still need much more learning and practice in&amp;nbsp;delivery.&lt;/p&gt;
+&lt;p&gt;Now the brand-new programme called &lt;span class="caps"&gt;&lt;span class="caps"&gt;PATHWAYS&lt;/span&gt;&lt;/span&gt; has been rolled out in &lt;span class="caps"&gt;&lt;span class="caps"&gt;SG&lt;/span&gt;&lt;/span&gt;. I decided to embrace the new one and start it again from Ice&amp;nbsp;Breaker:)&lt;/p&gt;
+&lt;p&gt;Apart from the speaking/leadership training, there are many other good stuff coming out of this team. People are positive, sincere and inspirational. People from diverse backgrounds provide different&amp;nbsp;perspectives.&lt;/p&gt;
+&lt;p&gt;Quite reluctantly initially but fearless in the end, I decide to take the position of Club President for the coming term. It will be challenging and it will be fun. I need to take a giant stride to make some changes, just as what I did during my very first swimming and diving this&amp;nbsp;year.&lt;/p&gt;
+&lt;h3&gt;Other&amp;nbsp;Activities&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/108107823@N04/35592385383/in/dateposted-public/" title="color_splash__color_study__by_unmaskart-d7fqbli"&gt;&lt;img alt="color_splash__color_study__by_unmaskart-d7fqbli" src="https://farm5.staticflickr.com/4386/35592385383_885638f0a0.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reading, Writing,&amp;nbsp;Investing&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Undisciplined curiosity kills me. I do not know who said this, life without art is unbearable. Reading, or the content, to me is the thing that makes life less unbearable, or more interesting. Last year(2016), I read 20+ books, including novels, biography, Scientifics, religions, sociology etc. This year (2017), my readings are focusing on three areas: investment, science, and Russian/the Soviet Union literatures. If there is one discipline is choosing which book to read, it would be that I only read great books by great&amp;nbsp;authors.&lt;/p&gt;
+&lt;p&gt;Often I find myself in a situation where I am hungry to take but lazy to deliver. Terence Tao gives his blog the title ::&lt;strong&gt;What’s New&lt;/strong&gt;:: &lt;a href="https://terrytao.wordpress.com"&gt;https://terrytao.wordpress.com&lt;/a&gt;. Feynman Richard said that ::&lt;em&gt;What I cannot create I do not understand&lt;/em&gt;::. Delivery is important, both in its substance and its form. To this end, I have started writing consistently on Quora &lt;a href="https://www.quora.com"&gt;https://www.quora.com&lt;/a&gt;. In terms of vocabulary and delivery in creative writing, the gap is more obvious than ever when I have to write down a few sentences by&amp;nbsp;myself.&lt;/p&gt;
+&lt;p&gt;Another area I have spent a bit time is investing, mainly in funds and common stocks. Since I withdrew from my &lt;a href="http://linnus.net/posts/2015/Oct/13/personal%20finance%20management%20and%20related/"&gt;previous adventure&lt;/a&gt; in China stock market, I have put my trading account rest for more than two years! This year, influenced by a friend, I jumped back into this game. Luckily, the market I ventured in this time (&lt;span class="caps"&gt;&lt;span class="caps"&gt;HKEX&lt;/span&gt;&lt;/span&gt;）is in its Bull stage. I will see how far this bull market can go and how is my investment&amp;nbsp;outcome.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/108107823@N04/36263305861/in/dateposted-public/" title="TBC"&gt;&lt;img alt="TBC" src="https://farm5.staticflickr.com/4339/36263305861_eb641f8957.jpg"&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="random"></category></entry><entry><title>ToastMasters CC4: How to Say it</title><link href="http://linnus.net/posts/2016/Jul/23/ToastMasters-CC4-How-to-Say-it/" rel="alternate"></link><published>2016-07-23T22:40:00+08:00</published><updated>2016-07-23T00:00:00+08:00</updated><author><name>JIN Lin</name></author><id>tag:linnus.net,2016-07-23:/posts/2016/Jul/23/ToastMasters-CC4-How-to-Say-it/</id><summary type="html">&lt;p&gt;&lt;img alt="http://www.spectaclephoto.com/blog/2015/6/19/just-say-no-to-descriptive-design" src="https://www.dropbox.com/s/khyjlgq84wrc7gp/CC4-how%20to%20say%20it2.jpg?dl=0"&gt;&lt;/p&gt;
 &lt;h3&gt;The&amp;nbsp;Script&lt;/h3&gt;
 &lt;p&gt;Many years later, as I face the shimmering flame at a fireplace, I will definitely recall that distant winter afternoon, when an old man read to a few&amp;nbsp;boys.&lt;/p&gt;
 &lt;p&gt;That moment freezes, penetrates time and reaches out to the deepest part of my&amp;nbsp;mind. &lt;/p&gt;
@@ -419,14 +452,14 @@ Once connection established, viewing the files, uploading, and downloading files
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="" src="https://dl.dropboxusercontent.com/u/18094167/ipython%20notebook/npg-training.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="npg-training" src="https://dl.dropboxusercontent.com/u/18094167/ipython%20notebook/npg-training.png"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Chinese scientists identified the lack of postdocs and technicians as the biggest hurdle for their research&amp;nbsp;teams.
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="" src="https://dl.dropboxusercontent.com/u/18094167/ipython%20notebook/npg-posdoctechnician.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="npg-posdoctechnician" src="https://dl.dropboxusercontent.com/u/18094167/ipython%20notebook/npg-posdoctechnician.png"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Chinese researchers reported being assessed primarily by quantitative&amp;nbsp;metrics.&lt;/li&gt;
@@ -3182,7 +3215,7 @@ src="https://farm1.staticflickr.com/378/19632398099_1d31d20eab_z.jpg" width="380
 &lt;p&gt;Related to the page address provided by&amp;nbsp;GitHub. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="ipdns" src="https://dl.dropboxusercontent.com/u/18094167/blogimages/IPDNS.png"&gt;&lt;/p&gt;
 &lt;p&gt;After commit &lt;span class="caps"&gt;CNAME&lt;/span&gt; files to the remote repo, you should see this: 
-&lt;img alt="" src="https://dl.dropboxusercontent.com/u/18094167/blogimages/settingssite.png"&gt;&lt;/p&gt;
+&lt;img alt="settingssite" src="https://dl.dropboxusercontent.com/u/18094167/blogimages/settingssite.png"&gt;&lt;/p&gt;
 &lt;p&gt;GitHub has provide a &lt;a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/"&gt;guide&lt;/a&gt; for setting your custom domain as&amp;nbsp;well. &lt;/p&gt;
 &lt;h4&gt;Add&amp;nbsp;&amp;#8216;Comments&amp;#8217;&lt;/h4&gt;
 &lt;p&gt;Pelican does not provide the function for comments, the most popular third party tool is &lt;code&gt;Disqus&lt;/code&gt;. If you need this function, register an account with them and do the following&amp;nbsp;settings. &lt;/p&gt;
@@ -3314,10 +3347,10 @@ Get some confidence by setting up a working site first and then we worry about t
 
 
 &lt;p&gt;Now, check your &lt;code&gt;settings&lt;/code&gt; in your GitHub repository. If it shows the following message: 
-&lt;img alt="" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/settingssite.png"&gt;&lt;/p&gt;
+&lt;img alt="settingssite" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/settingssite.png"&gt;&lt;/p&gt;
 &lt;p&gt;Without a personal domain, the address will be &lt;code&gt;http://username.github.io&lt;/code&gt; instead. To be explained how to set up your personal&amp;nbsp;domain. &lt;/p&gt;
 &lt;p&gt;You might encounter some error messages when running above Git commands like I have experienced when I pull/push back and forth. For&amp;nbsp;example:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/error1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="error1" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/error1.png"&gt;&lt;/p&gt;
 &lt;p&gt;For this particular problem which you might be encounter later when you make other modifications, run the following code before push the changes if the remote files are unwanted&amp;nbsp;anymore: &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;git remote -v &lt;/span&gt;
 &lt;span class="code-line"&gt;#show available repositories and branches&lt;/span&gt;
@@ -3483,10 +3516,10 @@ term/definition pair to spread things out&amp;nbsp;more.)&lt;/p&gt;
 | Line&amp;nbsp;tree&lt;/p&gt;
 &lt;p&gt;and images can be specified like&amp;nbsp;so:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="example image" src="https://lh3.googleusercontent.com/jouWmw3uR2_L7GHsOY7uaBwdQv_18j-bQQ2QyXHENgvLVdyWR_E5-YfM8smqOYjvi8z2mtTVcnZ7iLdtmTv_hMh91J3jncviXCWPNz_b=s660"&gt;&lt;/p&gt;
-&lt;p&gt;Inline math equations go in like so: $\omega = d\phi / dt$. Display
+&lt;p&gt;Inline math equations go in like so: &lt;span class="math"&gt;\(\omega = d\phi / dt\)&lt;/span&gt;. Display
 math should get its own line and be put in in&amp;nbsp;double-dollarsigns:&lt;/p&gt;
-&lt;p&gt;$$I = \int \rho R^{2}&amp;nbsp;dV$$&lt;/p&gt;
-&lt;p&gt;&lt;span class="caps"&gt;INLINE&lt;/span&gt; &lt;span class="caps"&gt;MATH&lt;/span&gt;&amp;nbsp;$e=mc^2$&lt;/p&gt;
+&lt;div class="math"&gt;$$I = \int \rho R^{2} dV$$&lt;/div&gt;
+&lt;p&gt;&lt;span class="caps"&gt;INLINE&lt;/span&gt; &lt;span class="caps"&gt;MATH&lt;/span&gt; &lt;span class="math"&gt;\(e=mc^2\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;..&amp;nbsp;math::&lt;/p&gt;
 &lt;p&gt;α_t(i) = P(O_1, O_2, … O_t, q_t = S_i&amp;nbsp;λ)&lt;/p&gt;
 &lt;p&gt;And note that you can backslash-escape any punctuation characters
@@ -3498,4 +3531,59 @@ which you wish to be displayed literally, ex.: `foo`, *bar*,&amp;nbsp;etc.&lt;/p
 &lt;p&gt;Footnote text goes here.&amp;#160;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</content><category term="tech-iT"></category></entry></feed>
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="tech-iT"></category></entry></feed>
