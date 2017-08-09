@@ -432,7 +432,7 @@ article .meta a.comments_btn:hover {
         </header>
 
         <div class="article_content">
-            <p><img alt="HPC" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/hpc1_300.jpg"></p>
+            <p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001116450/in/dateposted-public/" title="hpc1_300"><img src="https://farm5.staticflickr.com/4348/36001116450_ab851a11cf.jpg" width="500" height="146" alt="hpc1_300"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p>Every now and then, I need to use <em><span class="caps">ANSYS</span> Workbench(Fluent)</em> for fluid dynamics simulation. <span class="caps">NUS</span>&#8217;s <span class="caps">HPC</span>(High Performance Computing)service offers a range of modelling and simulation <a href="https://comcen.nus.edu.sg/services/hpc/application-software/">software</a> including <em>Fluent</em>. Numerical simulations usually require a large amount of computation power, and the service is meant to handle this (though I do not really feel the so-called high performance). They have limited licence. First come and first serve.  More information could be found <a href="https://comcen.nus.edu.sg/services/hpc/getting-started/introductory-guide-for-new-hpc-users/">here</a>.</p>
 <p>The problem I have with the <span class="caps">HPC</span> is that their user interface is somewhat terrible, at least from the perspective of a Mac non-<span class="caps">CS</span> user. ~~No clear guide is provided to Mac(i.e. Unix) users either~~. <a href="https://comcen.nus.edu.sg/technus/hpc/accessing-hpc-resources-via-a-mac/">There is one actually</a>. Therefore, after some searching and crawling, here I present a clean and easy way to access <span class="caps">NUS</span> <span class="caps">HPC</span> and manage files, specifically for Mac users with no command-line&nbsp;experience. </p>
 <p><strong>Step 1:Register an Account with Computer&nbsp;Centre</strong></p>
@@ -444,36 +444,34 @@ article .meta a.comments_btn:hover {
 <ul>
 <li>Make sure install the latest version from office website. Java control panel could be located at <em>Preferences</em>,as shown&nbsp;below:</li>
 </ul>
-<p><img alt="Java-control-panel" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/java-preference.png"></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001106240/in/dateposted-public/" title="java-preference"><img src="https://farm5.staticflickr.com/4431/36001106240_526000e2bc.jpg" width="500" height="167" alt="java-preference"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <ul>
-<li>
-<p>Enter the control panel, under <em>security</em>, add the following two address to the trusted list.
-<img alt="Java-Exception-Site-List" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/java-security.png"></p>
-</li>
-<li>
-<p>Under <em>advanced</em> menu, check the item using &#8220;Certificate Revocation Lists&nbsp;(CRLs)&#8221;</p>
-</li>
+<li>Enter the control panel, under <em>security</em>, add the following two address to the trusted&nbsp;list.</li>
 </ul>
-<p><img alt="Java-TLS" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/java-TLS.png"></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001102970/in/dateposted-public/" title="java-security"><img src="https://farm5.staticflickr.com/4334/36001102970_cac1ecf8a5.jpg" width="500" height="416" alt="java-security"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+<li>Under <em>advanced</em> menu, check the item using &#8220;Certificate Revocation Lists&nbsp;(CRLs)&#8221;</li>
+</ul>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001100090/in/dateposted-public/" title="java-TLS"><img src="https://farm5.staticflickr.com/4334/36001100090_1cee3b96a0.jpg" width="500" height="422" alt="java-TLS"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p>3::&nbsp;XQuartz </p>
 <p>It is an open-source replacement of previous X11, which is windowing system (<span class="caps">GUI</span>) for apps that were written to work in X-Windows. Download the latest here from <a href="http://www.xquartz.org">XQuartz</a>.</p>
 <p>Now, everything you need in order to run the Software housing in <span class="caps">HPC</span> cluster is in place. You can either click the icon of <em>Oracle Secure Global Desktop Client</em> or type the address <a href="https://bobcat.nus.edu.sg">https://bobcat.nus.edu.sg</a> in Firefox, both will get to this&nbsp;page: </p>
-<p><img alt="login page" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/login.png"></p>
-<p>After login, a window will pop up for your confirmation: 
-<img alt="pop-run" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/java-run.png">.</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/35562366544/in/dateposted-public/" title="login"><img src="https://farm5.staticflickr.com/4351/35562366544_b60ae44467.jpg" width="500" height="323" alt="login"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>After login, a window will pop up for your&nbsp;confirmation:</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001106100/in/dateposted-public/" title="java-run"><img src="https://farm5.staticflickr.com/4387/36001106100_64b9b33f9f.jpg" width="500" height="350" alt="java-run"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p>A workspace will&nbsp;appear: </p>
-<p><img alt="workspace" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/workspace-hpc.png"></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36260936031/in/dateposted-public/" title="workspace-hpc"><img src="https://farm5.staticflickr.com/4442/36260936031_f0f6c6d982.jpg" width="258" height="399" alt="workspace-hpc"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p>The <em>MobileVisLab</em> and <em>HighEndVisLab</em> are for graphics-intensive application, for which you may find useful to instll another view software <a href="https://sourceforge.net/projects/turbovnc/files/latest/download">TurbVNC</a>. I personally do not feel the speed&nbsp;difference. </p>
 <p><strong>Step 3: Upload/Download&nbsp;Files</strong></p>
 <p>Here comes the important part. Since within the software (say Fluent), I could not directly import files from my local disk or write files to my local disk, a file transferring system is&nbsp;essential. </p>
 <p>As a side note, recently <span class="caps">NUS</span> <span class="caps">HPC</span> has allocated a new working directory (/hpctmp2) which offers <span class="caps">500GB</span> space. But files older than 60 days will be purged away,so be carefully, do not back up files&nbsp;there.</p>
-<p><img alt="working directory" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/HPC-directory.png"></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001106950/in/dateposted-public/" title="HPC-directory"><img src="https://farm5.staticflickr.com/4436/36001106950_41b0081564.jpg" width="500" height="225" alt="HPC-directory"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p>Meanwhile, I found the <a href="https://comcen.nus.edu.sg/services/online_storage/nus-hdrive-personal-network-drive/">HDrive</a> has been decommissioned. I used to used it to store simulation files and even school works because I can access from any <span class="caps">PC</span> on&nbsp;campus.</p>
 <p>I am using <a href="https://cyberduck.io/?l=en">CyberDuck</a>(free) to access not only <span class="caps">NUS</span> <span class="caps">HPC</span> but all other servers(e.g.my blog, my lab and other public servers.)  Setup of the connection is very&nbsp;simple:</p>
-<p><img alt="CyberDuck-Setup" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/cyberduck-setup.png"></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36229786902/in/dateposted-public/" title="cyberduck-setup"><img src="https://farm5.staticflickr.com/4430/36229786902_971bd19e93.jpg" width="426" height="269" alt="cyberduck-setup"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p>Note: <code>&lt;nickname&gt;</code> for your ease of reference of the server (for <span class="caps">NUS</span>-<span class="caps">HPC</span>); <code>&lt;account&gt;</code>: your account registered with <span class="caps">HPC</span>, usually it is <span class="caps">NUSNET</span> <span class="caps">NO</span>. <code>&lt;hostname&gt;</code> could be from any one of the&nbsp;following: </p>
-<p><img alt="HPC-Hostname" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/hpc-hostname.png">. 
-Once connection established, viewing the files, uploading, and downloading files just&nbsp;follow.  </p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001106870/in/dateposted-public/" title="hpc-hostname"><img src="https://farm5.staticflickr.com/4441/36001106870_d336ddda41.jpg" width="500" height="166" alt="hpc-hostname"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Once connection established, viewing the files, uploading, and downloading files just&nbsp;follow.  </p>
 <p><strong>Step 4: Play and&nbsp;Enjoy</strong></p>
 <p>If any problem, people at computer centre are really helpful. Please approach&nbsp;them. </p>
 <p><strong>One More Step: Command&nbsp;Line</strong></p>
@@ -496,7 +494,7 @@ Once connection established, viewing the files, uploading, and downloading files
 
         <div class="meta">
             <div>
-                    <a href="../../../../../tag/tech-it.html" class="tag">tech-iT</a>
+                    <a href="http://linnus.net/tag/tech-it.html" class="tag">tech-iT</a>
             </div>
         </div>
 	   <DIV style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FILTER: progid:DXImageTransform.Microsoftpadding:8px; ; LEFT: expression_r(eval_r(document.body.scrollLeft)+eval_r(document.body.clientWidth)-70); BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; POSITION: right; ; TOP: expression_r(eval_r(document.body.scrollTop)+eval_r(document.body.clientHeight)-240); TEXT-ALIGN: center"><A href="#top"><IMG src="/images/top-button.png" border=0></A></DIV>
@@ -508,7 +506,7 @@ Once connection established, viewing the files, uploading, and downloading files
     <script type="text/javascript">
       var disqus_shortname = 'linnus';
       var disqus_identifier = '/posts/2016/Mar/08/technote-acces-NUS-HPC-from-Mac/';
-      var disqus_url = '../../../../../posts/2016/Mar/08/technote-acces-NUS-HPC-from-Mac/';
+      var disqus_url = 'http://linnus.net/posts/2016/Mar/08/technote-acces-NUS-HPC-from-Mac/';
       var disqus_title = 'TechNote-Acess <span class="caps">NUS</span> <span class="caps">HPC</span> from&nbsp;Mac';
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -577,7 +575,7 @@ pre code {
 		<hr />
 		<div class="row">
 			<center>
-			<p><a href="http://linnus.net"><font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN-LIN | Hallo Welt </font> </a>by <font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN-Lin</font></p>
+			<p><a href="http://linnus.net"><font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN-LIN | Hallo Welt </p>
 			<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 			<p>Powered by <a href="http://getpelican.com">Pelican</a>. Inspired by <a rel="bookmark" href="http://jakevdp.github.io">"Pythonic Perambulations". </a> 
 			</center>
