@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="JIN Lin">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>TechNote-Acess <span class="caps">NUS</span> <span class="caps">HPC</span> from&nbsp;Mac | JIN Lin | Oh,Interesting</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="JIN Lin | Oh,Interesting blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+        <style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+        <style>body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+header.main-header {
+  background: none repeat scroll 0% 0% #205F29;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #5C881C;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  color: #205F29;
+  background: #FFF;
+  border: 1px solid #205F29;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #5C881C;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #5C881C;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+        </script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-inverse bs-docs-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span> 
+		  </button>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JIN Lin | Oh,Interesting</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+		    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/pages/about.html" title="About">About</a></li>
+                            <li><a href="/archives.html" title="Archive">Archive</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrap">
+<div class="container post">
+    <article>
+        <header>
+            <h1>TechNote-Acess <span class="caps">NUS</span> <span class="caps">HPC</span> from&nbsp;Mac</h1>
+            <time datetime="article.date.isoformat()" pubdate>Tue 08 March 2016</time>
+        </header>
+
+        <div class="article_content">
+            <p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001116450/in/dateposted-public/" title="hpc1_300"><img src="https://farm5.staticflickr.com/4348/36001116450_ab851a11cf.jpg" width="500" height="146" alt="hpc1_300"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Every now and then, I need to use <em><span class="caps">ANSYS</span> Workbench(Fluent)</em> for fluid dynamics simulation. <span class="caps">NUS</span>&#8217;s <span class="caps">HPC</span>(High Performance Computing)service offers a range of modelling and simulation <a href="https://comcen.nus.edu.sg/services/hpc/application-software/">software</a> including <em>Fluent</em>. Numerical simulations usually require a large amount of computation power, and the service is meant to handle this (though I do not really feel the so-called high performance). They have limited licence. First come and first serve.  More information could be found <a href="https://comcen.nus.edu.sg/services/hpc/getting-started/introductory-guide-for-new-hpc-users/">here</a>.</p>
+<p>The problem I have with the <span class="caps">HPC</span> is that their user interface is somewhat terrible, at least from the perspective of a Mac non-<span class="caps">CS</span> user. ~~No clear guide is provided to Mac(i.e. Unix) users either~~. <a href="https://comcen.nus.edu.sg/technus/hpc/accessing-hpc-resources-via-a-mac/">There is one actually</a>. Therefore, after some searching and crawling, here I present a clean and easy way to access <span class="caps">NUS</span> <span class="caps">HPC</span> and manage files, specifically for Mac users with no command-line&nbsp;experience. </p>
+<p><strong>Step 1:Register an Account with Computer&nbsp;Centre</strong></p>
+<p>Get through the first door <a href="https://comcen.nus.edu.sg/services/hpc/getting-started/register-for-hpc/">here</a>. You need to explain your purpose, your preferred software (Fluent, <span class="caps">MATLAB</span>,&nbsp;etc.) </p>
+<p><strong>Step 2:Establish Connection with <span class="caps">HPC</span></strong></p>
+<p>1::  Mozilla&nbsp;Firefox </p>
+<p>In Firefox Browser, key in the address <a href="https://bobcat.nus.edu.sg">https://bobcat.nus.edu.sg</a>. It will ask you to install the items listed in the 2nd&nbsp;point. </p>
+<p>2:: Java and Oracle Secure Global Desktop&nbsp;Client</p>
+<ul>
+<li>Make sure install the latest version from office website. Java control panel could be located at <em>Preferences</em>,as shown&nbsp;below:</li>
+</ul>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001106240/in/dateposted-public/" title="java-preference"><img src="https://farm5.staticflickr.com/4431/36001106240_526000e2bc.jpg" width="500" height="167" alt="java-preference"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+<li>Enter the control panel, under <em>security</em>, add the following two address to the trusted&nbsp;list.</li>
+</ul>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001102970/in/dateposted-public/" title="java-security"><img src="https://farm5.staticflickr.com/4334/36001102970_cac1ecf8a5.jpg" width="500" height="416" alt="java-security"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<ul>
+<li>Under <em>advanced</em> menu, check the item using &#8220;Certificate Revocation Lists&nbsp;(CRLs)&#8221;</li>
+</ul>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001100090/in/dateposted-public/" title="java-TLS"><img src="https://farm5.staticflickr.com/4334/36001100090_1cee3b96a0.jpg" width="500" height="422" alt="java-TLS"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>3::&nbsp;XQuartz </p>
+<p>It is an open-source replacement of previous X11, which is windowing system (<span class="caps">GUI</span>) for apps that were written to work in X-Windows. Download the latest here from <a href="http://www.xquartz.org">XQuartz</a>.</p>
+<p>Now, everything you need in order to run the Software housing in <span class="caps">HPC</span> cluster is in place. You can either click the icon of <em>Oracle Secure Global Desktop Client</em> or type the address <a href="https://bobcat.nus.edu.sg">https://bobcat.nus.edu.sg</a> in Firefox, both will get to this&nbsp;page: </p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/35562366544/in/dateposted-public/" title="login"><img src="https://farm5.staticflickr.com/4351/35562366544_b60ae44467.jpg" width="500" height="323" alt="login"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>After login, a window will pop up for your&nbsp;confirmation:</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001106100/in/dateposted-public/" title="java-run"><img src="https://farm5.staticflickr.com/4387/36001106100_64b9b33f9f.jpg" width="500" height="350" alt="java-run"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>A workspace will&nbsp;appear: </p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36260936031/in/dateposted-public/" title="workspace-hpc"><img src="https://farm5.staticflickr.com/4442/36260936031_f0f6c6d982.jpg" width="258" height="399" alt="workspace-hpc"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>The <em>MobileVisLab</em> and <em>HighEndVisLab</em> are for graphics-intensive application, for which you may find useful to instll another view software <a href="https://sourceforge.net/projects/turbovnc/files/latest/download">TurbVNC</a>. I personally do not feel the speed&nbsp;difference. </p>
+<p><strong>Step 3: Upload/Download&nbsp;Files</strong></p>
+<p>Here comes the important part. Since within the software (say Fluent), I could not directly import files from my local disk or write files to my local disk, a file transferring system is&nbsp;essential. </p>
+<p>As a side note, recently <span class="caps">NUS</span> <span class="caps">HPC</span> has allocated a new working directory (/hpctmp2) which offers <span class="caps">500GB</span> space. But files older than 60 days will be purged away,so be carefully, do not back up files&nbsp;there.</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001106950/in/dateposted-public/" title="HPC-directory"><img src="https://farm5.staticflickr.com/4436/36001106950_41b0081564.jpg" width="500" height="225" alt="HPC-directory"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Meanwhile, I found the <a href="https://comcen.nus.edu.sg/services/online_storage/nus-hdrive-personal-network-drive/">HDrive</a> has been decommissioned. I used to used it to store simulation files and even school works because I can access from any <span class="caps">PC</span> on&nbsp;campus.</p>
+<p>I am using <a href="https://cyberduck.io/?l=en">CyberDuck</a>(free) to access not only <span class="caps">NUS</span> <span class="caps">HPC</span> but all other servers(e.g.my blog, my lab and other public servers.)  Setup of the connection is very&nbsp;simple:</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36229786902/in/dateposted-public/" title="cyberduck-setup"><img src="https://farm5.staticflickr.com/4430/36229786902_971bd19e93.jpg" width="426" height="269" alt="cyberduck-setup"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Note: <code>&lt;nickname&gt;</code> for your ease of reference of the server (for <span class="caps">NUS</span>-<span class="caps">HPC</span>); <code>&lt;account&gt;</code>: your account registered with <span class="caps">HPC</span>, usually it is <span class="caps">NUSNET</span> <span class="caps">NO</span>. <code>&lt;hostname&gt;</code> could be from any one of the&nbsp;following: </p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001106870/in/dateposted-public/" title="hpc-hostname"><img src="https://farm5.staticflickr.com/4441/36001106870_d336ddda41.jpg" width="500" height="166" alt="hpc-hostname"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>Once connection established, viewing the files, uploading, and downloading files just&nbsp;follow.  </p>
+<p><strong>Step 4: Play and&nbsp;Enjoy</strong></p>
+<p>If any problem, people at computer centre are really helpful. Please approach&nbsp;them. </p>
+<p><strong>One More Step: Command&nbsp;Line</strong></p>
+<p>Truth be told, I do find <em>command line tool</em> works faster and more elegant. Here it&nbsp;is: </p>
+<p>Find the <span class="caps">APP</span> <strong>Terminal</strong> and key in the following single line&nbsp;command: </p>
+<p><code>ssh –X &lt;account&gt;@&lt;hpc_server&gt;</code></p>
+<p>Again, <code>&lt;account&gt;</code> refers to your <span class="caps">NUSNET</span> account, <code>&lt;hpc-server&gt;</code> refers to any one of the hostname shown&nbsp;above. </p>
+<p>Then just follow the question, say <em>yes</em>, input <em>password</em>, and type the software you want to use( for each specific software, refer the <span class="caps">HPC</span> website). Of course, Java and XQuartz are still&nbsp;required.  </p>
+<p><strong>Some More Resources</strong>: </p>
+<ol>
+<li>
+<p><a href="http://www.nus.edu.sg/comcen/news/HPC/articles/Top3_FAQs_HPC.pdf">Top 3 Frequently Asked Questions on <span class="caps">HPC</span>&nbsp;Services</a></p>
+</li>
+<li>
+<p><a href="https://comcen.nus.edu.sg/technus/hpc/accessing-hpc-resources-via-a-mac/"><span class="caps">ACCESSING</span> <span class="caps">HPC</span> <span class="caps">RESOURCES</span> <span class="caps">VIA</span> A <span class="caps">MAC</span></a></p>
+</li>
+<li><a href="http://comcen.nus.edu.sg/technus/hpc/connecting-to-your-hpc-home-directory-on-mac-os-x/"><span class="caps">CONNECTING</span> <span class="caps">TO</span> <span class="caps">YOUR</span> <span class="caps">HPC</span> <span class="caps">HOME</span> <span class="caps">DIRECTORY</span> <span class="caps">ON</span> <span class="caps">MAC</span> <span class="caps">OS</span>&nbsp;X</a></li>
+</ol>
+        </div>
+
+        <div class="meta">
+            <div>
+                    <a href="http://linnus.net/tag/tech-it.html" class="tag">tech-iT</a>
+            </div>
+        </div>
+	   <DIV style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FILTER: progid:DXImageTransform.Microsoftpadding:8px; ; LEFT: expression_r(eval_r(document.body.scrollLeft)+eval_r(document.body.clientWidth)-70); BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; POSITION: right; ; TOP: expression_r(eval_r(document.body.scrollTop)+eval_r(document.body.clientHeight)-240); TEXT-ALIGN: center"><A href="#top"><IMG src="/images/top-button.png" border=0></A></DIV>
+    </article>
+
+  <section>
+    <h2>Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'linnus';
+      var disqus_identifier = '/posts/2016/Mar/08/technote-acces-NUS-HPC-from-Mac/';
+      var disqus_url = 'http://linnus.net/posts/2016/Mar/08/technote-acces-NUS-HPC-from-Mac/';
+      var disqus_title = 'TechNote-Acess <span class="caps">NUS</span> <span class="caps">HPC</span> from&nbsp;Mac';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  </section>
+
+</div>
+
+<style type="text/css">
+{
+    max-width: 700px;
+}
+
+.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+    max-width: 580px;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}
+
+pre code {
+    background-color: inherit;
+}</style>   
+
+        </div>
+
+	   
+<footer class="row">
+	<div class="large-12 columns">
+		<hr />
+		<div class="row">
+			<center>
+			<p><a href="http://linnus.net"><font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN Lin | Oh,Interesting</p>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+			<p>Powered by <a href="http://getpelican.com">Pelican</a>. Inspired by <a rel="bookmark" href="http://jakevdp.github.io">"Pythonic Perambulations". </a> 
+			</center>
+		</div>
+	</div>
+</footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-64765479-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64765479-1');
+    ga('send', 'pageview');
+</script>
+    </body>
+</html>

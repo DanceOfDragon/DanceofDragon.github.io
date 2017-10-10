@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="JIN Lin">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>理财及其他 | JIN Lin | Oh,Interesting</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="JIN Lin | Oh,Interesting blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+        <style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+        <style>body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+header.main-header {
+  background: none repeat scroll 0% 0% #205F29;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #5C881C;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  color: #205F29;
+  background: #FFF;
+  border: 1px solid #205F29;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #5C881C;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #5C881C;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+        </script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-inverse bs-docs-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span> 
+		  </button>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JIN Lin | Oh,Interesting</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+		    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/pages/about.html" title="About">About</a></li>
+                            <li><a href="/archives.html" title="Archive">Archive</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrap">
+<div class="container post">
+    <article>
+        <header>
+            <h1>理财及其他</h1>
+            <time datetime="article.date.isoformat()" pubdate>Tue 13 October 2015</time>
+        </header>
+
+        <div class="article_content">
+            <p>钱，一直是我生活里的一个核心问题。它对我的三观塑造效果可能等同于故乡的那几座山丘。这里只讲讲最近自己参与的小投资活动，和看过的一些关于投资理财的书籍。</p>
+<p>今年（2015）4月22日，我通过同花顺注册了A股交易帐号，测试了下自己的投资性格属性：稳健型。读了少许如何看盘,买卖规则之后，就真金白银投入了，可以想见与我同样非理性不专业的股民何其多。 当时A股收盘于4,625.56点，正处在一个傻瓜也能赚钱的疯长时期。而今天的A股收盘于3,449.14，&nbsp;期间经历了也许是A股历史上最为让人惊心动魄的动荡，5.28暴跌300多点，而后继续上扬至5411点后转势下挫，跌破5000，跌破4000，跌破3000，信心丧失，大盘跌停，国家救市等等。第一次玩儿股票，就坐上这等过山车，幸甚。</p>
+<p><strong>收获之一：从开始投入到八月中全部撤出，获得了近20%的收益</strong>（note:在后期尝试投入了小量股票型指数基金，它多投资于安全性较高的银行证券，因为赎回费较贵，准备长期持有，目前仍然处于亏损中。）</p>
+<p>买卖记录和收益如图：</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001116310/in/dateposted-public/" title="4，5"><img src="https://farm5.staticflickr.com/4358/36001116310_e522c1bb21.jpg" width="364" height="336" alt="4，5"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001116160/in/dateposted-public/" title="6，7"><img src="https://farm5.staticflickr.com/4366/36001116160_509c407a2a.jpg" width="361" height="344" alt="6，7"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/35562374314/in/dateposted-public/" title="7，8"><img src="https://farm5.staticflickr.com/4373/35562374314_8209873cd5.jpg" width="360" height="347" alt="7，8"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><strong>收获之二：实战经验，包括在操作中学习的硬知识，以及心理情绪的锻炼</strong></p>
+<p>除开天才们的直觉，我等还是要做到对自己的选择和操作有合乎常识的理由，粗略归结起来无非三点：选什么股，买点在哪儿，卖点在哪儿。细枝末节的还包括分析单盘和个股走势，如何分散投资，买多少，卖多少等等问题。股灾后爆出的各种内幕操作，以及国家的强行干预，也许会让所有的扯淡投资策略都显得可笑，会让人觉得股市就是个充满出老千的大赌场，让人更加专注投机而不是技术分析，而不是关注企业本身，即使如此，我依然觉得具备扎实的基础知识和解读数据的能力是必需的。这是态度方面。</p>
+<p>第一次卖中化国际（600500.<span class="caps">SH</span>）的时候，看着它不断疯长，收益率眼看着已经超过30%，我是忐忑的，卖还是不卖？最终，在当日涨到高点时，我还是颤抖着把它清仓了。颤抖一是因为确实想卖在最高点，一是我总在期待着明天可能的更高点。在适时止盈的大原则指导下，我决定卖了，结果后来它一路高涨，几乎涨到了我买入价的两倍。并没有太多后悔。卖后，我还是一直关注它，它的表现很强劲，或者说与大盘有高度的一致性；摸熟它的习性后，我在股灾后又把它买了回来，因为有国家强力救市，大盘回光返照，这支股票再次给我带来甚至更多的收益。想总结的就是：买熟悉领域的股票，化工是我的专业背景，这有助于我分析企业的基本面；关注尽可能少的几支股票，深入了解它们的行为，抓住时机果断买进或卖出&nbsp;(所以，这里其实还不是什么价值投资，A股市场投机气氛太浓）；再有就是，与止损同样重要的是，适时止盈，巴菲特不是说过，要在（别人）贪婪的时候恐惧。</p>
+<p>心里情绪方面，因为我做的是实验性的小额交易，也许对个人的抗压能力考验不是很大，从这些实验中我还是获得了些许有益的训练。或多或少也许投资的人都会有点赌徒心理，尤其是希望借以翻身，借杠杆来撬动高收益的人，为了减少这种孤注一掷的赌徒心态，一定要合理安置个人手上所有的总资产。对普通人来讲，股票投资的钱应该是占总资产很少的一部分（&lt;20%）,总之不会影响其他方面的正常运转。初期靠工作收入维持的人，主轴还是应该放在提高专业能力和提高硬性收入上去。</p>
+<p><strong>投资相关书籍阅读</strong></p>
+<p>在这个过程中，也断断续续看了一些关于投资的书籍，主要有Jesse Livermore的《股票做手回忆录》，Charlie Munger的《穷查理宝典》，以及Frank Partnoy《泥鸽靶》(Fiasco: The Inside Story of a Wall Street&nbsp;Trader)。之前接触过的经济金融方面的材料，比如大学上过的经济学入门课程和会计课程，对我阅读这些书有很大的帮助。</p>
+<p>三本书涵盖的内容跨越近百年，从二三十年代华尔街的股票/期货到本世纪初的让人眼花缭乱的衍生产品，资本的运作越来越复杂、越来越数学模型化。给我个人的粗略的感觉是，巴菲特/芒格所做的倒更像是做企业，而非做金融，我对这种态度更觉亲切。好读书，不求甚解，只求吐槽， <span class="caps">J.L.</span>的回忆录整个就是在说我很厉害，看我怎么厉害的；<span class="caps">C.M.</span>的宝典则是个行将就木地老人把他赖以坚守的信念一遍又一遍地念叨，企图以掉书袋而不屑于用有多少money的方式来镇住人；<span class="caps">F.P.</span>&nbsp;则是个自己刚志满意得地从华尔街爬出来又恨不得用口水把华尔街给淹了的愤青。</p>
+<p>散漫至此，不成章法。何以为继，唯有实践，辅以精读。</p>
+        </div>
+
+        <div class="meta">
+            <div>
+                    <a href="http://linnus.net/tag/readingcn.html" class="tag">reading/cn</a>
+            </div>
+        </div>
+	   <DIV style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FILTER: progid:DXImageTransform.Microsoftpadding:8px; ; LEFT: expression_r(eval_r(document.body.scrollLeft)+eval_r(document.body.clientWidth)-70); BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; POSITION: right; ; TOP: expression_r(eval_r(document.body.scrollTop)+eval_r(document.body.clientHeight)-240); TEXT-ALIGN: center"><A href="#top"><IMG src="/images/top-button.png" border=0></A></DIV>
+    </article>
+
+  <section>
+    <h2>Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'linnus';
+      var disqus_identifier = '/posts/2015/Oct/13/personal finance management and related/';
+      var disqus_url = 'http://linnus.net/posts/2015/Oct/13/personal finance management and related/';
+      var disqus_title = '理财及其他';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  </section>
+
+</div>
+
+<style type="text/css">
+{
+    max-width: 700px;
+}
+
+.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+    max-width: 580px;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}
+
+pre code {
+    background-color: inherit;
+}</style>   
+
+        </div>
+
+	   
+<footer class="row">
+	<div class="large-12 columns">
+		<hr />
+		<div class="row">
+			<center>
+			<p><a href="http://linnus.net"><font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN Lin | Oh,Interesting</p>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+			<p>Powered by <a href="http://getpelican.com">Pelican</a>. Inspired by <a rel="bookmark" href="http://jakevdp.github.io">"Pythonic Perambulations". </a> 
+			</center>
+		</div>
+	</div>
+</footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-64765479-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64765479-1');
+    ga('send', 'pageview');
+</script>
+    </body>
+</html>

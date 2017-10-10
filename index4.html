@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="JIN Lin">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Home | JIN Lin | Oh,Interesting</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="JIN Lin | Oh,Interesting blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+        <style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+        <style>body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+header.main-header {
+  background: none repeat scroll 0% 0% #205F29;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #5C881C;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  color: #205F29;
+  background: #FFF;
+  border: 1px solid #205F29;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #5C881C;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #5C881C;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+        </script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-inverse bs-docs-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span> 
+		  </button>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JIN Lin | Oh,Interesting</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+		    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/pages/about.html" title="About">About</a></li>
+                            <li><a href="/archives.html" title="Archive">Archive</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrap">
+<div class="container index">
+
+  <article>
+    <header>
+      <h2><a href="http://linnus.net/posts/2015/Oct/16/html-presentation-demo/"><span class="caps">HTML</span> Presentation&nbsp;Demo</a></h2>
+      <time datetime="" title="2015-10-16T19:40:00+08:00" pubdate>Fri 16 October 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>This part is just to cover the summary part of the blog post, for better presentaion on mobile&nbsp;device. </p>
+<blockquote>
+<p>[1]Sonner, Z., Wilder, E., Heikenfeld, J., Kasting, G., Beyette, F., Swaile, D., &#8230; <span class="amp">&amp;</span> Naik, R. (2015). The microfluidics of the eccrine sweat gland, including biomarker partitioning, transport, and biosensing implications. Biomicrofluidics …</p></blockquote>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="http://linnus.net/posts/2015/Oct/16/html-presentation-demo/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="http://linnus.net/tag/academic-research.html" class="tag">academic-research</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="http://linnus.net/posts/2015/Oct/13/personal finance management and related/">理财及其他</a></h2>
+      <time datetime="" title="2015-10-13T21:40:00+08:00" pubdate>Tue 13 October 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>钱，一直是我生活里的一个核心问题。它对我的三观塑造效果可能等同于故乡的那几座山丘。这里只讲讲最近自己参与的小投资活动，和看过的一些关于投资理财的书籍。</p>
+<p>今年（2015）4月22日，我通过同花顺注册了A股交易帐号，测试了下自己的投资性格属性：稳健型。读了少许如何看盘,买卖规则之后，就真金白银投入了，可以想见与我同样非理性不专业的股民何其多。 当时A股收盘于4,625.56点，正处在一个傻瓜也能赚钱的疯长时期。而今天的A股收盘于3,449.14，&nbsp;期间经历了也许是A股历史上最为让人惊心动魄的动荡，5.28暴跌300多点，而后继续上扬至5411点后转势下挫，跌破5000，跌破4000，跌破3000，信心丧失，大盘跌停，国家救市等等。第一次玩儿股票，就坐上这等过山车，幸甚。</p>
+<p><strong>收获之一：从开始投入到八月中全部撤出，获得了近20%的收益</strong>（note:在后期尝试投入了小量股票型指数基金，它多投资于安全性较高的银行证券，因为赎回费较贵，准备长期持有，目前仍然处于亏损中。）</p>
+<p>买卖记录和收益如图：</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001116310/in/dateposted-public/" title="4，5"><img src="https://farm5.staticflickr.com/4358/36001116310_e522c1bb21.jpg" width="364" height="336" alt="4，5"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/36001116160/in/dateposted-public/" title="6，7"><img src="https://farm5.staticflickr.com/4366/36001116160_509c407a2a.jpg" width="361" height="344" alt="6，7"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/35562374314/in/dateposted-public/" title="7，8"><img src="https://farm5.staticflickr.com/4373/35562374314_8209873cd5.jpg" width="360" height="347" alt="7，8"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><strong>收获之二：实战经验，包括在操作中学习的硬知识，以及心理情绪的锻炼 …</strong></p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="http://linnus.net/posts/2015/Oct/13/personal finance management and related/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="http://linnus.net/tag/readingcn.html" class="tag">reading/cn</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="http://linnus.net/posts/2015/Oct/12/notes python for data analysis/">Notes: Python for Data Analysis (Part&nbsp;1)</a></h2>
+      <time datetime="" title="2015-10-12T20:40:00+08:00" pubdate>Mon 12 October 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>[<span class="caps">TOC</span>]</p>
+<p>Finished reading the book <em>Python for Data Analysis</em>. The review notes are just for my quick reference of available data processing tools with the focus on NumPy and&nbsp;Pandas. </p>
+<h3>Essential&nbsp;Libraries</h3>
+<ul>
+<li>NumPy </li>
+</ul>
+<blockquote>
+<p>ndarray; element-wise computation;&nbsp;`</p>
+</blockquote>
+<ul>
+<li>pandas</li>
+</ul>
+<blockquote>
+<p>DataFrame (time-series for financial data; reshape, slice, dice, aggregation&nbsp;etc.)</p>
+</blockquote>
+<ul>
+<li>matplotlib </li>
+</ul>
+<blockquote>
+<p>Plots. 2D …</p></blockquote>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="http://linnus.net/posts/2015/Oct/12/notes python for data analysis/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="http://linnus.net/tag/tech-it.html" class="tag">tech-iT</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="http://linnus.net/posts/2015/Sep/29/TangNuoTalksAboutNovel/">唐诺说小说</a></h2>
+      <time datetime="" title="2015-09-29T09:40:00+08:00" pubdate>Tue 29 September 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>未读过唐诺，也没作过小说，目前属于努力加餐饭的哺食者。</p>
+<p>偶然看到他的下面这段话：</p>
+<blockquote>
+<p>小说书写者这样一个经济收入愈来愈可疑、社会光环也愈来愈可疑的「行业」，终究有个本质性的、社会现况再怎么不利却任谁也拿不走的美好内核，那就是，小说书写者的生命中很少有所谓浪费这件事，不管他之前从事的是看起来如何不相干的工作，不管他做过多少件似徒劳无功的事，甚或失败的事、不光采的事、错误的事、缺德败德的事，乃至于终日发呆游荡失了魂般的无所事事。小说书写一事宛如一方巨大奇特的海绵体，吸收力特强，甚至我们该用「大地」这个烂熟的概念来形容它，它什么都吸纳得进来，以各种高明不高明的方式分解消化成自身独特的养分，这个行业以几近是无垠的柔软宽容善待它的子民，是在别处罕见到让人已不敢想象的幸福。</p>
+</blockquote>
+<p>当然从一个既要能实践又要会讲故事并且必须跨过某道门槛才能做这些事以及做不好讲不好就会被淘汰的研究生的角度来看，世界似乎并不那么温柔。由于最近生活诸多困窘，这段话于我是个不小的安慰。</p>
+<p>不管从事什么行业，别忘记如何表达。要求再高一点，别忘记如何有趣地表达。这是需一辈子来修炼的事，不急。</p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="http://linnus.net/posts/2015/Sep/29/TangNuoTalksAboutNovel/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="http://linnus.net/tag/readingcn.html" class="tag">reading/cn</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="http://linnus.net/posts/2015/Sep/28/ipython_notebook_slideshow/">IPython Notebook&nbsp;Slideshow</a></h2>
+      <time datetime="" title="2015-09-28T17:40:00+08:00" pubdate>Mon 28 September 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>This tutorial was edited by <span class="caps">JIN</span> Lin. To view the slides，which was created by <em>ipython notebook&nbsp;slideshow</em></p>
+<p><a href="http://nbviewer.ipython.org/format/slides/gist/DanceOfDragon/9b362d32d4a483610026#/">Visit the slides on&nbsp;NBViewer</a> </p>
+<p>Or </p>
+<p>simply view it&nbsp;here. </p>
+<iframe src="http://nbviewer.ipython.org/format/slides/gist/DanceOfDragon/9b362d32d4a483610026#/" width=600 height=450></iframe>
+
+<p>The&nbsp;End. </p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="http://linnus.net/posts/2015/Sep/28/ipython_notebook_slideshow/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="http://linnus.net/tag/tech-it.html" class="tag">tech-iT</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="http://linnus.net/posts/2015/Sep/19/《知识分子》与《赛先生》创刊词之比较/">微信科普之路会好么？饶毅鲁白谢宇再启航，《知识分子》与《赛先生》创刊词之比较</a></h2>
+      <time datetime="" title="2015-09-19T11:40:00+08:00" pubdate>Sat 19 September 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p>我与《赛先生》的缘分起于某天某人分享到朋友圈的某篇文章，得知其内部控制权之争是从某北大毕业生的微信分享，《知识分子》上线则是从同一人那里获知。与其他许多也许超过99.99%的关注饮食男女的公众号相比，《赛先生》吸引我的地方是其内容的厚实，加之有三位顶尖的科学家把关，更多了几分信任。三位创始人出走，引来一系列的思考。如果真是利益驱走了科学，我会坚决取关《赛先生》。&nbsp;科普到底要公益化的运作还是市场化的运作？甚至公益该如何市场化运作？媒体和科学之间到的鸿沟该如何弥补？当媒体人(比如堂吉柯德崔·永元)需要强出头来做科普时，其实也是挺悲催的。目前来看，《知识分子》并不会比《赛先生》走得更容易，即使克服了之前的内忧，外患依旧存在而且越来越厉害。我会一直关注两个公众号的进展，期待二者都能出有价值的内容，发展处不同的特色，用不一样的方式让普通人爱上赛先生，让普通人也理解知识分子的价值观。</p>
+<p><strong>人物简介：</strong></p>
+<blockquote>
+<p>饶毅：著名生物学家，2007年从西北大学全职回国，前北京大学生命科学学院院长，现任北京大学IDG/麦戈文脑研究所所长、北大清华生命科学联合中心主任。</p>
+<p>鲁白：2009年辞去美国国立卫生研究院(<span class="caps">NIH</span>)神经发育研究室主任后回国定居 …</p></blockquote>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="http://linnus.net/posts/2015/Sep/19/《知识分子》与《赛先生》创刊词之比较/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="http://linnus.net/tag/watch.html" class="tag">watch</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+  <article>
+    <header>
+      <h2><a href="http://linnus.net/posts/2015/Sep/13/艺术的故事插图全简析5/">插图一览《艺术的故事》（5）</a></h2>
+      <time datetime="" title="2015-09-13T21:40:00+08:00" pubdate>Sun 13 September 2015</time>
+    </header>
+
+    <div class="article_content">
+      <p><span class="dquo">&#8220;</span>荣耀即希腊，宏伟即罗马。&#8221; </p>
+<p>这种宏伟多是体现在各种土木工程上的，比如剧场（Colosseum），比如道路（条条大路通罗马），比如输水道，比如公共浴场，等等。</p>
+<p>圆形剧场综合了希腊神庙的各种风格，底层是多利安风格的变形，第二层是爱奥尼亚式，第三层和第四层是科林斯式半柱。</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19819139055/in/album-72157655648698450/" title="Untitled"><img src="https://farm1.staticflickr.com/562/19819139055_7017f316b7.jpg" width="500" height="395" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>073 The Coliseum, Rome [80&nbsp;a.C.]</p>
+<p>凯旋门遍布帝国各地。
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19198235533/in/album-72157655648698450/" title="Untitled"><img src="https://farm1.staticflickr.com/368/19198235533_b9d5bc901c.jpg" width="413" height="500" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>074 Triumphal arch of Tiberius, Orange, France [14-37&nbsp;a.C.]</p>
+<p>罗马人对起拱技术的精通在万神庙上体现得尽致淋漓。</p>
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19630941298/in/album-72157655648698450/" title="Untitled"><img src="https://farm4.staticflickr.com/3761/19630941298_ac73cb3374.jpg" width="462" height="500" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>075 (<span class="caps">GP</span> Pannini) Inside the Pantheon, Rome [130&nbsp;a.C.]</p>
+<p>罗马时期基督教徒是禁止偶像崇拜的，在未成为国教之前，罗马皇帝们的头像还是被宗教似的崇拜着。不过，真实，大于美化。
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19793198086/in/album-72157655648698450/" title="Untitled"><img src="https://farm4.staticflickr.com/3823/19793198086_879af92939.jpg" width="333" height="500" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>076 …</p>
+    </div>
+
+    <div class="meta">
+      <div>
+        <a href="http://linnus.net/posts/2015/Sep/13/艺术的故事插图全简析5/" class="read_more">Read more &#8594;</a>
+      </div>
+
+      <div>
+            <a href="http://linnus.net/tag/readingcn.html" class="tag">reading/cn</a>
+      </div>
+
+    </div>
+
+  </article>
+  <div class="separator"></div>
+
+  <nav class="pagination row">
+    <div class="col-xs-6 left">
+        <a class="prev" href="http://linnus.net/index5.html">&#8592; Past</a>
+    </div>
+    <div class="col-xs-6 right">
+        <a class="next" href="http://linnus.net/index3.html">Future &#8594;</a>
+    </div>
+  </nav>
+
+  </div>
+
+</div>
+
+        </div>
+
+	   
+<footer class="row">
+	<div class="large-12 columns">
+		<hr />
+		<div class="row">
+			<center>
+			<p><a href="http://linnus.net"><font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN Lin | Oh,Interesting</p>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+			<p>Powered by <a href="http://getpelican.com">Pelican</a>. Inspired by <a rel="bookmark" href="http://jakevdp.github.io">"Pythonic Perambulations". </a> 
+			</center>
+		</div>
+	</div>
+</footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-64765479-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64765479-1');
+    ga('send', 'pageview');
+</script>
+    </body>
+</html>

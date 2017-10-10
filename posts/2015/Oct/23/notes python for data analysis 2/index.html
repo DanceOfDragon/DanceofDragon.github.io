@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="JIN Lin">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Notes: Python for Data Analysis (Part&nbsp;2) | JIN Lin | Oh,Interesting</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="JIN Lin | Oh,Interesting blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+        <style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+        <style>body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+header.main-header {
+  background: none repeat scroll 0% 0% #205F29;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #5C881C;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  color: #205F29;
+  background: #FFF;
+  border: 1px solid #205F29;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #5C881C;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #5C881C;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+        </script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-inverse bs-docs-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span> 
+		  </button>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JIN Lin | Oh,Interesting</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+		    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/pages/about.html" title="About">About</a></li>
+                            <li><a href="/archives.html" title="Archive">Archive</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrap">
+<div class="container post">
+    <article>
+        <header>
+            <h1>Notes: Python for Data Analysis (Part&nbsp;2)</h1>
+            <time datetime="article.date.isoformat()" pubdate>Fri 23 October 2015</time>
+        </header>
+
+        <div class="article_content">
+            <p>[<span class="caps">TOC</span>]</p>
+<p>To continue with <a href="http://linnus.net/posts/2015/Oct/12/notes%20python%20for%20data%20analysis/">previous post</a> about the basics of NumPy and&nbsp;Pandas. </p>
+<h3>Plotting and&nbsp;Visulization</h3>
+<p><strong>matplotlib</strong></p>
+<p>It is the primary <span class="caps">MATLIB</span>-like 2D plot; add-on toolkits like <strong>mplot3d</strong> for 2D plot, and <strong>basemap</strong> for mapping and&nbsp;projections. </p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="c1">#launch interaction between *IPython* and *matplotlib*</span></span>
+<span class="code-line"><span class="n">ipython</span> <span class="o">--</span><span class="n">pylab</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span></span>
+</pre></div>
+
+
+<p><strong>Figures <span class="amp">&amp;</span>&nbsp;Subplots</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>fig = plt.figure(figsize=(w,h),dpi= None,...) </span>
+<span class="code-line">#it is a top level container for all plot elements.</span>
+</pre></div>
+
+
+<p><a href="http://matplotlib.org/api/figure_api.html">More&nbsp;here</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span>fig.add-subplot(*args,*kwargs)</span>
+<span class="code-line">#args same as in *plt.subplot* </span>
+<span class="code-line">subplot(nrows, ncols, plot_number)</span>
+<span class="code-line">#*kwargs: xlabel,ylabel, etc.</span>
+</pre></div>
+
+
+<p><strong>Spacing around&nbsp;plots</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=None)</span>
+</pre></div>
+
+
+<p><strong>Colors,Markers, Line&nbsp;Styles</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">plot(randn(x,y, color=&#39;k&#39;, linestyle=&#39;dashed&#39;, marker=&#39;o&#39;,label=&#39;Default&#39;)</span>
+</pre></div>
+
+
+<p><strong>Ticks, Labels.&nbsp;Legends</strong></p>
+<p>xlim, xticks,&nbsp;xticklabels </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">plt.xlim() or plt.xlim([a,b])</span>
+</pre></div>
+
+
+<p>All such methods act on the active or most recently-created <em>AxesSubplot</em>. corresponds to two methods: ax.get_xlim, and&nbsp;ax.set_xlim </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">ax.legend() or plt.legend() </span>
+<span class="code-line">#automatically creates legends.</span>
+</pre></div>
+
+
+<p><strong>Annotations,&nbsp;Drawing</strong></p>
+<p><em>text, arrow,&nbsp;annotate</em></p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">ax.text(x,y,&#39;Tidehello&#39;,family=&#39;monsapce&#39;,fontsize=12) </span>
+<span class="code-line">#(x,y) cooridates on the plot</span>
+</pre></div>
+
+
+<p><strong>Shapes</strong></p>
+<p><em>matplotlib.patches</em> </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">rect = plt.Rectangle((0.2, 0.75), 0.4, 0.15, color=&#39;k&#39;, alpha=0.3);</span>
+<span class="code-line">ax.add_patch(rect)</span>
+</pre></div>
+
+
+<p><strong>Saving&nbsp;plots</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>plt.savefig(&#39;figpath.png&#39;, dpi=400, bbox_inches=&#39;tight&#39;)</span>
+</pre></div>
+
+
+<p><strong>matplotlib&nbsp;configuration</strong></p>
+<p>The default configuration is geared towards for publication, however, it can be modified by changing the config&nbsp;settings. </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">plt.rc(&#39;figure&#39;, figsize=(10, 10))</span>
+</pre></div>
+
+
+<h3>Plotting Functions in&nbsp;pandas</h3>
+<p>Compard to <em>matplotlib</em>, it offers a high-level plotting methods due to the highly organized&nbsp;Series/DataFrames. </p>
+<p><em>Series.plot()</em>&nbsp;arguments: </p>
+<ul>
+<li>label, ax, style, alpha, kind(bar,line,barh,kde), logy, use_index, rot, xticks, yticks, xlim, ylim,&nbsp;grid. </li>
+</ul>
+<p><em>DataFrame specific&nbsp;arguments</em></p>
+<ul>
+<li>subplots, sharex, sharey, figsize, title, legend,&nbsp;sort_columns</li>
+</ul>
+<p><strong>Bar&nbsp;plots</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>ax.plot(kind = &#39;bar&#39;  or &#39;barh&#39;, stacked= True/False)</span>
+</pre></div>
+
+
+<p><strong>Histograms/ Density&nbsp;Plot</strong></p>
+<p>e.g. </p>
+<div class="highlight"><pre><span class="code-line"><span></span>values.hist(bins=100, alpha=0.3, color=&#39;k&#39;, normed=True)</span>
+<span class="code-line">values.plot(kind=&#39;kde&#39;, style=&#39;k--&#39;)</span>
+</pre></div>
+
+
+<p><strong>Scatter&nbsp;plots</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>plt.scatter(x,y)</span>
+</pre></div>
+
+
+<p><strong>Maps</strong></p>
+<p>refer to <a href="http://linnus.net/posts/2015/Oct/04/2016_US_Federal_Election_Contributors/">2015 Federal Electon Tutorial</a> for&nbsp;more. </p>
+<h3>Data Aggregation and Group&nbsp;Operations.</h3>
+<p><strong>GroupBy</strong> mechanism: <em>split-apply-combine</em> </p>
+<p><code>df.groupby(key or keys).mean()</code>: <em>df.groupby()</em> returns a GroupBy object which is ready for subsequent computation, <em>.mean()</em> does the <em>apply-combine</em> opeartion. By default, it groups on axis =&nbsp;0. </p>
+<p><code>df.groupby(key or keys).size()</code>: returning a Series containing group size ( how many elements are grouped under each&nbsp;key)</p>
+<p>Keys could be in the form of ndarray, dict or Series. e.g. mapping the column names to other category&nbsp;information.</p>
+<div class="highlight"><pre><span class="code-line"><span></span>mapping = {&#39;a&#39;: &#39;red&#39;, &#39;b&#39;: &#39;red&#39;, &#39;c&#39;: &#39;blue&#39;, ....: &#39;d&#39;: &#39;blue&#39;, &#39;e&#39;: &#39;red&#39;, &#39;f&#39; : &#39;orange&#39;}</span>
+<span class="code-line"># by dict mapping</span>
+<span class="code-line">by_column = people.groupby(mapping, axis=1)</span>
+<span class="code-line"># by series </span>
+<span class="code-line">map_series = Series(mapping)</span>
+<span class="code-line">people.groupby(map_series, axis=1).count()</span>
+</pre></div>
+
+
+<ul>
+<li>
+<p><strong>Iterating over&nbsp;groups</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">for (k1, k2), group in df.groupby([&#39;key1&#39;, &#39;key2&#39;])</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><strong>Selecting subset&nbsp;columns</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g </span>
+<span class="code-line">df.groupby([&#39;key1&#39;, &#39;key2&#39;])[[&#39;data2&#39;]].mean()</span>
+</pre></div>
+
+
+</li>
+<li>
+<p><strong>Grouping with&nbsp;Functions</strong></p>
+</li>
+</ul>
+<p>e.g <code>people.groupby(len).sum()</code>: len is the length of <em>names</em>. Everything will be converted to array&nbsp;internally. </p>
+<ul>
+<li><strong>Grouping by Index Levels</strong><div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">hier_df.groupby(level=&#39;cty&#39;, axis=1).count()</span>
+</pre></div>
+
+
+</li>
+</ul>
+<p><strong>Data&nbsp;Aggregation</strong></p>
+<p>Data transformation that produces scalar vaues from&nbsp;arrays. </p>
+<ul>
+<li><strong>optimized groupby&nbsp;methods</strong></li>
+</ul>
+<p>count, sum, mean, median, std, var, min, max, prod, first, last.&nbsp;describe.</p>
+<ul>
+<li><strong>user&nbsp;functions</strong> </li>
+</ul>
+<p>aggregate / agg : <code>grouped.agg(user_functions)</code>. Normal fuctions can still be used,e.g.<code>grouped.agg('mean','sum')</code></p>
+<ul>
+<li><strong>Other&nbsp;operations</strong></li>
+</ul>
+<p>A list of (name,functions) tuples can be passed to the agg keys. <em>name</em>  will replace <em>functions name</em>. e.g. <code>grouped.agg([('foo', 'mean'), ('bar', np.std)])</code></p>
+<p>Apply different functions to different columns: e.g. <code>grouped.agg({'tip' : [np.max, 'min'], 'size' : 'sum'})</code></p>
+<p>Return aggregated data in unindexed form. e.g &#8216;tips.groupby([&#8216;sex&#8217;, &#8216;smoker&#8217;], as_index=False).mean()&#8217;.  <em>reset_index</em> could be used to reset the&nbsp;index. </p>
+<p><strong>Group-wise Operations and&nbsp;Transformations</strong> </p>
+<ul>
+<li><strong>transform</strong></li>
+</ul>
+<p>aggregate + merge : add columns to existing&nbsp;df. </p>
+<p><em>Transform</em> applies a function to each group, then places the results in the appropriate locations. If each group produces a scalar value, it will be propagated (broadcasted) to the same size as the df. .eg. <code>people.groupby(key).transform(np.mean)</code>. </p>
+<ul>
+<li><strong>apply</strong></li>
+</ul>
+<p><em>Apply</em> splits the object being manipulated into pieces, invokes the passed function on each piece, then attempts to concatenate the pieces&nbsp;together. </p>
+<p>In GroupBy, the <em>describe</em> method is a shortcut&nbsp;for </p>
+<div class="highlight"><pre><span class="code-line"><span></span>f = lambda x: x.describe() </span>
+<span class="code-line">grouped.apply(f)</span>
+</pre></div>
+
+
+<p>group-keys can be opened up, i.e. each row has a corresponding key. 
+e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
+<ul>
+<li><strong>Bucket/Quantile&nbsp;Analysis</strong></li>
+</ul>
+<p><em>cut/qcut</em>&nbsp;e.g: </p>
+<div class="highlight"><pre><span class="code-line"><span></span>factor = pd.cut(frame.data1, 4) </span>
+<span class="code-line">grouped = frame.data2.groupby(factor)</span>
+<span class="code-line">grouped.apply(get_stats).unstack()</span>
+</pre></div>
+
+
+<ul>
+<li><strong>Fill missing&nbsp;values</strong></li>
+</ul>
+<p>Fill <span class="caps">NA</span> with fixed value.&nbsp;e.g. </p>
+<div class="highlight"><pre><span class="code-line"><span></span>s.fillna(s.mean())</span>
+</pre></div>
+
+
+<p>Fill vaule varied by group.&nbsp;e.g. </p>
+<div class="highlight"><pre><span class="code-line"><span></span>states = [&#39;Ohio&#39;, &#39;New York&#39;, &#39;Vermont&#39;, &#39;Florida&#39;, &#39;Oregon&#39;, &#39;Nevada&#39;, &#39;California&#39;, &#39;Idaho&#39;]</span>
+<span class="code-line">group_key = [&#39;East&#39;] * 4 + [&#39;West&#39;] * 4</span>
+<span class="code-line">fill_mean = lambda g: g.fillna(g.mean())</span>
+<span class="code-line">data.groupby(group_key).apply(fill_mean)</span>
+</pre></div>
+
+
+<p>Fill pre-defined values.&nbsp;e.g. </p>
+<div class="highlight"><pre><span class="code-line"><span></span>fill_values = {&#39;East&#39;: 0.5, &#39;West&#39;: -1}</span>
+<span class="code-line">fill_func = lambda g: g.fillna(fill_values[g.name])</span>
+<span class="code-line">data.groupby(group_key).apply(fill_func)</span>
+</pre></div>
+
+
+<ul>
+<li>
+<p><strong>Other application&nbsp;examples</strong></p>
+</li>
+<li>
+<p>Random sampling and&nbsp;permutation: </p>
+</li>
+</ul>
+<p>e.g </p>
+<div class="highlight"><pre><span class="code-line"><span></span>#create a deck of cards </span>
+<span class="code-line"># Hearts, Spades, Clubs, Diamonds </span>
+<span class="code-line">suits = [&#39;H&#39;,&#39;S&#39;,&#39;C&#39;,&#39;D&#39;]</span>
+<span class="code-line"># let Ace be 1</span>
+<span class="code-line">card_val = (rang(1,11)+[10]*3)*4</span>
+<span class="code-line">base_names = [&#39;A&#39;] + range(2, 11) + [&#39;J&#39;, &#39;K&#39;, &#39;Q&#39;]</span>
+<span class="code-line">cards = []</span>
+<span class="code-line">for suit in [&#39;H&#39;, &#39;S&#39;, &#39;C&#39;, &#39;D&#39;]: </span>
+<span class="code-line">    cards.extend(str(num) + suit for num in base_names)</span>
+<span class="code-line"># deck e.g AH 1; KH 10  </span>
+<span class="code-line">deck = Series(card_val, index=cards)</span>
+<span class="code-line"></span>
+<span class="code-line"># draw 5 cards </span>
+<span class="code-line">def draw(deck,n = 5):</span>
+<span class="code-line">    return deck.take(np.random.permutation(len(deck))[:n])</span>
+<span class="code-line"></span>
+<span class="code-line"># Draw two random cards from each suit </span>
+<span class="code-line">get_suit = lambda card: card[-1] # last letter is suit</span>
+<span class="code-line">deck.groupby(get_suit).apply(draw, n=2)</span>
+</pre></div>
+
+
+<ul>
+<li>group weighted average and correlation ( between columns /&nbsp;series) </li>
+</ul>
+<p>e.g.</p>
+<div class="highlight"><pre><span class="code-line"><span></span>                #AAPL   MSFT  XOM  SPX </span>
+<span class="code-line">    #2011-10-11 400.29 27.00 76.27 1195.54</span>
+<span class="code-line">    spx_corr = lambda x: x.corrwith(x[&#39;SPX&#39;])</span>
+<span class="code-line">    by_year = rets.groupby(lambda x: x.year)</span>
+<span class="code-line">    by_year.apply(spx_corr</span>
+</pre></div>
+
+
+<ul>
+<li>linear&nbsp;regression</li>
+</ul>
+<p><strong>Pivot-tables / Cross&nbsp;Tabulation</strong></p>
+<p><em>pivot_table</em>&nbsp;e.g. </p>
+<div class="highlight"><pre><span class="code-line"><span></span>tips.pivot_table(rows=[&#39;sex&#39;, &#39;smoker&#39;]) </span>
+<span class="code-line"># groupby has the same function </span>
+<span class="code-line"># *margin* method could be used to include partial total. </span>
+<span class="code-line">tips.pivot_table([&#39;tip_pct&#39;, &#39;size&#39;], rows=[&#39;sex&#39;, &#39;day&#39;],cols = &#39;smoker&#39;, margins = True)</span>
+<span class="code-line"></span>
+<span class="code-line">#other options:  values, rows, cols, aggfunc, fill_value, margins</span>
+</pre></div>
+
+
+<p><em>Cross-tabulation:&nbsp;crosstab</em></p>
+<p>computes group frequencies. e.g<code>pd.crosstab(data.Gender, data.Handedness, margins=True)</code></p>
+<h3>Time&nbsp;Series</h3>
+<ul>
+<li>Python <strong>datetime</strong>&nbsp;module </li>
+</ul>
+<p>Types: date, time, datetime,&nbsp;timedelta</p>
+<p>e.g.<code>from datetime import datetime; now = datetime.now()</code></p>
+<ul>
+<li>Converting between string <span class="amp">&amp;</span>&nbsp;datetime  </li>
+</ul>
+<p>e.g.</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="c1"># time to string </span></span>
+<span class="code-line"><span class="n">stamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> </span>
+<span class="code-line"><span class="c1">#str</span></span>
+<span class="code-line"><span class="nb">str</span><span class="err">（</span><span class="n">stamp</span><span class="err">）</span></span>
+<span class="code-line"><span class="c1">#strftime </span></span>
+<span class="code-line"><span class="n">stamp</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># string to time </span></span>
+<span class="code-line"><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;2011-01-03&#39;</span></span>
+<span class="code-line"><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># parse date formats </span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">dateutil.parser</span> <span class="kn">import</span> <span class="n">parse</span></span>
+<span class="code-line"><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;2011-01-03&#39;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># pandas to_datetime method </span></span>
+<span class="code-line"><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">([</span><span class="s1">&#39;1/1/2011&#39;</span><span class="p">])</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># NaT (Not a Time) is pandas’s NA value for timestamp data.</span></span>
+</pre></div>
+
+
+<p>Other datetime formats: %Y(4-digit year), %y (2-digit year), %m(2-digit month), %d (2-digit day),%H(24-hour clock); %I (12-hour clock), %M(2-digit minute）, %S(second),%w (weekday as ineger, [0 Sunday,6]), %U (week number of a year [0,53],Sun is the first day of a week),%W (week number of a year [0,53],Mon is the first day of a week), %z(<span class="caps">UTC</span> timezone offsets), %F(Shortcut for%Y-%m-%d),%D(Shortcut&nbsp;for%m/%d/%y). </p>
+<p><strong>timestamp</strong></p>
+<p>DatetimeIndex; dtype:&nbsp;datetime64</p>
+<p><em>TimeSeries</em> is a subset of Series, therefore can be indexed, sliced, and&nbsp;selected, </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line">index=pd.date_range(&#39;1/1/2000&#39;, periods=1000))</span>
+<span class="code-line"># truncate between two dates. </span>
+<span class="code-line">ts.truncate(after=&#39;1/9/2011&#39;)</span>
+</pre></div>
+
+
+<p>duplicate&nbsp;indices </p>
+<div class="highlight"><pre><span class="code-line"><span></span># is_unique</span>
+</pre></div>
+
+
+<p><strong>Date&nbsp;ranges/frequencies/shifting</strong></p>
+<p>By default, <em>date_range</em> generates daily&nbsp;timestamp. </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. # BM last business day of month.</span>
+<span class="code-line">pd.date_range(&#39;1/1/2000&#39;, &#39;12/1/2000&#39;, freq=&#39;BM&#39;)</span>
+</pre></div>
+
+
+<p>By default, the time series has no fixed frequency. <em>base frequency</em>
+like &#8216;M&#8217;, &#8216;H&#8217;，&#8217;B&#8217;(business day),&#8217;Q-<span class="caps">JAN</span>&#8217;(quater end), &#8216;A-<span class="caps">JAN</span>&#8217;(year&nbsp;end)</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> </span>
+<span class="code-line"><span class="c1"># import base frequencies</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">pandas.tseries.offsets</span> <span class="kn">import</span> <span class="n">Hour</span><span class="p">,</span> <span class="n">Minute</span></span>
+<span class="code-line"><span class="c1"># multiplier </span></span>
+<span class="code-line"><span class="n">four_hours</span> <span class="o">=</span> <span class="n">Hour</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1">#</span></span>
+<span class="code-line"><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;1/1/2000&#39;</span><span class="p">,</span> <span class="s1">&#39;1/3/2000 23:59&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;4h&#39;</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># WOM, week of month, WOM-3FRI: third Fri of each month. </span></span>
+<span class="code-line"><span class="n">rng</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;1/1/2012&#39;</span><span class="p">,</span> <span class="s1">&#39;9/1/2012&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;WOM-3FRI&#39;</span><span class="p">)</span></span>
+</pre></div>
+
+
+<p><strong>Shifting&nbsp;Data</strong></p>
+<p>Applicaton: compute percent changes in time series in the form of ts / ts.shift(1) -&nbsp;1.</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">ts.shift(1, freq=&#39;3D&#39;)</span>
+</pre></div>
+
+
+<p>Offsets can also be used to shift&nbsp;time</p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> </span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">pandas.tseries.offsets</span> <span class="kn">import</span> <span class="n">Day</span><span class="p">,</span> <span class="n">MonthEnd</span></span>
+<span class="code-line"><span class="n">now</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">Day</span><span class="p">()</span></span>
+<span class="code-line"><span class="c1"># rollforward, rollbackward,</span></span>
+<span class="code-line"><span class="n">offset</span> <span class="o">=</span> <span class="n">MonthEnd</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">offset</span><span class="o">.</span><span class="n">rollforward</span><span class="p">(</span><span class="n">now</span><span class="p">)</span></span>
+</pre></div>
+
+
+<p><strong>Timezone</strong></p>
+<blockquote>
+<p><span class="caps">UTC</span>: coordinated universal&nbsp;time </p>
+<p>Greenwich Mean&nbsp;Time </p>
+<p><span class="caps">DST</span>: daylight savings&nbsp;time
+</p>
+</blockquote>
+<p>In Python, time zone infor is stored in 3rd party module <em>pytz</em> </p>
+<div class="highlight"><pre><span class="code-line"><span></span><span class="kn">import</span> <span class="nn">pytz</span></span>
+</pre></div>
+
+
+<p>Localization <span class="amp">&amp;</span>&nbsp;Conversion</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">pd.date_range(&#39;3/9/2012 9:30&#39;, periods=10, freq=&#39;D&#39;, tz=&#39;UTC&#39;)</span>
+<span class="code-line">#localize  (tz_localize)</span>
+<span class="code-line">ts_utc = ts.tz_localize(&#39;UTC&#39;)</span>
+<span class="code-line">#convert   (tz_convert)</span>
+<span class="code-line">ts_utc.tz_convert(&#39;US/Eastern&#39;)</span>
+</pre></div>
+
+
+<p>Timezone-aware Timestamp&nbsp;Objects </p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">stamp_moscow = pd.Timestamp(&#39;2011-03-12 04:00&#39;, tz=&#39;Europe/Moscow&#39;)</span>
+<span class="code-line"></span>
+<span class="code-line">#or localize </span>
+<span class="code-line">stamp.tz_localize(&#39;US/Eastern&#39;)</span>
+</pre></div>
+
+
+<p>Operations between time&nbsp;zones </p>
+<p>When two time series are combined, the resulting timezone will be <span class="caps">UTC</span>. </p>
+<p><strong>Periods</strong></p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
+<span class="code-line"># timespan from 1-1-2007 - 12-31-2007</span>
+<span class="code-line">p = pd.Period(2007, freq=&#39;A-DEC&#39;)</span>
+<span class="code-line"></span>
+<span class="code-line"># period_range </span>
+<span class="code-line">rng = pd.period_range(&#39;1/1/2000&#39;, &#39;6/30/2000&#39;, freq=&#39;M&#39;)</span>
+<span class="code-line"># convert frequency </span>
+<span class="code-line">p.asfreq(&#39;M&#39;, how=&#39;start&#39;) # or p.asfreq(&#39;M&#39;,&#39;start&#39;)</span>
+<span class="code-line"></span>
+<span class="code-line">#period_index </span>
+<span class="code-line">values = [&#39;2001Q3&#39;, &#39;2002Q2&#39;, &#39;2003Q1&#39;]</span>
+<span class="code-line">index = pd.PeriodIndex(values, freq=&#39;Q-DEC&#39;)</span>
+</pre></div>
+
+
+<p>Quaterly&nbsp;Period: </p>
+<div class="highlight"><pre><span class="code-line"><span></span># Fiscal year ending in Feb, Q4 runs from Nov to Feb, inclusive. </span>
+<span class="code-line">p = pd.Period(&#39;2012Q4&#39;, freq=&#39;Q-FEB&#39;)</span>
+</pre></div>
+
+
+<p><strong>Timestamp to&nbsp;Periods</strong></p>
+<p><em>to_period</em></p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">rng = pd.date_range(&#39;1/29/2000&#39;, periods=6, freq=&#39;D&#39;)</span>
+<span class="code-line">ts = Series(randn(6), index=rng)</span>
+<span class="code-line">tp = ts.to_period(&#39;M&#39;) #the fre changes to Month</span>
+</pre></div>
+
+
+<p><em>to_timestamp</em></p>
+<div class="highlight"><pre><span class="code-line"><span></span>tp.to_timestamp(how=&#39;end&#39;)</span>
+</pre></div>
+
+
+<p><strong>Resampling</strong></p>
+<ul>
+<li>Timestamp</li>
+</ul>
+<p><em>resample(methods)</em>,  methods include freq, how( such as mean, ohlc, sum,etc), axis, fill_method,&nbsp;etc. </p>
+<p><em>downsampling</em>: aggregation is&nbsp;needed.</p>
+<p><em>upsampling</em>: no aggregation is needed,missing values are filled. e.g. <code>frame.resample('D', fill_method='ffill', limit=2)</code></p>
+<ul>
+<li>Periods</li>
+</ul>
+<p>Same principles&nbsp;apply</p>
+<div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
+<span class="code-line">annual_frame.resample(&#39;Q-DEC&#39;, fill_method=&#39;ffill&#39;, convention=&#39;start&#39;)&#39;</span>
+</pre></div>
+
+
+<p><span class="caps">END</span>. </p>
+        </div>
+
+        <div class="meta">
+            <div>
+                    <a href="http://linnus.net/tag/tech-it.html" class="tag">tech-iT</a>
+            </div>
+        </div>
+	   <DIV style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FILTER: progid:DXImageTransform.Microsoftpadding:8px; ; LEFT: expression_r(eval_r(document.body.scrollLeft)+eval_r(document.body.clientWidth)-70); BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; POSITION: right; ; TOP: expression_r(eval_r(document.body.scrollTop)+eval_r(document.body.clientHeight)-240); TEXT-ALIGN: center"><A href="#top"><IMG src="/images/top-button.png" border=0></A></DIV>
+    </article>
+
+  <section>
+    <h2>Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'linnus';
+      var disqus_identifier = '/posts/2015/Oct/23/notes python for data analysis 2/';
+      var disqus_url = 'http://linnus.net/posts/2015/Oct/23/notes python for data analysis 2/';
+      var disqus_title = 'Notes: Python for Data Analysis (Part&nbsp;2)';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  </section>
+
+</div>
+
+<style type="text/css">
+{
+    max-width: 700px;
+}
+
+.text_cell .prompt {
+    display: none;
+}
+
+div.cell {
+    padding: 0;
+}
+
+div.text_cell_render {
+    padding: 0;
+}
+
+div.prompt {
+    font-size: 13px;
+}
+
+div.input_prompt {
+    padding: .7em 0.2em;
+}
+
+div.output_prompt {
+    padding: .4em .2em;
+}
+
+div.input_area {
+    margin: .2em 0.4em;
+    max-width: 580px;
+}
+
+table.dataframe {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+table.dataframe th, td {
+    padding: 4px;
+    text-align: left;
+}
+
+pre code {
+    background-color: inherit;
+}</style>   
+
+        </div>
+
+	   
+<footer class="row">
+	<div class="large-12 columns">
+		<hr />
+		<div class="row">
+			<center>
+			<p><a href="http://linnus.net"><font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN Lin | Oh,Interesting</p>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+			<p>Powered by <a href="http://getpelican.com">Pelican</a>. Inspired by <a rel="bookmark" href="http://jakevdp.github.io">"Pythonic Perambulations". </a> 
+			</center>
+		</div>
+	</div>
+</footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-64765479-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64765479-1');
+    ga('send', 'pageview');
+</script>
+    </body>
+</html>

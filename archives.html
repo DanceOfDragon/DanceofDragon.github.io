@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="JIN Lin">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <title>Archives | JIN Lin | Oh,Interesting</title>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="alternate" type="application/atom+xml" title="JIN Lin | Oh,Interesting blog atom feed" href="/feeds/all.atom.xml" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
+        <style>.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+        <style>body {
+  margin: 0;
+  padding: 0;
+  font: 15px 'Source Sans Pro', sans-serif;
+  line-height: 1.6em;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #007EE5;
+  text-decoration: none;
+}
+a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+header.main-header {
+  background: none repeat scroll 0% 0% #205F29;
+  margin-bottom: 0px;
+}
+header.main-header a {
+  color: #fff;
+}
+header.main-header .container {
+  max-width: 1000px;
+}
+header.main-header .container nav a:hover {
+  background-color: #5C881C;
+}
+article {
+  margin: 0;
+}
+article header.about {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+article header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+article header h1 {
+  margin-bottom: 2px;
+  font-weight: 700;
+  color: #000;
+}
+article header time {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: right;
+}
+article header time.left {
+  color: #9E9E9E;
+  font-size: 0.85em;
+  float: left;
+}
+article div.social-links ul {
+  padding: 0px;
+}
+article div.social-links li {
+  display: inline;
+  font-size: 20px;
+}
+article div.social-links li a {
+  color: #000;
+  padding: 10px;
+}
+article div.social-links li a:hover {
+  color: #666;
+  text-decoration: none;
+}
+article p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+article p.note {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0.533em 0.733em;
+}
+article p.update {
+  background-color: #FEEFB3;
+  border: 1px solid #e6e68a;
+  padding: 0.533em 0.733em;
+}
+article p.alert {
+  background-color: #ffe2e2;
+  border: 1px solid #ffb2b2;
+  padding: 0.533em 0.733em;
+}
+article ul,
+article ol {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+article li {
+  font-size: 16px;
+  line-height: 1.6em;
+}
+article a:hover {
+  text-decoration: underline;
+}
+article blockquote {
+  border-left: 2px solid #c7c7cc;
+  color: #666;
+  margin: 30px 0;
+  padding: 0 0 0 25px;
+}
+article img {
+  max-width: 100%;
+}
+article code {
+  color: #333;
+  background-color: #EEE;
+  border-radius: 0;
+  font-size: 13px;
+}
+article .meta {
+  font-size: 11px;
+}
+article .meta a:hover {
+  text-decoration: none;
+}
+article .meta div {
+  margin-bottom: 20px;
+  display: block;
+}
+article .meta a.tag {
+  margin: 0 10px 10px 0;
+  padding: 1px 12px;
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+article .meta a.tag:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+article .meta a.read_more,
+article .meta a.comments_btn {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px 20px;
+  color: #205F29;
+  background: #FFF;
+  border: 1px solid #205F29;
+}
+article .meta a.read_more:hover,
+article .meta a.comments_btn:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.index {
+  max-width: 700px;
+}
+.index article header h2 {
+  font-size: 36px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.index article header h2 a {
+  color: #000;
+}
+.index article header h2 a:hover {
+  color: #007EE5;
+  text-decoration: none;
+}
+.index .separator {
+  padding: 40px 0 0 0;
+  margin: 0 0 40px 0;
+  height: 10px;
+  border-bottom: solid 1px #CCC;
+}
+.index .pagination {
+  display: block;
+  margin-bottom: 100px;
+}
+.index .pagination .left {
+  text-align: right;
+}
+.index .pagination .right {
+  text-align: left;
+}
+.index .pagination a {
+  display: inline-block;
+  border: 2px solid #5C881C;
+  margin: 0 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  color: #5C881C;
+}
+.index .pagination a:hover {
+  color: #FFF;
+  background: #5C881C;
+}
+.post {
+  max-width: 700px;
+}
+.post h2:before {
+  content: "# ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h3:before {
+  content: "## ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post h4:before {
+  content: "### ";
+  font-weight: bold;
+  color: #DDD;
+}
+.post article .meta {
+  margin: 50px 0 100px;
+}
+.list {
+  max-width: 700px;
+}
+.list ul.double-list {
+  margin: 0 auto 60px;
+  padding: 0;
+  list-style-type: none;
+}
+.list ul.double-list li {
+  padding: 5px 0;
+}
+.list ul.double-list li h2 {
+  font-size: 1em;
+  display: inline;
+  font-weight: normal;
+}
+.list ul.double-list li span {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  font-size: 12px;
+  color: #999;
+}
+.full-width-content {
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
+}</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+        <script type="text/javascript">
+        init_mathjax = function() {
+            if (window.MathJax) {
+                // MathJax loaded
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    },
+                    displayAlign: 'left', // Change this to 'center' to center equations.
+                    "HTML-CSS": {
+                        styles: {'.MathJax_Display': {"margin": 0}}
+                    }
+                });
+                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+            }
+        }
+        init_mathjax();
+        </script>
+
+    </head>
+
+    <body>
+        <header class="navbar navbar-inverse bs-docs-nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span> 
+		  </button>
+                  <a class="navbar-brand" href="/" title="Home" class="title">JIN Lin | Oh,Interesting</a>
+                </div>
+                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
+		    <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/pages/about.html" title="About">About</a></li>
+                            <li><a href="/archives.html" title="Archive">Archive</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="wrap">
+<div class="container list">
+    <article>
+        <h1 style="margin-bottom: 30px;">Archives and tags</h1>
+
+        <div class="meta" style="margin-bottom: 30px;">
+                <a href="http://linnus.net/tag/random.html" class="tag">random (6)</a>
+                <a href="http://linnus.net/tag/watch.html" class="tag">watch (6)</a>
+                <a href="http://linnus.net/tag/tech-it.html" class="tag">tech-iT (10)</a>
+                <a href="http://linnus.net/tag/academic-research.html" class="tag">academic-research (5)</a>
+                <a href="http://linnus.net/tag/readingcn.html" class="tag">reading/cn (18)</a>
+        </div>
+
+        <ul class="double-list">
+            <li>
+                <a href='/posts/2017/Aug/05/updates/'>
+                    <h2>Updates</h2>
+                    <span>05.08.2017</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Jul/23/ToastMasters-CC4-How-to-Say-it/'>
+                    <h2>ToastMasters <span class="caps">CC4</span>: How to Say&nbsp;it</h2>
+                    <span>23.07.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Jul/23/ToastMasters-CC3-Get-to-the-Point/'>
+                    <h2>ToastMasters <span class="caps">CC3</span>: Get to the&nbsp;Point</h2>
+                    <span>23.07.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Jul/23/ToastMasters-CC2-Organize-Your-Speech/'>
+                    <h2>ToastMasters <span class="caps">CC2</span>: Organize Your&nbsp;Speech</h2>
+                    <span>23.07.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Jul/16/A-Short-Trip-to-Indonesia-Bintan-Island/'>
+                    <h2>A Short Trip to Indonesia Bintan&nbsp;Island</h2>
+                    <span>16.07.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Jun/25/switching-domain-from-GoDaddy-to-NameCheap/'>
+                    <h2>Switching Domain from GoDaddy to&nbsp;NameCheap</h2>
+                    <span>25.06.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Jun/25/two-lectures-with-George-Whitesides/'>
+                    <h2>Two Lectures with George M.&nbsp;Whitesides</h2>
+                    <span>25.06.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/May/17/recent-updates-running-and-speaking/'>
+                    <h2>Recent Updates: Running and&nbsp;Speaking</h2>
+                    <span>17.05.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Mar/17/watch-Hikaru-no-Go/'>
+                    <h2>看<棋魂></h2>
+                    <span>17.03.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Mar/09/A-Day-Full-of-Wonder/'>
+                    <h2>一天惊喜</h2>
+                    <span>09.03.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Mar/08/technote-acces-NUS-HPC-from-Mac/'>
+                    <h2>TechNote-Acess <span class="caps">NUS</span> <span class="caps">HPC</span> from&nbsp;Mac</h2>
+                    <span>08.03.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Mar/05/plos-one-creator-gate/'>
+                    <h2>#CreatorGate</h2>
+                    <span>05.03.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Mar/04/about-presentation/'>
+                    <h2>关于presentation的一些思考</h2>
+                    <span>04.03.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Feb/27/interfacing/'>
+                    <h2><span class="caps">INTERFACING</span></h2>
+                    <span>27.02.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2016/Jan/01/2016-new-year/'>
+                    <h2>2016 New&nbsp;Year</h2>
+                    <span>01.01.2016</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Dec/02/Scientific-Research-in-China-and-Singapore/'>
+                    <h2>Scientific Research in China <span class="amp">&amp;</span>&nbsp;Singapore</h2>
+                    <span>02.12.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Nov/26/SingaoreNationalGallaryWu-Guanzhong/'>
+                    <h2>新加坡国家美术馆吴冠中作品展</h2>
+                    <span>26.11.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Nov/20/of reading paper/'>
+                    <h2>Of Reading&nbsp;Paper</h2>
+                    <span>20.11.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Nov/07/艺术的故事插图全简析6/'>
+                    <h2>插图一览《艺术的故事》（6）</h2>
+                    <span>07.11.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Oct/23/notes python for data analysis 2/'>
+                    <h2>Notes: Python for Data Analysis (Part&nbsp;2)</h2>
+                    <span>23.10.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Oct/18/how to tell tear-dring funny story/'>
+                    <h2>如何讲潸泪的喜剧</h2>
+                    <span>18.10.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Oct/16/html-presentation-demo/'>
+                    <h2><span class="caps">HTML</span> Presentation&nbsp;Demo</h2>
+                    <span>16.10.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Oct/13/personal finance management and related/'>
+                    <h2>理财及其他</h2>
+                    <span>13.10.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Oct/12/notes python for data analysis/'>
+                    <h2>Notes: Python for Data Analysis (Part&nbsp;1)</h2>
+                    <span>12.10.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Sep/29/TangNuoTalksAboutNovel/'>
+                    <h2>唐诺说小说</h2>
+                    <span>29.09.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Sep/28/ipython_notebook_slideshow/'>
+                    <h2>IPython Notebook&nbsp;Slideshow</h2>
+                    <span>28.09.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Sep/19/《知识分子》与《赛先生》创刊词之比较/'>
+                    <h2>微信科普之路会好么？饶毅鲁白谢宇再启航，《知识分子》与《赛先生》创刊词之比较</h2>
+                    <span>19.09.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Sep/13/艺术的故事插图全简析5/'>
+                    <h2>插图一览《艺术的故事》（5）</h2>
+                    <span>13.09.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Sep/07/一篇勉强的《三体》批评/'>
+                    <h2>一篇勉强的《三体》批评</h2>
+                    <span>07.09.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Aug/30/vba case study 1/'>
+                    <h2><span class="caps">VBA</span>-case study&nbsp;1</h2>
+                    <span>30.08.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Aug/29/艺术的故事插图全简析4/'>
+                    <h2>插图一览《艺术的故事》（4）</h2>
+                    <span>29.08.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Aug/14/notes-excel-vba/'>
+                    <h2>Notes:Excel <span class="caps">VBA</span></h2>
+                    <span>14.08.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Aug/09/艺术的故事插图全简析3/'>
+                    <h2>插图一览《艺术的故事》（3）</h2>
+                    <span>09.08.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Aug/09/莫迪亚诺·暗店街/'>
+                    <h2>你的故事有谁来讲</h2>
+                    <span>09.08.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Aug/06/人类简史·从动物到上帝/'>
+                    <h2>读《人类简史·从动物到上帝》</h2>
+                    <span>06.08.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Aug/01/艺术的故事插图全简析2/'>
+                    <h2>插图一览《艺术的故事》（2）</h2>
+                    <span>01.08.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/31/万物生长必有其土壤-读鲁迅《中国小说史略》/'>
+                    <h2>万物生长，必有其土壤</h2>
+                    <span>31.07.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/24/艺术的故事插图全简析1/'>
+                    <h2>插图一览《艺术的故事》（1）</h2>
+                    <span>24.07.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/24/How_to_setup_blog_with_GitHub_Pages_Pelican(3)/'>
+                    <h2>Blogging with GitHub Pages + Pelican&nbsp;(3)</h2>
+                    <span>24.07.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/19/艺术的故事插图全简析0/'>
+                    <h2>插图一览《艺术的故事》（0）</h2>
+                    <span>19.07.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/18/没来由没归处-读冯唐《18岁给我一个姑娘》及《北京 北京》/'>
+                    <h2>没来由没归处</h2>
+                    <span>18.07.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/12/生活就是一些状态，一些片段 -读冯唐《万物生长》/'>
+                    <h2>生活就是一些状态，一些片段</h2>
+                    <span>12.07.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/11/How_to_setup_blog_with_GitHub_Pages_Pelican(2)/'>
+                    <h2>Blogging with GitHub Pages + Pelican&nbsp;(2)</h2>
+                    <span>11.07.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/11/How_to_setup_blog_with_GitHub_Pages_Pelican(1)/'>
+                    <h2>Blogging with GitHub Pages + Pelican&nbsp;(1)</h2>
+                    <span>11.07.2015</span>
+                </a>
+            </li>
+            <li>
+                <a href='/posts/2015/Jul/06/blog-post-markdown/'>
+                    <h2>Test</h2>
+                    <span>06.07.2015</span>
+                </a>
+            </li>
+        </ul>
+    </article>
+</div>
+        </div>
+
+	   
+<footer class="row">
+	<div class="large-12 columns">
+		<hr />
+		<div class="row">
+			<center>
+			<p><a href="http://linnus.net"><font style="color:#444;font-family:'Open Sans';font-weight: bold">JIN Lin | Oh,Interesting</p>
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />Unless otherwise stated, this work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+			<p>Powered by <a href="http://getpelican.com">Pelican</a>. Inspired by <a rel="bookmark" href="http://jakevdp.github.io">"Pythonic Perambulations". </a> 
+			</center>
+		</div>
+	</div>
+</footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-64765479-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-64765479-1');
+    ga('send', 'pageview');
+</script>
+    </body>
+</html>
