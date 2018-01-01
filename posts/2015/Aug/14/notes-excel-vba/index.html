@@ -6,7 +6,7 @@
         <meta name="author" content="JIN Lin">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <title>Notes:Excel <span class="caps">VBA</span> | JIN Lin | Oh,Interesting</title>
+        <title>Notes:Excel VBA | JIN Lin | Oh,Interesting</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -427,56 +427,56 @@ article .meta a.comments_btn:hover {
 <div class="container post">
     <article>
         <header>
-            <h1>Notes:Excel <span class="caps">VBA</span></h1>
+            <h1>Notes:Excel VBA</h1>
             <time datetime="article.date.isoformat()" pubdate>Fri 14 August 2015</time>
         </header>
 
         <div class="article_content">
-            <p>[<span class="caps">TOC</span>]</p>
-<h3>1. Macros vs. <span class="caps">VBA</span></h3>
+            <p>[TOC]</p>
+<h3>1. Macros vs. VBA</h3>
 <ul>
-<li><span class="caps">VBA</span>- Visual Basic&nbsp;Applications </li>
-<li>Essentially, both are realised by some codes except that Macros requires only a few clikcs while <span class="caps">VBA</span> requires requires  you to type down the&nbsp;codes. </li>
-<li>It is faster and easier to create Macros but it also means less flexibility. <span class="caps">VBA</span> in this case offers much flexibile and powerful options through which you can call APIs, read and write all kinds of files, access other databases, and create dashboards or userforms&nbsp;etc. </li>
-<li>It is probably enough to eliminate minor repetitions by just using Macros,or functions. Of course <span class="caps">VBA</span> is&nbsp;cooler. </li>
+<li>VBA- Visual Basic Applications </li>
+<li>Essentially, both are realised by some codes except that Macros requires only a few clikcs while VBA requires requires  you to type down the codes. </li>
+<li>It is faster and easier to create Macros but it also means less flexibility. VBA in this case offers much flexibile and powerful options through which you can call APIs, read and write all kinds of files, access other databases, and create dashboards or userforms etc. </li>
+<li>It is probably enough to eliminate minor repetitions by just using Macros,or functions. Of course VBA is cooler. </li>
 </ul>
-<h3>2.&nbsp;Terminology</h3>
+<h3>2. Terminology</h3>
 <ul>
-<li><strong><span class="dquo">&#8220;</span>Procedure&#8221;</strong>: Procedures, which might include multiple actions, is to do one task. <em>Sub</em> and <em>Functions</em> are used most&nbsp;often. </li>
-<li><strong><span class="dquo">&#8220;</span>Module&#8221;</strong>: A module is where the procedures are&nbsp;stored. </li>
-<li><strong><span class="dquo">&#8220;</span>Object&#8221;</strong>: Objects are the items to be controlled. They include <em>Workbook</em>,<em>Worksheet</em>,<em>Range</em>,<em>Cell</em>,<em>Charts</em>&nbsp;etc. </li>
-<li><strong><span class="dquo">&#8220;</span>Property&#8221;</strong>: Properties are the characteristics of an Objects which can be measured and quantified.e.g. Range(&#8220;A1&#8221;).Value, here <em>value</em> is the property of <em>Range(&#8220;A1&#8221;)</em>. A property could become an object. e.g. Range(&#8220;A1&#8221;).Font.Size. <em>Font</em> is the property of <em>Range</em> meanwhile the object of its property <em>Size</em>.</li>
-<li><strong><span class="dquo">&#8220;</span>Method&#8221;</strong>:Methods are the actions that can be performed by an Object or on an Object.e.g.Range(&#8220;A1&#8221;).Select. <em>Select</em> is the action on <em>Range</em>. Obejects, and their Methods and Properties could be browsed in the <span class="caps">VBE</span> (integrated <span class="caps">VB</span>&nbsp;Editor).</li>
-<li><strong><span class="dquo">&#8220;</span>Event&#8221;</strong>Events are actions performed by users which trigger Excel <span class="caps">VBA</span> to execute&nbsp;code. </li>
+<li><strong>"Procedure"</strong>: Procedures, which might include multiple actions, is to do one task. <em>Sub</em> and <em>Functions</em> are used most often. </li>
+<li><strong>"Module"</strong>: A module is where the procedures are stored. </li>
+<li><strong>"Object"</strong>: Objects are the items to be controlled. They include <em>Workbook</em>,<em>Worksheet</em>,<em>Range</em>,<em>Cell</em>,<em>Charts</em> etc. </li>
+<li><strong>"Property"</strong>: Properties are the characteristics of an Objects which can be measured and quantified.e.g. Range("A1").Value, here <em>value</em> is the property of <em>Range("A1")</em>. A property could become an object. e.g. Range("A1").Font.Size. <em>Font</em> is the property of <em>Range</em> meanwhile the object of its property <em>Size</em>.</li>
+<li><strong>"Method"</strong>:Methods are the actions that can be performed by an Object or on an Object.e.g.Range("A1").Select. <em>Select</em> is the action on <em>Range</em>. Obejects, and their Methods and Properties could be browsed in the VBE (integrated VB Editor).</li>
+<li><strong>"Event"</strong>Events are actions performed by users which trigger Excel VBA to execute code. </li>
 </ul>
-<h3>3. <span class="caps">VBE</span></h3>
-<p>Just an example window. It can be adjusted to suit your favor. This is where codes are written and&nbsp;editted. </p>
+<h3>3. VBE</h3>
+<p>Just an example window. It can be adjusted to suit your favor. This is where codes are written and editted. </p>
 <p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19923031923/in/dateposted-public/" title="vbe-init"><img src="https://farm6.staticflickr.com/5689/19923031923_f355f31837_n.jpg" width="279" height="320" alt="vbe-init"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<p>It&nbsp;includes:</p>
+<p>It includes:</p>
 <ul>
-<li>Menu&nbsp;bar  </li>
-<li>Tool&nbsp;bar </li>
-<li>Project window:including <em>Excel Objects</em>(Sheets and ThisWorkbook),<em>Forms</em>, <em>Modules</em>&nbsp;and </li>
-<li>Properties window: press F4 to&nbsp;open. </li>
-<li>Code&nbsp;window</li>
-<li>Immdiate window. <span class="caps">CTRL</span> + <span class="caps">ALT</span> + I to open. Write code and press Return to&nbsp;excute. </li>
-<li>F1: <span class="caps">HELP</span>. Who knows better than those developed the <span class="caps">VBA</span>? </li>
+<li>Menu bar  </li>
+<li>Tool bar </li>
+<li>Project window:including <em>Excel Objects</em>(Sheets and ThisWorkbook),<em>Forms</em>, <em>Modules</em> and </li>
+<li>Properties window: press F4 to open. </li>
+<li>Code window</li>
+<li>Immdiate window. CTRL + ALT + I to open. Write code and press Return to excute. </li>
+<li>F1: HELP. Who knows better than those developed the VBA? </li>
 </ul>
-<h3>4.&nbsp;Basics</h3>
-<h4>4.1&nbsp;Varaibles</h4>
-<h5>4.1.1 Variables: Name&nbsp;Convention</h5>
+<h3>4. Basics</h3>
+<h4>4.1 Varaibles</h4>
+<h5>4.1.1 Variables: Name Convention</h5>
 <ul>
-<li>Less than 255&nbsp;characters;</li>
-<li>No&nbsp;spacing;</li>
-<li>It must not begin with a&nbsp;number;</li>
-<li>Period is not&nbsp;permitted;</li>
-<li>Do not use key syntax defined by <span class="caps">VBA</span>, e.g. Workbook,&nbsp;Range</li>
+<li>Less than 255 characters;</li>
+<li>No spacing;</li>
+<li>It must not begin with a number;</li>
+<li>Period is not permitted;</li>
+<li>Do not use key syntax defined by VBA, e.g. Workbook, Range</li>
 </ul>
-<h5>4.1.2 Variables: Data&nbsp;Types</h5>
-<p>Excel is like a grocery store where all types of things are sold. To lump the same types of things under one label is easier to manage and&nbsp;search. </p>
+<h5>4.1.2 Variables: Data Types</h5>
+<p>Excel is like a grocery store where all types of things are sold. To lump the same types of things under one label is easier to manage and search. </p>
 <p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/20518360866/in/dateposted-public/" title="Excel-VBA-Variable-Types"><img src="https://farm6.staticflickr.com/5697/20518360866_2e9a660209.jpg" width="500" height="443" alt="Excel-VBA-Variable-Types"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p>By default, the type is <em>Variant</em>.</p>
-<h5>4.1.3 Variables:&nbsp;Declaration</h5>
+<h5>4.1.3 Variables: Declaration</h5>
 <p><strong>Syntax</strong>:</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Dim (Variable_Name) As (Data Type)</span>
 <span class="code-line">e.g.</span>
@@ -488,14 +488,14 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p><strong>Option&nbsp;Explicit</strong></p>
+<p><strong>Option Explicit</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>Option Explicit { On | Off }</span>
 <span class="code-line"></span>
 <span class="code-line">&#39;by default is On. Force explicit delcaration of all variables.</span>
 </pre></div>
 
 
-<p>Since it is more efficient if <span class="caps">EXCEL</span> knows exactly what type of the variable is, you can force to declare the data types(in case you forget) rather than use the default one by turning on the <em>option explicit</em>.It can be set in the tool&nbsp;bar.</p>
+<p>Since it is more efficient if EXCEL knows exactly what type of the variable is, you can force to declare the data types(in case you forget) rather than use the default one by turning on the <em>option explicit</em>.It can be set in the tool bar.</p>
 <p><strong>Scope</strong> </p>
 <div class="highlight"><pre><span class="code-line"><span></span>Public (Variable_Name) As (Data_Type) </span>
 <span class="code-line">    &#39;used across all modules</span>
@@ -509,7 +509,7 @@ article .meta a.comments_btn:hover {
 
 
 <p><strong>Assignment</strong></p>
-<p><span class="caps">LET</span> </p>
+<p>LET </p>
 <div class="highlight"><pre><span class="code-line"><span></span>[Let] Variable_Name = data </span>
 <span class="code-line">    &#39;Let could be implicit</span>
 <span class="code-line">    &#39;data are mumberic such as date, integer</span>
@@ -519,7 +519,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p><span class="caps">SET</span></p>
+<p>SET</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Set Variable_Name = data </span>
 <span class="code-line">    &#39; Set is a must</span>
 <span class="code-line">    &#39; data is Object such Range,Cells etc.</span>
@@ -533,7 +533,7 @@ article .meta a.comments_btn:hover {
 
 
 <p><strong>Constant</strong></p>
-<p>Constants like pi, tax rate are better represented by a constant&nbsp;variable.</p>
+<p>Constants like pi, tax rate are better represented by a constant variable.</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Const   (Variable_Name) As (Data_Type) = data</span>
 <span class="code-line">e.g.</span>
 <span class="code-line">    Const pi As Single = 3.14</span>
@@ -542,7 +542,7 @@ article .meta a.comments_btn:hover {
 
 
 <p><strong>Array</strong></p>
-<p>This is where a matrix of different types of data could be&nbsp;manipulated. </p>
+<p>This is where a matrix of different types of data could be manipulated. </p>
 <p>Declaration</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Public|Dim (Array_Name(a to b)) As (Data_Type) </span>
 <span class="code-line">    &#39;either use Public or Dim</span>
@@ -570,7 +570,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Dynamic&nbsp;Array</p>
+<p>Dynamic Array</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Dim arr() As String </span>
 <span class="code-line">    &#39;together with ReDim to better accommondate unknown number of data</span>
 <span class="code-line">e.g.</span>
@@ -583,20 +583,20 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Other Ways to Create&nbsp;Array</p>
-<p><em>Array</em>&nbsp;Function</p>
+<p>Other Ways to Create Array</p>
+<p><em>Array</em> Function</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Dim arr As Variant </span>
 <span class="code-line">arr = Array(1,3,4,5,7)</span>
 </pre></div>
 
 
-<p><em>Split</em>&nbsp;Function</p>
+<p><em>Split</em> Function</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Dim arr As Variant </span>
 <span class="code-line">arr = Array(&quot;David,Tony,Tome,Lily,Lucy&quot;,&quot;,&quot;)</span>
 </pre></div>
 
 
-<p><em>Range</em>&nbsp;Object</p>
+<p><em>Range</em> Object</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Dim arr As Variant</span>
 <span class="code-line">arr = Range(&quot;A1:G3&quot;).Value</span>
 </pre></div>
@@ -621,7 +621,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p><em>Write into&nbsp;Cells</em> </p>
+<p><em>Write into Cells</em> </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line">    arr = Array(1,3,5,7,9)</span>
 <span class="code-line">    Range(&quot;A1:A5&quot;)= Application.WorksheetFunction.Transpose(arr)</span>
@@ -629,7 +629,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h4>4.2&nbsp;Objects/Properties/Methods</h4>
+<h4>4.2 Objects/Properties/Methods</h4>
 <p>Obejcts</p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line">    Application.Workbooks(&quot;Book1&quot;).Worksheets(&quot;sheet1&quot;).Range(&quot;A2&quot;)</span>
@@ -648,8 +648,8 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h4>4.3&nbsp;Operators</h4>
-<p>The precedence of all these operators is the same as other language such as Python. A full list could be found here <a href="http://onlinelibrary.wiley.com/store/10.1002/9781118390405.app4/asset/app4.pdf?v=1&amp;t=idbb6bev&amp;s=faca84fd5f25030d9d227a960f362715cc8093d9"><span class="caps">VBA</span> Operators Summary</a>. </p>
+<h4>4.3 Operators</h4>
+<p>The precedence of all these operators is the same as other language such as Python. A full list could be found here <a href="http://onlinelibrary.wiley.com/store/10.1002/9781118390405.app4/asset/app4.pdf?v=1&amp;t=idbb6bev&amp;s=faca84fd5f25030d9d227a960f362715cc8093d9">VBA Operators Summary</a>. </p>
 <p><em>Arithmetic</em>
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/19938771784/in/dateposted-public/" title="VBA-arithmetic operators"><img src="https://farm6.staticflickr.com/5758/19938771784_e6e0824144.jpg" width="500" height="481" alt="VBA-arithmetic operators"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p><em>Comparison</em></p>
@@ -659,8 +659,8 @@ article .meta a.comments_btn:hover {
 <p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/20373375110/in/dateposted-public/" title="VBA-logic operators 2"><img src="https://farm6.staticflickr.com/5788/20373375110_4a5db544a4.jpg" width="500" height="188" alt="VBA-logic operators 2"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
 <p><em>Others</em></p>
 <p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/20373375120/in/dateposted-public/" title="VBA-Miscellaneous Operators"><img src="https://farm6.staticflickr.com/5625/20373375120_e9601d5e82.jpg" width="500" height="442" alt="VBA-Miscellaneous Operators"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<h4>4.4 Built-in&nbsp;Functions</h4>
-<p>Employ these readily available functions to save&nbsp;time. </p>
+<h4>4.4 Built-in Functions</h4>
+<p>Employ these readily available functions to save time. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">    Time() &#39; return system time</span>
 <span class="code-line">    Date()  &#39; return system date</span>
@@ -669,8 +669,8 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h4>4.5&nbsp;Syntaxes</h4>
-<h5>4.5.1&nbsp;If&#8230;Then</h5>
+<h4>4.5 Syntaxes</h4>
+<h5>4.5.1 If...Then</h5>
 <div class="highlight"><pre><span class="code-line"><span></span>If (conditional statement) Then (action) Else (xx)</span>
 <span class="code-line">e.g.</span>
 <span class="code-line">    If Time&lt;0.5 Then MsgBox &quot;Good Morning!&quot; Else MsgBox &quot;Good afternoon&quot;</span>
@@ -684,7 +684,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>multiple&nbsp;choices</p>
+<p>multiple choices</p>
 <div class="highlight"><pre><span class="code-line"><span></span>If ... Then</span>
 <span class="code-line">...</span>
 <span class="code-line">ElseIf... Then</span>
@@ -695,8 +695,8 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h5>4.5.2&nbsp;Select&#8230;Case</h5>
-<p>This is more suitable when more than 3 choices are to be determined. Once Select finds the matched condition, it will executes under that condition and jump off the the Select process. Put the most likely condition foremost to increase&nbsp;efficiency.  </p>
+<h5>4.5.2 Select...Case</h5>
+<p>This is more suitable when more than 3 choices are to be determined. Once Select finds the matched condition, it will executes under that condition and jump off the the Select process. Put the most likely condition foremost to increase efficiency.  </p>
 <div class="highlight"><pre><span class="code-line"><span></span>Select Case (Variable_Name)</span>
 <span class="code-line">    Case &lt;condition1&gt;</span>
 <span class="code-line">        ...</span>
@@ -707,7 +707,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h5>4.5.3&nbsp;For&#8230;Next</h5>
+<h5>4.5.3 For...Next</h5>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">For</span> <span class="p">(</span><span class="n">iteration_variable</span><span class="o">=&lt;</span><span class="n">initial</span> <span class="n">value</span><span class="o">&gt;</span> <span class="n">To</span> <span class="o">&lt;</span><span class="n">end</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">)[</span><span class="n">Step</span> <span class="n">size</span><span class="p">]</span></span>
 <span class="code-line">    <span class="p">...</span></span>
 <span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">For</span><span class="p">]</span>  <span class="err">&#39;</span><span class="n">when</span> <span class="n">encounter</span> <span class="n">this</span> <span class="n">sentence</span><span class="p">,</span> <span class="n">exit</span> <span class="n">the</span> <span class="n">loop</span><span class="p">.</span> </span>
@@ -726,7 +726,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h5>4.5.4 Do&#8230;&nbsp;While</h5>
+<h5>4.5.4 Do... While</h5>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">Do</span> <span class="o">&lt;</span><span class="n">While</span> <span class="n">logical</span> <span class="n">statements</span><span class="o">&gt;</span>    <span class="err">&#39;</span> <span class="n">when</span> <span class="n">True</span><span class="p">,</span><span class="n">execute</span> <span class="n">until</span> <span class="n">it</span> <span class="n">returns</span> <span class="n">False</span></span>
 <span class="code-line">    <span class="p">...</span></span>
 <span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Do</span><span class="p">]</span></span>
@@ -735,7 +735,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p><span class="caps">OR</span> </p>
+<p>OR </p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">Do</span> </span>
 <span class="code-line">    <span class="p">...</span></span>
 <span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Do</span><span class="p">]</span></span>
@@ -744,8 +744,8 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h5>4.5.5&nbsp;Do&#8230;Until</h5>
-<p>Contrary to Do&#8230;While, Do Until executes when the Logical statement is False, and exits when it is&nbsp;True. </p>
+<h5>4.5.5 Do...Until</h5>
+<p>Contrary to Do...While, Do Until executes when the Logical statement is False, and exits when it is True. </p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">Do</span> <span class="o">&lt;</span><span class="n">Until</span> <span class="n">logical</span> <span class="n">statements</span><span class="o">&gt;</span>    <span class="err">&#39;</span> <span class="n">when</span> <span class="n">False</span><span class="p">,</span><span class="n">execute</span> <span class="n">until</span> <span class="n">it</span> <span class="n">returns</span> <span class="n">True</span></span>
 <span class="code-line">    <span class="p">...</span></span>
 <span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Do</span><span class="p">]</span></span>
@@ -754,7 +754,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p><span class="caps">OR</span></p>
+<p>OR</p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">Do</span> </span>
 <span class="code-line">    <span class="p">...</span></span>
 <span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Do</span><span class="p">]</span></span>
@@ -763,8 +763,8 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h5>4.5.6 For&nbsp;Each&#8230;Next</h5>
-<p>When the number of iterations is unknown, For&#8230; Next is a bit&nbsp;problematic. </p>
+<h5>4.5.6 For Each...Next</h5>
+<p>When the number of iterations is unknown, For... Next is a bit problematic. </p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">For</span> <span class="n">Each</span> <span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="n">In</span> <span class="p">(</span><span class="n">objects</span><span class="o">/</span><span class="n">arrays</span><span class="p">)</span></span>
 <span class="code-line">    <span class="p">...</span></span>
 <span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">For</span><span class="p">]</span></span>
@@ -785,7 +785,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h5>4.5.7 Other Common&nbsp;Syntaxes</h5>
+<h5>4.5.7 Other Common Syntaxes</h5>
 <p><strong>GoTo</strong> </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line"></span>
@@ -801,7 +801,7 @@ article .meta a.comments_btn:hover {
 
 
 <p><strong>With</strong></p>
-<p>It helps remove the repetition of the codes with the same&nbsp;structure.</p>
+<p>It helps remove the repetition of the codes with the same structure.</p>
 <p>e.g.</p>
 <div class="highlight"><pre><span class="code-line"><span></span>With Worksheet(&quot;sheet1&quot;).Range(&quot;A1&quot;).Font</span>
 <span class="code-line">    .Name = &quot;Times&quot;</span>
@@ -812,10 +812,10 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h4>4.6&nbsp;Procedures</h4>
-<h5>4.6.1&nbsp;Sub</h5>
-<p>Sub is a set of actions to do certain task. When recording a Macro, it creates a Sub procedure which is stored in a&nbsp;moudule.</p>
-<p>Declare a&nbsp;Sub </p>
+<h4>4.6 Procedures</h4>
+<h5>4.6.1 Sub</h5>
+<p>Sub is a set of actions to do certain task. When recording a Macro, it creates a Sub procedure which is stored in a moudule.</p>
+<p>Declare a Sub </p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="p">[</span><span class="n">Public</span><span class="o">|</span><span class="n">Private</span><span class="o">|</span><span class="n">Static</span><span class="p">]</span> <span class="n">Sub</span> <span class="n">sub_name</span><span class="p">()</span></span>
 <span class="code-line">    <span class="p">...</span></span>
 <span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Sub</span><span class="p">]</span></span>
@@ -826,7 +826,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Run Sub_a in&nbsp;Sub_b</p>
+<p>Run Sub_a in Sub_b</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Sub Sub_b()</span>
 <span class="code-line">    Call Sub_a[(variable1,variable2...)]</span>
 <span class="code-line">    &#39;or Application.Run &quot;Sub_a[(variable1,variable2...)]&quot;</span>
@@ -834,9 +834,9 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h5>4.6.2&nbsp;Function</h5>
-<p>Excel has quite a lot basic yet powerful functions but still might not solve particular problems faced with. For instance, counting the yellow box in one sheet. The customer function could be used in either <span class="caps">VBA</span> or Excel&nbsp;Spreadsheets.</p>
-<p>Declare a&nbsp;Function </p>
+<h5>4.6.2 Function</h5>
+<p>Excel has quite a lot basic yet powerful functions but still might not solve particular problems faced with. For instance, counting the yellow box in one sheet. The customer function could be used in either VBA or Excel Spreadsheets.</p>
+<p>Declare a Function </p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="p">[</span><span class="n">Public</span><span class="o">|</span><span class="n">Private</span><span class="o">|</span><span class="n">Static</span><span class="p">]</span> <span class="n">Function</span> <span class="n">function_name</span><span class="p">([</span><span class="n">variable</span> <span class="n">list</span><span class="p">])[</span><span class="n">As</span> <span class="n">data</span> <span class="n">type</span><span class="p">]</span> <span class="err">&#39;</span><span class="n">returned</span> <span class="n">data</span> <span class="n">type</span></span>
 <span class="code-line">    <span class="p">...</span></span>
 <span class="code-line">    <span class="p">[</span><span class="n">Exit</span> <span class="n">Function</span><span class="p">]</span></span>
@@ -846,19 +846,19 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h4>4.7 Better&nbsp;Code</h4>
+<h4>4.7 Better Code</h4>
 <ul>
-<li>Indent&nbsp;properly</li>
-<li>Avoid long&nbsp;sentence</li>
-<li>Combine trivial&nbsp;lines</li>
-<li>Write clear&nbsp;comments </li>
+<li>Indent properly</li>
+<li>Avoid long sentence</li>
+<li>Combine trivial lines</li>
+<li>Write clear comments </li>
 </ul>
-<h3>5.&nbsp;Objects</h3>
-<p>The following chapters expand above subjects with more&nbsp;details.</p>
-<h4>5.1 Common&nbsp;Objects</h4>
-<p>Object&nbsp;Hierarchy</p>
+<h3>5. Objects</h3>
+<p>The following chapters expand above subjects with more details.</p>
+<h4>5.1 Common Objects</h4>
+<p>Object Hierarchy</p>
 <p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/108107823@N04/20563347155/in/dateposted-public/" title="excelobjectchart"><img src="https://farm6.staticflickr.com/5637/20563347155_9d5876520b.jpg" width="500" height="183" alt="excelobjectchart"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<h5>5.1.1&nbsp;Application</h5>
+<h5>5.1.1 Application</h5>
 <p>Property: <code>ScreenUpdating</code></p>
 <div class="highlight"><pre><span class="code-line"><span></span>Application.ScreenUpdating = True | False </span>
 <span class="code-line">&#39;by default True, results will be shown on screen.</span>
@@ -882,7 +882,7 @@ article .meta a.comments_btn:hover {
 
 
 <p>Property: <code>EnableEvents</code></p>
-<p>Event, e.g. open/close the workbook,select a cell&nbsp;etc.</p>
+<p>Event, e.g. open/close the workbook,select a cell etc.</p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line">Private Sub Workbook_SelectionChange(ByVal,Target As Range)</span>
 <span class="code-line">    Target.Value = Target.Address</span>
@@ -891,7 +891,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Disable an&nbsp;Event</p>
+<p>Disable an Event</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Private Sub Workbook_SelectionChange(ByVal,Target As Range)</span>
 <span class="code-line">    Target.Value = Target.Address</span>
 <span class="code-line">    Target.Offset(1,0).Select    &#39;it will again return an address and select another cell, resulting an endless process. </span>
@@ -899,7 +899,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>To prevent&nbsp;this:</p>
+<p>To prevent this:</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Private Sub Workbook_SelectionChange(ByVal,Target As Range)</span>
 <span class="code-line">    Target.Value = Target.Address</span>
 <span class="code-line">    Application.EnableEvents = False  &#39;it will offset by one cell but wont return an address and offset onemore time</span>
@@ -910,14 +910,14 @@ article .meta a.comments_btn:hover {
 
 
 <p>Property: <code>WorksheetFunction</code></p>
-<p>In <span class="caps">VBA</span>, there is no <span class="caps">COUNTIF</span>,<span class="caps">SUMIF</span>,<span class="caps">TRANSPOSE</span>,or <span class="caps">VLOOKUP</span> etc. To use them, call them by using the following&nbsp;syntax:</p>
+<p>In VBA, there is no COUNTIF,SUMIF,TRANSPOSE,or VLOOKUP etc. To use them, call them by using the following syntax:</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Application.WorksheetFunction.CountIf(...)</span>
 <span class="code-line"></span>
 <span class="code-line">&#39;if VBA already has the function,say fun_a, same as that in Excel, use fun_a() instead of WorksheetFunction.fun_a()</span>
 </pre></div>
 
 
-<p>Other&nbsp;Properties:</p>
+<p>Other Properties:</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Application</span>
 <span class="code-line">    .Caption          &#39;Excel title</span>
 <span class="code-line">    .DisplayFormulaBar&#39;</span>
@@ -937,56 +937,56 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h5>5.1.2&nbsp;Workbook</h5>
-<p>Call&nbsp;Workbook</p>
+<h5>5.1.2 Workbook</h5>
+<p>Call Workbook</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Workbooks.Item(1)</span>
 <span class="code-line">Workbooks(1)</span>
 <span class="code-line">Workbooks(&quot;Book1.xls&quot;)</span>
 </pre></div>
 
 
-<p>Create&nbsp;Workbook</p>
+<p>Create Workbook</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Workbooks.Add &#39;blank excel&#39;</span>
 <span class="code-line">Workbooks.Add(&quot;full name&quot;)</span>
 <span class="code-line">Workbooks.Add xlWBATCHART</span>
 </pre></div>
 
 
-<p>Open&nbsp;Workbook</p>
+<p>Open Workbook</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Workboos.Open Filename :=&quot;E:\Book1.xls&quot;</span>
 <span class="code-line">or </span>
 <span class="code-line">Workboos.Open &quot;E:\Book1.xls&quot;</span>
 </pre></div>
 
 
-<p>Acitivate&nbsp;Workbook</p>
+<p>Acitivate Workbook</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Workbooks(&quot;Book1.xls&quot;).Active</span>
 </pre></div>
 
 
-<p>Save&nbsp;Workbook</p>
+<p>Save Workbook</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Workbooks(&quot;Book1&quot;).Save</span>
 <span class="code-line">Workbooks(&quot;Book1&quot;).SaveAs Filename :=&quot;full name&quot; &#39;close original file,open new</span>
 <span class="code-line">Workbooks(&quot;Book1&quot;).SaveCopyAs Filename :=&quot;full name&quot; &#39;keep original file,do not open new&#39;</span>
 </pre></div>
 
 
-<p>Close&nbsp;Workbook</p>
+<p>Close Workbook</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Workbooks.Close  &#39;close all files</span>
 <span class="code-line">Workbooks(&quot;Book1&quot;).Close</span>
 <span class="code-line">Workbooks(&quot;Book1&quot;).Close savechanges :=True</span>
 </pre></div>
 
 
-<h5>5.1.3&nbsp;Worksheet</h5>
-<p>Call&nbsp;Worksheet</p>
+<h5>5.1.3 Worksheet</h5>
+<p>Call Worksheet</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets.Item()</span>
 <span class="code-line">Worksheets()</span>
 <span class="code-line">Worksheets(&quot;&quot;)</span>
 </pre></div>
 
 
-<p>Create&nbsp;Worksheet</p>
+<p>Create Worksheet</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets.add</span>
 <span class="code-line">Worksheets.add Before := Worksheets(1) &#39;insert one before sheet1&#39;</span>
 <span class="code-line">Worksheets.add After := Worksheets(1)</span>
@@ -995,52 +995,52 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Edit Worksheet&nbsp;Name</p>
+<p>Edit Worksheet Name</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Nmae = &quot;salary sheet&quot;</span>
 <span class="code-line">ActiveSheet.Name = &quot;salary sheet&quot;</span>
 <span class="code-line">Worksheets.add(Before := Worksheets(1)).Name = &quot;salary sheet&quot;</span>
 </pre></div>
 
 
-<p>Delete&nbsp;Worksheet</p>
+<p>Delete Worksheet</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Delete</span>
 </pre></div>
 
 
-<p>Activate&nbsp;Worksheet</p>
+<p>Activate Worksheet</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Activate</span>
 <span class="code-line">Worksheets(1).Select</span>
 </pre></div>
 
 
-<p>Copy&nbsp;Worksheet</p>
+<p>Copy Worksheet</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Copy</span>
 </pre></div>
 
 
-<p>Move&nbsp;Worksheet</p>
+<p>Move Worksheet</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Move before := Worksheets(&quot;salary sheet&quot;)</span>
 </pre></div>
 
 
-<p>Display&nbsp;Worksheet</p>
+<p>Display Worksheet</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets(1).Visible = True</span>
 </pre></div>
 
 
-<p>Count&nbsp;Worksheets</p>
+<p>Count Worksheets</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheets.Count</span>
 </pre></div>
 
 
-<p>Sheets vs.&nbsp;Worksheets</p>
+<p>Sheets vs. Worksheets</p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">Sheets</span><span class="o">:</span> <span class="k">include</span> <span class="n">all</span> <span class="n">types</span> <span class="n">of</span> <span class="n">worksheets</span><span class="o">,</span> <span class="n">charts</span><span class="o">,</span><span class="n">macro</span><span class="o">,</span><span class="n">normal</span></span>
 <span class="code-line"><span class="n">Worksheets</span><span class="o">:</span> <span class="n">normal</span> <span class="n">spreadsheet</span></span>
 </pre></div>
 
 
-<h5>5.1.4 Range&nbsp;(essential)</h5>
-<p>Basic&nbsp;actions</p>
+<h5>5.1.4 Range (essential)</h5>
+<p>Basic actions</p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line"></span>
 <span class="code-line">Worksheets(&quot;Sheet1&quot;).Range(&quot;A1&quot;).Value = 50 </span>
@@ -1150,7 +1150,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Select <span class="amp">&amp;</span>&nbsp;Activate</p>
+<p>Select &amp; Activate</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Range(&quot;A1:A10&quot;).Select</span>
 <span class="code-line">    equivalent to</span>
 <span class="code-line">Range(&quot;A1;A10&quot;).Activate</span>
@@ -1248,9 +1248,9 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Others on <span class="caps">HELP</span></p>
-<h3>6.&nbsp;Events</h3>
-<p>Automatic response to some&nbsp;actions.</p>
+<p>Others on HELP</p>
+<h3>6. Events</h3>
+<p>Automatic response to some actions.</p>
 <p>Worksheet_Change() </p>
 <div class="highlight"><pre><span class="code-line"><span></span>When data in cells are changed,Return message</span>
 <span class="code-line">e.g.</span>
@@ -1292,7 +1292,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Other&nbsp;events:</p>
+<p>Other events:</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Worksheet_BeforeDoubleClick</span>
 <span class="code-line">Worksheet_Calculate </span>
 <span class="code-line">Worksheet_BeforeRightClick</span>
@@ -1302,7 +1302,7 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p>Workbook Events (Just some&nbsp;examples)</p>
+<p>Workbook Events (Just some examples)</p>
 <div class="highlight"><pre><span class="code-line"><span></span>Workbook_Open</span>
 <span class="code-line">Workbook_BeforeClose</span>
 <span class="code-line">Workbook_SheetChange</span>
@@ -1318,8 +1318,8 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<h3>7.&nbsp;Next</h3>
-<p>Here comes the end of some basics of the Excel <span class="caps">VBA</span>. What follows is one or more projects that build upon these basics and the <strong>Interatice UserForm</strong> as&nbsp;well. </p>
+<h3>7. Next</h3>
+<p>Here comes the end of some basics of the Excel VBA. What follows is one or more projects that build upon these basics and the <strong>Interatice UserForm</strong> as well. </p>
         </div>
 
         <div class="meta">
@@ -1337,7 +1337,7 @@ article .meta a.comments_btn:hover {
       var disqus_shortname = 'linnus';
       var disqus_identifier = '/posts/2015/Aug/14/notes-excel-vba/';
       var disqus_url = 'http://linnus.net/posts/2015/Aug/14/notes-excel-vba/';
-      var disqus_title = 'Notes:Excel <span class="caps">VBA</span>';
+      var disqus_title = 'Notes:Excel VBA';
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';

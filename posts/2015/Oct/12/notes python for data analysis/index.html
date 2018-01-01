@@ -6,7 +6,7 @@
         <meta name="author" content="JIN Lin">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <title>Notes: Python for Data Analysis (Part&nbsp;1) | JIN Lin | Oh,Interesting</title>
+        <title>Notes: Python for Data Analysis (Part 1) | JIN Lin | Oh,Interesting</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -427,204 +427,204 @@ article .meta a.comments_btn:hover {
 <div class="container post">
     <article>
         <header>
-            <h1>Notes: Python for Data Analysis (Part&nbsp;1)</h1>
+            <h1>Notes: Python for Data Analysis (Part 1)</h1>
             <time datetime="article.date.isoformat()" pubdate>Mon 12 October 2015</time>
         </header>
 
         <div class="article_content">
-            <p>[<span class="caps">TOC</span>]</p>
-<p>Finished reading the book <em>Python for Data Analysis</em>. The review notes are just for my quick reference of available data processing tools with the focus on NumPy and&nbsp;Pandas. </p>
-<h3>Essential&nbsp;Libraries</h3>
+            <p>[TOC]</p>
+<p>Finished reading the book <em>Python for Data Analysis</em>. The review notes are just for my quick reference of available data processing tools with the focus on NumPy and Pandas. </p>
+<h3>Essential Libraries</h3>
 <ul>
 <li>NumPy </li>
 </ul>
 <blockquote>
-<p>ndarray; element-wise computation;&nbsp;`</p>
+<p>ndarray; element-wise computation; `</p>
 </blockquote>
 <ul>
 <li>pandas</li>
 </ul>
 <blockquote>
-<p>DataFrame (time-series for financial data; reshape, slice, dice, aggregation&nbsp;etc.)</p>
+<p>DataFrame (time-series for financial data; reshape, slice, dice, aggregation etc.)</p>
 </blockquote>
 <ul>
 <li>matplotlib </li>
 </ul>
 <blockquote>
-<p>Plots. 2D data visulization; interactive within&nbsp;IPython</p>
+<p>Plots. 2D data visulization; interactive within IPython</p>
 </blockquote>
 <ul>
 <li>IPython </li>
 </ul>
 <blockquote>
-<p>Terminal-based or <span class="caps">HTML</span>-based&nbsp;notebook </p>
+<p>Terminal-based or HTML-based notebook </p>
 </blockquote>
 <ul>
 <li>SciPy </li>
 </ul>
 <blockquote>
-<p>packages for various scientific computing: scipy.integrate; linalg,optimize, signal,sparse,special,stats, weave,&nbsp;etc. </p>
+<p>packages for various scientific computing: scipy.integrate; linalg,optimize, signal,sparse,special,stats, weave, etc. </p>
 </blockquote>
 <h3>IPython</h3>
 <ul>
 <li>
-<p>Tab completion (methods,file directories&nbsp;etc.);</p>
+<p>Tab completion (methods,file directories etc.);</p>
 </li>
 <li>
 <p>Introspection (xx?: show general info,docstring; xx?? show source code if any; together with <em>,e.g. np.</em>load*?)</p>
 </li>
 <li>
-<p>%run: run the script; ctrl-c interrupt running&nbsp;code</p>
+<p>%run: run the script; ctrl-c interrupt running code</p>
 </li>
 <li>
-<p>%pase,&nbsp;%cpase </p>
+<p>%pase, %cpase </p>
 </li>
 <li>
-<p>short&nbsp;cuts </p>
+<p>short cuts </p>
 </li>
 <li>
-<p>magic commands: %magic,&nbsp;%quickref</p>
+<p>magic commands: %magic, %quickref</p>
 </li>
 <li>
-<p>matplotlib integration: ipython&nbsp;&#8212;pylab </p>
+<p>matplotlib integration: ipython --pylab </p>
 </li>
 <li>
-<p>command history: up-arrow&nbsp;key </p>
+<p>command history: up-arrow key </p>
 </li>
 <li>
-<p>input and output variables: _ or ___ / _iX (input) _X&nbsp;(output)</p>
+<p>input and output variables: _ or ___ / _iX (input) _X (output)</p>
 </li>
 <li>
-<p>%hist: print input&nbsp;history; </p>
+<p>%hist: print input history; </p>
 </li>
 <li>
-<p>logging the input/output: %logstart;&nbsp;%logstop</p>
+<p>logging the input/output: %logstart; %logstop</p>
 </li>
 <li>
-<p>interacting with <span class="caps">OS</span>: shell commands,&nbsp;%alias, </p>
+<p>interacting with OS: shell commands, %alias, </p>
 </li>
 <li>
-<p>%bookmark: pin the&nbsp;directory </p>
+<p>%bookmark: pin the directory </p>
 </li>
 <li>
-<p>interactive debugger:&nbsp;%debug </p>
+<p>interactive debugger: %debug </p>
 </li>
 <li>
-<p>timecode: %timeit and %time; %prun, %run&nbsp;-p </p>
+<p>timecode: %timeit and %time; %prun, %run -p </p>
 </li>
 <li>
-<p>ipython notebook&nbsp;&#8212;pylab=inline</p>
+<p>ipython notebook --pylab=inline</p>
 </li>
 <li>
-<p>profiles and configuration: cd&nbsp;~/.config/ipython/</p>
+<p>profiles and configuration: cd  ~/.config/ipython/</p>
 </li>
 </ul>
 <h3>NumPy</h3>
 <p><strong>ndarray</strong></p>
 <ul>
-<li>multidimensional homogeneoys data: shape; dtype (arrayd.shape;&nbsp;arrayd.dtype)</li>
-<li>creating array: np.array(data) / np.zeros; np.ones; np.empty; np.arange,&nbsp;np.eye </li>
+<li>multidimensional homogeneoys data: shape; dtype (arrayd.shape; arrayd.dtype)</li>
+<li>creating array: np.array(data) / np.zeros; np.ones; np.empty; np.arange, np.eye </li>
 <li>
-<p>data types: int8/16/32/64, float16/32/64/128,complex64/128/256, bool, object, string_, unicode_ (e.g.&nbsp;np.float64)</p>
+<p>data types: int8/16/32/64, float16/32/64/128,complex64/128/256, bool, object, string_, unicode_ (e.g. np.float64)</p>
 </li>
 <li>
-<p>convert dtype: <em>astype</em> method ,creating a new&nbsp;array</p>
+<p>convert dtype: <em>astype</em> method ,creating a new array</p>
 </li>
-<li>vectorization: element-wise,&nbsp;broadcasting </li>
-<li>indexing,slcing: single element: [1,2,&#8230;,n] for n-dimension arrays; rows; columns; boolean indexing: ==, &lt;,&gt;, etc; fancy indexing: alter the row/column order, copying the data to new&nbsp;array </li>
-<li>transposing: e.g np.arange(15).reshape((3,5)); arr.T;&nbsp;arr.transpose </li>
-<li>inner product:&nbsp;np.dot(a,b)</li>
-<li>swapaxes:&nbsp;arr.swapaxes()</li>
-<li>ufunc: universal functions, e.g. np.sqrt(arr), np.exp(arr),np.maximum(x,y),abs, fabs, square, exp, log, log10,log2,sign,ceil,floor, rint, modf, isnan,isfinte, isinf, cos, sosh,sin,sinh,tan, tanh,arccos,logical_note;  add, subtract, multiply,divide,floor_divide,power, maximum, fmin, mod,&nbsp;copysign, </li>
-<li>stats: arr.mean(axis=1), np.mean(arr),  sum, std, var, min, max, argmin, argmax, cumsum,&nbsp;cumprod, </li>
-<li>methods of boolean arrays: arr.any(),&nbsp;arr.all()</li>
-<li>sorting:&nbsp;arr.sort()</li>
-<li>unique:&nbsp;np.unique(arr);</li>
-<li>np.save, np.load ;&nbsp;np.loadtxt(&#8216;filepath&#8217;,delimiter=&#8217;,&#8217;)</li>
-<li>np.linalg: diag, dot, trace, det, eig, inv, pinv, qr, svd, solve,&nbsp;lstsq </li>
-<li>random number generation: np.random.seed/permutation,shuffle, rand, randint, randn, binominal, normal, beta, chisquare, gama,&nbsp;uniform, </li>
+<li>vectorization: element-wise, broadcasting </li>
+<li>indexing,slcing: single element: [1,2,...,n] for n-dimension arrays; rows; columns; boolean indexing: ==, &lt;,&gt;, etc; fancy indexing: alter the row/column order, copying the data to new array </li>
+<li>transposing: e.g np.arange(15).reshape((3,5)); arr.T; arr.transpose </li>
+<li>inner product: np.dot(a,b)</li>
+<li>swapaxes: arr.swapaxes()</li>
+<li>ufunc: universal functions, e.g. np.sqrt(arr), np.exp(arr),np.maximum(x,y),abs, fabs, square, exp, log, log10,log2,sign,ceil,floor, rint, modf, isnan,isfinte, isinf, cos, sosh,sin,sinh,tan, tanh,arccos,logical_note;  add, subtract, multiply,divide,floor_divide,power, maximum, fmin, mod, copysign, </li>
+<li>stats: arr.mean(axis=1), np.mean(arr),  sum, std, var, min, max, argmin, argmax, cumsum, cumprod, </li>
+<li>methods of boolean arrays: arr.any(), arr.all()</li>
+<li>sorting: arr.sort()</li>
+<li>unique: np.unique(arr);</li>
+<li>np.save, np.load ; np.loadtxt('filepath',delimiter=',')</li>
+<li>np.linalg: diag, dot, trace, det, eig, inv, pinv, qr, svd, solve, lstsq </li>
+<li>random number generation: np.random.seed/permutation,shuffle, rand, randint, randn, binominal, normal, beta, chisquare, gama, uniform, </li>
 </ul>
 <h3>pandas</h3>
 <p><strong>Series</strong></p>
 <hr>
-<p>A Series is a one-dimensional array-like object containing an array of data (of any NumPy data type) and an associated array of data labels, called its&nbsp;index.</p>
+<p>A Series is a one-dimensional array-like object containing an array of data (of any NumPy data type) and an associated array of data labels, called its index.</p>
 <hr>
 <ul>
-<li>Series (array,&nbsp;index)</li>
-<li>convert dict to Series:&nbsp;Series(dict)</li>
+<li>Series (array, index)</li>
+<li>convert dict to Series: Series(dict)</li>
 <li>pd.isnull(series),pd.notnull(series)</li>
-<li>obj.name = &#8221; / obj.index.name = &#8216;&nbsp;&#8216;</li>
+<li>obj.name = '' / obj.index.name = ' '</li>
 </ul>
 <p><strong>DataFrame</strong></p>
 <hr>
-<p>A DataFrame represents a tabular, spreadsheet-like data structure containing an or- dered collection of columns, each of which can be a different value type (numeric, string, boolean, etc.). The DataFrame has both a row and column index; it can be thought of as a dict of&nbsp;Series </p>
+<p>A DataFrame represents a tabular, spreadsheet-like data structure containing an or- dered collection of columns, each of which can be a different value type (numeric, string, boolean, etc.). The DataFrame has both a row and column index; it can be thought of as a dict of Series </p>
 <hr>
 <ul>
-<li>DataFrame(data, columns,index): df.a /df[&#8216;a&#8217;] ;&nbsp;df.ix[x]</li>
-<li>Convert dic to DataFrame:&nbsp;DataFrame(dict)</li>
-<li>df.values,&nbsp;df.index </li>
-<li>pd.Index: create index;&nbsp;pd.Int64Index/MultiIndex/DatetimeIndex/PeriodIndex</li>
-<li>Index methods: append, diff, intersection, union, isin, delete,drop,insert,&nbsp;is_monotoinc/is_unique/unique</li>
+<li>DataFrame(data, columns,index): df.a /df['a'] ; df.ix[x]</li>
+<li>Convert dic to DataFrame: DataFrame(dict)</li>
+<li>df.values, df.index </li>
+<li>pd.Index: create index; pd.Int64Index/MultiIndex/DatetimeIndex/PeriodIndex</li>
+<li>Index methods: append, diff, intersection, union, isin, delete,drop,insert, is_monotoinc/is_unique/unique</li>
 </ul>
-<p><strong>Essential&nbsp;Functionality</strong></p>
+<p><strong>Essential Functionality</strong></p>
 <ul>
-<li>reindex:&nbsp;df.reindex([],method=&#8217;ffill/pad/bfill/backfill&#8217;)</li>
-<li>drop entries: obj.drop(&#8216;x&#8217;),x could be from either&nbsp;axis </li>
-<li>indexing, selection, slicing:&nbsp;obj[value],obj.ix[value]</li>
-<li>arithmetic and data aignment: df1.add(df2,fill_value=x), add, sub, div,&nbsp;mul</li>
-<li>operations betwen DataFrame and&nbsp;Series </li>
-<li>functions： e.g. np.abs(df);&nbsp;df.apply(f,axis=1)</li>
+<li>reindex: df.reindex([],method='ffill/pad/bfill/backfill')</li>
+<li>drop entries: obj.drop('x'),x could be from either axis </li>
+<li>indexing, selection, slicing: obj[value],obj.ix[value]</li>
+<li>arithmetic and data aignment: df1.add(df2,fill_value=x), add, sub, div, mul</li>
+<li>operations betwen DataFrame and Series </li>
+<li>functions： e.g. np.abs(df); df.apply(f,axis=1)</li>
 <li>df.applymap(f)</li>
-<li>sorting:&nbsp;obj.sort_index(axis=1,ascending=False,by=[value])</li>
-<li>Ranking; obj.order();&nbsp;obj.rank(ascending=False,method=&#8217;max/average/min/first&#8217;)</li>
-<li>axis indexes with duplicate values:&nbsp;obj.index.is_unique</li>
-<li>reductions/ summary statistics: <em>e.g.</em> count,describe,min,max,sum,mean,median, mad, var, std, skew,kurt, cumsum, cummin,cummax,cumprod,diff,pct_change, <em>methods</em>:axis, skipna,&nbsp;level(MultiIndex), </li>
-<li>df.idxmax(); df.cumsum();&nbsp;df.describe();</li>
-<li>correlation, covariance: Series: a.corr/cov(b);DataFrame: df.corr() ;&nbsp;df.corrwith(df.x) </li>
-<li>unque values:&nbsp;obj.unique()</li>
-<li>values count: obj.value_counts();&nbsp;pd.value_counts(obj.values,sort=False)</li>
-<li>handling missing data: dropna, fillna, isnull,&nbsp;notnull</li>
-<li>filtering missing data:&nbsp;obj.dropna(how=&#8217;all&#8217;)</li>
-<li>filling missing data: df.fillna({1: 0.5, 3: -1}) or&nbsp;df.fillna(method=&#8217;ffill/&#8217;)</li>
-<li>hierarchical&nbsp;indexing: </li>
-<li>reording/sorting levels:&nbsp;df.swaplevel(leve1,level2)</li>
-<li>summary sttats by level: e.g.&nbsp;df.sum(level=&#8217;xx&#8217;)</li>
+<li>sorting: obj.sort_index(axis=1,ascending=False,by=[value])</li>
+<li>Ranking; obj.order(); obj.rank(ascending=False,method='max/average/min/first')</li>
+<li>axis indexes with duplicate values: obj.index.is_unique</li>
+<li>reductions/ summary statistics: <em>e.g.</em> count,describe,min,max,sum,mean,median, mad, var, std, skew,kurt, cumsum, cummin,cummax,cumprod,diff,pct_change, <em>methods</em>:axis, skipna, level(MultiIndex), </li>
+<li>df.idxmax(); df.cumsum(); df.describe();</li>
+<li>correlation, covariance: Series: a.corr/cov(b);DataFrame: df.corr() ; df.corrwith(df.x) </li>
+<li>unque values: obj.unique()</li>
+<li>values count: obj.value_counts(); pd.value_counts(obj.values,sort=False)</li>
+<li>handling missing data: dropna, fillna, isnull, notnull</li>
+<li>filtering missing data: obj.dropna(how='all')</li>
+<li>filling missing data: df.fillna({1: 0.5, 3: -1}) or df.fillna(method='ffill/')</li>
+<li>hierarchical indexing: </li>
+<li>reording/sorting levels: df.swaplevel(leve1,level2)</li>
+<li>summary sttats by level: e.g. df.sum(level='xx')</li>
 </ul>
-<p><strong>Data Loading/Storage,File&nbsp;Formats</strong></p>
+<p><strong>Data Loading/Storage,File Formats</strong></p>
 <ul>
-<li>reading:&nbsp;read_csv/table/fwf/clipboard/(sep=&#8217;x&#8217;)</li>
-<li>reading fraction of files: nrows,&nbsp;chunksize, </li>
-<li>writing data to text format:&nbsp;to_csv</li>
-<li>csv&nbsp;module: </li>
-<li><span class="caps">JSON</span> data: <em>json</em> module, json.loads(obj),&nbsp;json.dumps(obj),</li>
-<li><span class="caps">XML</span>,<span class="caps">HTML</span> web scraping: from lxml.html import parse, from urllib2 import&nbsp;urlopen,</li>
-<li>binary data&nbsp;formats: </li>
-<li><span class="caps">MS</span> Excel: xls_file = pd.ExcelFile(&#8216;xx.xls&#8217;); table =&nbsp;xls_file.parse(&#8216;sheet1&#8217;)</li>
-<li>Interacting with <span class="caps">HTML</span> / Web APIs: import <em>requests</em></li>
-<li>interacting with DataBases:<span class="caps">SQL</span>,&nbsp;NoSQL, </li>
+<li>reading: read_csv/table/fwf/clipboard/(sep='x')</li>
+<li>reading fraction of files: nrows, chunksize, </li>
+<li>writing data to text format: to_csv</li>
+<li>csv module: </li>
+<li>JSON data: <em>json</em> module, json.loads(obj), json.dumps(obj),</li>
+<li>XML,HTML web scraping: from lxml.html import parse, from urllib2 import urlopen,</li>
+<li>binary data formats: </li>
+<li>MS Excel: xls_file = pd.ExcelFile('xx.xls'); table = xls_file.parse('sheet1')</li>
+<li>Interacting with HTML / Web APIs: import <em>requests</em></li>
+<li>interacting with DataBases:SQL, NoSQL, </li>
 </ul>
-<h3>Data Wrangling: clean,transform, merge,&nbsp;reshape</h3>
+<h3>Data Wrangling: clean,transform, merge, reshape</h3>
 <p><strong>Rearranging</strong></p>
 <ul>
-<li>combining&amp; merging:&nbsp;pandas.merge/concat</li>
-<li>pd.merge(df1,df2,how=&#8217;inner/outter/left/right&#8217;); other arguments: left, right, on, left_on, right_on, left_index,right_index, sort, suffixes,&nbsp;copy</li>
-<li><em>concat</em>: e.g. pd.concat([S1,S2,S3],axis=1); other arguments: objs, axis, join, join_axes, keys, levels, names, verify_integrity, ignore_index; when axis=1, <em>keys</em> becomes column&nbsp;headers  </li>
-<li>combing data with overlap: <em>where</em>:e.g np.where(pd.isnull(a),b,a); <em>combine_first</em> :e.g.&nbsp;a.combine_first(b)</li>
-<li>reshape: stack/unstack,By default the innermost level is unstacked (same with&nbsp;stack). </li>
-<li>pivot: e.g.  pivoted = ldata.pivot(&#8216;date&#8217;, &#8216;item&#8217;,&nbsp;&#8216;value&#8217;)</li>
+<li>combining&amp; merging: pandas.merge/concat</li>
+<li>pd.merge(df1,df2,how='inner/outter/left/right'); other arguments: left, right, on, left_on, right_on, left_index,right_index, sort, suffixes, copy</li>
+<li><em>concat</em>: e.g. pd.concat([S1,S2,S3],axis=1); other arguments: objs, axis, join, join_axes, keys, levels, names, verify_integrity, ignore_index; when axis=1, <em>keys</em> becomes column headers  </li>
+<li>combing data with overlap: <em>where</em>:e.g np.where(pd.isnull(a),b,a); <em>combine_first</em> :e.g. a.combine_first(b)</li>
+<li>reshape: stack/unstack,By default the innermost level is unstacked (same with stack). </li>
+<li>pivot: e.g.  pivoted = ldata.pivot('date', 'item', 'value')</li>
 </ul>
 <p><strong>Transformation</strong></p>
 <ul>
-<li>removing duplicates: e.g.&nbsp;data.drop_duplicates();</li>
-<li>functions/map: e.g.  data[&#8216;animal&#8217;] = data[&#8216;food&#8217;].map(str.lower).map(meat_to_animal) or  data[&#8216;food&#8217;].map(lambda x: meat_to_animal[x.lower()]) /useful for&nbsp;categorizing/ </li>
-<li>replacing values: e.g data.repalce(a,b) #replace a with&nbsp;b;</li>
-<li>renaming axis index: e.g. data.index =&nbsp;data.index.map(str.upper)</li>
-<li>discretization and binning: e.g. cats= pd.cut(data,bins), methods: <em>lables,levels</em>; pd.value_counts(cats); e.g. pd.qcut(data,4) #cut througn&nbsp;quantile </li>
-<li>detecting and filtering&nbsp;outliers: </li>
-<li>permutation and random sampling: np.random.permutation, e.g.&nbsp;df.take(np.random.permutation(len(df)))</li>
+<li>removing duplicates: e.g. data.drop_duplicates();</li>
+<li>functions/map: e.g.  data['animal'] = data['food'].map(str.lower).map(meat_to_animal) or  data['food'].map(lambda x: meat_to_animal[x.lower()]) /useful for categorizing/ </li>
+<li>replacing values: e.g data.repalce(a,b) #replace a with b;</li>
+<li>renaming axis index: e.g. data.index = data.index.map(str.upper)</li>
+<li>discretization and binning: e.g. cats= pd.cut(data,bins), methods: <em>lables,levels</em>; pd.value_counts(cats); e.g. pd.qcut(data,4) #cut througn quantile </li>
+<li>detecting and filtering outliers: </li>
+<li>permutation and random sampling: np.random.permutation, e.g. df.take(np.random.permutation(len(df)))</li>
 <li>string manipulation: more on <em>regex</em></li>
 </ul>
-<p>&#8212;to be&nbsp;continued&#8212;</p>
+<p>--to be continued--</p>
         </div>
 
         <div class="meta">
@@ -642,7 +642,7 @@ article .meta a.comments_btn:hover {
       var disqus_shortname = 'linnus';
       var disqus_identifier = '/posts/2015/Oct/12/notes python for data analysis/';
       var disqus_url = 'http://linnus.net/posts/2015/Oct/12/notes python for data analysis/';
-      var disqus_title = 'Notes: Python for Data Analysis (Part&nbsp;1)';
+      var disqus_title = 'Notes: Python for Data Analysis (Part 1)';
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
