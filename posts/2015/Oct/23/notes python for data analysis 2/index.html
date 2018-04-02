@@ -6,7 +6,7 @@
         <meta name="author" content="JIN Lin">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <title>Notes: Python for Data Analysis (Part 2) | JIN Lin | Oh,Interesting</title>
+        <title>Notes: Python for Data Analysis (Part&nbsp;2) | JIN Lin | Oh,Interesting</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -427,29 +427,29 @@ article .meta a.comments_btn:hover {
 <div class="container post">
     <article>
         <header>
-            <h1>Notes: Python for Data Analysis (Part 2)</h1>
+            <h1>Notes: Python for Data Analysis (Part&nbsp;2)</h1>
             <time datetime="article.date.isoformat()" pubdate>Fri 23 October 2015</time>
         </header>
 
         <div class="article_content">
-            <p>[TOC]</p>
-<p>To continue with <a href="http://linnus.net/posts/2015/Oct/12/notes%20python%20for%20data%20analysis/">previous post</a> about the basics of NumPy and Pandas. </p>
-<h3>Plotting and Visulization</h3>
+            <p>[<span class="caps">TOC</span>]</p>
+<p>To continue with <a href="http://linnus.net/posts/2015/Oct/12/notes%20python%20for%20data%20analysis/">previous post</a> about the basics of NumPy and&nbsp;Pandas. </p>
+<h3>Plotting and&nbsp;Visulization</h3>
 <p><strong>matplotlib</strong></p>
-<p>It is the primary MATLIB-like 2D plot; add-on toolkits like <strong>mplot3d</strong> for 2D plot, and <strong>basemap</strong> for mapping and projections. </p>
+<p>It is the primary <span class="caps">MATLIB</span>-like 2D plot; add-on toolkits like <strong>mplot3d</strong> for 2D plot, and <strong>basemap</strong> for mapping and&nbsp;projections. </p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="c1">#launch interaction between *IPython* and *matplotlib*</span></span>
 <span class="code-line"><span class="n">ipython</span> <span class="o">--</span><span class="n">pylab</span></span>
 <span class="code-line"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span></span>
 </pre></div>
 
 
-<p><strong>Figures &amp; Subplots</strong></p>
+<p><strong>Figures <span class="amp">&amp;</span>&nbsp;Subplots</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>fig = plt.figure(figsize=(w,h),dpi= None,...) </span>
 <span class="code-line">#it is a top level container for all plot elements.</span>
 </pre></div>
 
 
-<p><a href="http://matplotlib.org/api/figure_api.html">More here</a></p>
+<p><a href="http://matplotlib.org/api/figure_api.html">More&nbsp;here</a></p>
 <div class="highlight"><pre><span class="code-line"><span></span>fig.add-subplot(*args,*kwargs)</span>
 <span class="code-line">#args same as in *plt.subplot* </span>
 <span class="code-line">subplot(nrows, ncols, plot_number)</span>
@@ -457,33 +457,33 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p><strong>Spacing around plots</strong></p>
+<p><strong>Spacing around&nbsp;plots</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=None)</span>
 </pre></div>
 
 
-<p><strong>Colors,Markers, Line Styles</strong></p>
+<p><strong>Colors,Markers, Line&nbsp;Styles</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">plot(randn(x,y, color=&#39;k&#39;, linestyle=&#39;dashed&#39;, marker=&#39;o&#39;,label=&#39;Default&#39;)</span>
 </pre></div>
 
 
-<p><strong>Ticks, Labels. Legends</strong></p>
-<p>xlim, xticks, xticklabels </p>
+<p><strong>Ticks, Labels.&nbsp;Legends</strong></p>
+<p>xlim, xticks,&nbsp;xticklabels </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line">plt.xlim() or plt.xlim([a,b])</span>
 </pre></div>
 
 
-<p>All such methods act on the active or most recently-created <em>AxesSubplot</em>. corresponds to two methods: ax.get_xlim, and  ax.set_xlim </p>
+<p>All such methods act on the active or most recently-created <em>AxesSubplot</em>. corresponds to two methods: ax.get_xlim, and&nbsp;ax.set_xlim </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">ax.legend() or plt.legend() </span>
 <span class="code-line">#automatically creates legends.</span>
 </pre></div>
 
 
-<p><strong>Annotations, Drawing</strong></p>
-<p><em>text, arrow, annotate</em></p>
+<p><strong>Annotations,&nbsp;Drawing</strong></p>
+<p><em>text, arrow,&nbsp;annotate</em></p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">ax.text(x,y,&#39;Tidehello&#39;,family=&#39;monsapce&#39;,fontsize=12) </span>
 <span class="code-line">#(x,y) cooridates on the plot</span>
@@ -498,52 +498,52 @@ article .meta a.comments_btn:hover {
 </pre></div>
 
 
-<p><strong>Saving plots</strong></p>
+<p><strong>Saving&nbsp;plots</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>plt.savefig(&#39;figpath.png&#39;, dpi=400, bbox_inches=&#39;tight&#39;)</span>
 </pre></div>
 
 
-<p><strong>matplotlib configuration</strong></p>
-<p>The default configuration is geared towards for publication, however, it can be modified by changing the config settings. </p>
+<p><strong>matplotlib&nbsp;configuration</strong></p>
+<p>The default configuration is geared towards for publication, however, it can be modified by changing the config&nbsp;settings. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">plt.rc(&#39;figure&#39;, figsize=(10, 10))</span>
 </pre></div>
 
 
-<h3>Plotting Functions in pandas</h3>
-<p>Compard to <em>matplotlib</em>, it offers a high-level plotting methods due to the highly organized Series/DataFrames. </p>
-<p><em>Series.plot()</em> arguments: </p>
+<h3>Plotting Functions in&nbsp;pandas</h3>
+<p>Compard to <em>matplotlib</em>, it offers a high-level plotting methods due to the highly organized&nbsp;Series/DataFrames. </p>
+<p><em>Series.plot()</em>&nbsp;arguments: </p>
 <ul>
-<li>label, ax, style, alpha, kind(bar,line,barh,kde), logy, use_index, rot, xticks, yticks, xlim, ylim, grid. </li>
+<li>label, ax, style, alpha, kind(bar,line,barh,kde), logy, use_index, rot, xticks, yticks, xlim, ylim,&nbsp;grid. </li>
 </ul>
-<p><em>DataFrame specific arguments</em></p>
+<p><em>DataFrame specific&nbsp;arguments</em></p>
 <ul>
-<li>subplots, sharex, sharey, figsize, title, legend, sort_columns</li>
+<li>subplots, sharex, sharey, figsize, title, legend,&nbsp;sort_columns</li>
 </ul>
-<p><strong>Bar plots</strong></p>
+<p><strong>Bar&nbsp;plots</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>ax.plot(kind = &#39;bar&#39;  or &#39;barh&#39;, stacked= True/False)</span>
 </pre></div>
 
 
-<p><strong>Histograms/ Density Plot</strong></p>
+<p><strong>Histograms/ Density&nbsp;Plot</strong></p>
 <p>e.g. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>values.hist(bins=100, alpha=0.3, color=&#39;k&#39;, normed=True)</span>
 <span class="code-line">values.plot(kind=&#39;kde&#39;, style=&#39;k--&#39;)</span>
 </pre></div>
 
 
-<p><strong>Scatter plots</strong></p>
+<p><strong>Scatter&nbsp;plots</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>plt.scatter(x,y)</span>
 </pre></div>
 
 
 <p><strong>Maps</strong></p>
-<p>refer to <a href="http://linnus.net/posts/2015/Oct/04/2016_US_Federal_Election_Contributors/">2015 Federal Electon Tutorial</a> for more. </p>
-<h3>Data Aggregation and Group Operations.</h3>
+<p>refer to <a href="http://linnus.net/posts/2015/Oct/04/2016_US_Federal_Election_Contributors/">2015 Federal Electon Tutorial</a> for&nbsp;more. </p>
+<h3>Data Aggregation and Group&nbsp;Operations.</h3>
 <p><strong>GroupBy</strong> mechanism: <em>split-apply-combine</em> </p>
-<p><code>df.groupby(key or keys).mean()</code>: <em>df.groupby()</em> returns a GroupBy object which is ready for subsequent computation, <em>.mean()</em> does the <em>apply-combine</em> opeartion. By default, it groups on axis = 0. </p>
-<p><code>df.groupby(key or keys).size()</code>: returning a Series containing group size ( how many elements are grouped under each key)</p>
-<p>Keys could be in the form of ndarray, dict or Series. e.g. mapping the column names to other category information.</p>
+<p><code>df.groupby(key or keys).mean()</code>: <em>df.groupby()</em> returns a GroupBy object which is ready for subsequent computation, <em>.mean()</em> does the <em>apply-combine</em> opeartion. By default, it groups on axis =&nbsp;0. </p>
+<p><code>df.groupby(key or keys).size()</code>: returning a Series containing group size ( how many elements are grouped under each&nbsp;key)</p>
+<p>Keys could be in the form of ndarray, dict or Series. e.g. mapping the column names to other category&nbsp;information.</p>
 <div class="highlight"><pre><span class="code-line"><span></span>mapping = {&#39;a&#39;: &#39;red&#39;, &#39;b&#39;: &#39;red&#39;, &#39;c&#39;: &#39;blue&#39;, ....: &#39;d&#39;: &#39;blue&#39;, &#39;e&#39;: &#39;red&#39;, &#39;f&#39; : &#39;orange&#39;}</span>
 <span class="code-line"># by dict mapping</span>
 <span class="code-line">by_column = people.groupby(mapping, axis=1)</span>
@@ -555,7 +555,7 @@ article .meta a.comments_btn:hover {
 
 <ul>
 <li>
-<p><strong>Iterating over groups</strong></p>
+<p><strong>Iterating over&nbsp;groups</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">for (k1, k2), group in df.groupby([&#39;key1&#39;, &#39;key2&#39;])</span>
 </pre></div>
@@ -563,7 +563,7 @@ article .meta a.comments_btn:hover {
 
 </li>
 <li>
-<p><strong>Selecting subset columns</strong></p>
+<p><strong>Selecting subset&nbsp;columns</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g </span>
 <span class="code-line">df.groupby([&#39;key1&#39;, &#39;key2&#39;])[[&#39;data2&#39;]].mean()</span>
 </pre></div>
@@ -571,10 +571,10 @@ article .meta a.comments_btn:hover {
 
 </li>
 <li>
-<p><strong>Grouping with Functions</strong></p>
+<p><strong>Grouping with&nbsp;Functions</strong></p>
 </li>
 </ul>
-<p>e.g <code>people.groupby(len).sum()</code>: len is the length of <em>names</em>. Everything will be converted to array internally. </p>
+<p>e.g <code>people.groupby(len).sum()</code>: len is the length of <em>names</em>. Everything will be converted to array&nbsp;internally. </p>
 <ul>
 <li><strong>Grouping by Index Levels</strong><div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line">hier_df.groupby(level=&#39;cty&#39;, axis=1).count()</span>
@@ -583,33 +583,33 @@ article .meta a.comments_btn:hover {
 
 </li>
 </ul>
-<p><strong>Data Aggregation</strong></p>
-<p>Data transformation that produces scalar vaues from arrays. </p>
+<p><strong>Data&nbsp;Aggregation</strong></p>
+<p>Data transformation that produces scalar vaues from&nbsp;arrays. </p>
 <ul>
-<li><strong>optimized groupby methods</strong></li>
+<li><strong>optimized groupby&nbsp;methods</strong></li>
 </ul>
-<p>count, sum, mean, median, std, var, min, max, prod, first, last. describe.</p>
+<p>count, sum, mean, median, std, var, min, max, prod, first, last.&nbsp;describe.</p>
 <ul>
-<li><strong>user functions</strong> </li>
+<li><strong>user&nbsp;functions</strong> </li>
 </ul>
 <p>aggregate / agg : <code>grouped.agg(user_functions)</code>. Normal fuctions can still be used,e.g.<code>grouped.agg('mean','sum')</code></p>
 <ul>
-<li><strong>Other operations</strong></li>
+<li><strong>Other&nbsp;operations</strong></li>
 </ul>
 <p>A list of (name,functions) tuples can be passed to the agg keys. <em>name</em>  will replace <em>functions name</em>. e.g. <code>grouped.agg([('foo', 'mean'), ('bar', np.std)])</code></p>
 <p>Apply different functions to different columns: e.g. <code>grouped.agg({'tip' : [np.max, 'min'], 'size' : 'sum'})</code></p>
-<p>Return aggregated data in unindexed form. e.g 'tips.groupby(['sex', 'smoker'], as_index=False).mean()'.  <em>reset_index</em> could be used to reset the index. </p>
-<p><strong>Group-wise Operations and Transformations</strong> </p>
+<p>Return aggregated data in unindexed form. e.g &#8216;tips.groupby([&#8216;sex&#8217;, &#8216;smoker&#8217;], as_index=False).mean()&#8217;.  <em>reset_index</em> could be used to reset the&nbsp;index. </p>
+<p><strong>Group-wise Operations and&nbsp;Transformations</strong> </p>
 <ul>
 <li><strong>transform</strong></li>
 </ul>
-<p>aggregate + merge : add columns to existing df. </p>
+<p>aggregate + merge : add columns to existing&nbsp;df. </p>
 <p><em>Transform</em> applies a function to each group, then places the results in the appropriate locations. If each group produces a scalar value, it will be propagated (broadcasted) to the same size as the df. .eg. <code>people.groupby(key).transform(np.mean)</code>. </p>
 <ul>
 <li><strong>apply</strong></li>
 </ul>
-<p><em>Apply</em> splits the object being manipulated into pieces, invokes the passed function on each piece, then attempts to concatenate the pieces together. </p>
-<p>In GroupBy, the <em>describe</em> method is a shortcut for </p>
+<p><em>Apply</em> splits the object being manipulated into pieces, invokes the passed function on each piece, then attempts to concatenate the pieces&nbsp;together. </p>
+<p>In GroupBy, the <em>describe</em> method is a shortcut&nbsp;for </p>
 <div class="highlight"><pre><span class="code-line"><span></span>f = lambda x: x.describe() </span>
 <span class="code-line">grouped.apply(f)</span>
 </pre></div>
@@ -618,9 +618,9 @@ article .meta a.comments_btn:hover {
 <p>group-keys can be opened up, i.e. each row has a corresponding key. 
 e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 <ul>
-<li><strong>Bucket/Quantile Analysis</strong></li>
+<li><strong>Bucket/Quantile&nbsp;Analysis</strong></li>
 </ul>
-<p><em>cut/qcut</em> e.g: </p>
+<p><em>cut/qcut</em>&nbsp;e.g: </p>
 <div class="highlight"><pre><span class="code-line"><span></span>factor = pd.cut(frame.data1, 4) </span>
 <span class="code-line">grouped = frame.data2.groupby(factor)</span>
 <span class="code-line">grouped.apply(get_stats).unstack()</span>
@@ -628,14 +628,14 @@ e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 
 
 <ul>
-<li><strong>Fill missing values</strong></li>
+<li><strong>Fill missing&nbsp;values</strong></li>
 </ul>
-<p>Fill NA with fixed value. e.g. </p>
+<p>Fill <span class="caps">NA</span> with fixed value.&nbsp;e.g. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>s.fillna(s.mean())</span>
 </pre></div>
 
 
-<p>Fill vaule varied by group. e.g. </p>
+<p>Fill vaule varied by group.&nbsp;e.g. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>states = [&#39;Ohio&#39;, &#39;New York&#39;, &#39;Vermont&#39;, &#39;Florida&#39;, &#39;Oregon&#39;, &#39;Nevada&#39;, &#39;California&#39;, &#39;Idaho&#39;]</span>
 <span class="code-line">group_key = [&#39;East&#39;] * 4 + [&#39;West&#39;] * 4</span>
 <span class="code-line">fill_mean = lambda g: g.fillna(g.mean())</span>
@@ -643,7 +643,7 @@ e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 </pre></div>
 
 
-<p>Fill pre-defined values. e.g. </p>
+<p>Fill pre-defined values.&nbsp;e.g. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>fill_values = {&#39;East&#39;: 0.5, &#39;West&#39;: -1}</span>
 <span class="code-line">fill_func = lambda g: g.fillna(fill_values[g.name])</span>
 <span class="code-line">data.groupby(group_key).apply(fill_func)</span>
@@ -652,10 +652,10 @@ e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 
 <ul>
 <li>
-<p><strong>Other application examples</strong></p>
+<p><strong>Other application&nbsp;examples</strong></p>
 </li>
 <li>
-<p>Random sampling and permutation: </p>
+<p>Random sampling and&nbsp;permutation: </p>
 </li>
 </ul>
 <p>e.g </p>
@@ -682,7 +682,7 @@ e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 
 
 <ul>
-<li>group weighted average and correlation ( between columns / series) </li>
+<li>group weighted average and correlation ( between columns /&nbsp;series) </li>
 </ul>
 <p>e.g.</p>
 <div class="highlight"><pre><span class="code-line"><span></span>                #AAPL   MSFT  XOM  SPX </span>
@@ -694,10 +694,10 @@ e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 
 
 <ul>
-<li>linear regression</li>
+<li>linear&nbsp;regression</li>
 </ul>
-<p><strong>Pivot-tables / Cross Tabulation</strong></p>
-<p><em>pivot_table</em> e.g. </p>
+<p><strong>Pivot-tables / Cross&nbsp;Tabulation</strong></p>
+<p><em>pivot_table</em>&nbsp;e.g. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>tips.pivot_table(rows=[&#39;sex&#39;, &#39;smoker&#39;]) </span>
 <span class="code-line"># groupby has the same function </span>
 <span class="code-line"># *margin* method could be used to include partial total. </span>
@@ -707,16 +707,16 @@ e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 </pre></div>
 
 
-<p><em>Cross-tabulation: crosstab</em></p>
+<p><em>Cross-tabulation:&nbsp;crosstab</em></p>
 <p>computes group frequencies. e.g<code>pd.crosstab(data.Gender, data.Handedness, margins=True)</code></p>
-<h3>Time Series</h3>
+<h3>Time&nbsp;Series</h3>
 <ul>
-<li>Python <strong>datetime</strong> module </li>
+<li>Python <strong>datetime</strong>&nbsp;module </li>
 </ul>
-<p>Types: date, time, datetime, timedelta</p>
+<p>Types: date, time, datetime,&nbsp;timedelta</p>
 <p>e.g.<code>from datetime import datetime; now = datetime.now()</code></p>
 <ul>
-<li>Converting between string &amp; datetime  </li>
+<li>Converting between string <span class="amp">&amp;</span>&nbsp;datetime  </li>
 </ul>
 <p>e.g.</p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="c1"># time to string </span></span>
@@ -741,10 +741,10 @@ e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 </pre></div>
 
 
-<p>Other datetime formats: %Y(4-digit year), %y (2-digit year), %m(2-digit month), %d (2-digit day),%H(24-hour clock); %I (12-hour clock), %M(2-digit minute）, %S(second),%w (weekday as ineger, [0 Sunday,6]), %U (week number of a year [0,53],Sun is the first day of a week),%W (week number of a year [0,53],Mon is the first day of a week), %z(UTC timezone offsets), %F(Shortcut for%Y-%m-%d),%D(Shortcut for%m/%d/%y). </p>
+<p>Other datetime formats: %Y(4-digit year), %y (2-digit year), %m(2-digit month), %d (2-digit day),%H(24-hour clock); %I (12-hour clock), %M(2-digit minute）, %S(second),%w (weekday as ineger, [0 Sunday,6]), %U (week number of a year [0,53],Sun is the first day of a week),%W (week number of a year [0,53],Mon is the first day of a week), %z(<span class="caps">UTC</span> timezone offsets), %F(Shortcut for%Y-%m-%d),%D(Shortcut&nbsp;for%m/%d/%y). </p>
 <p><strong>timestamp</strong></p>
-<p>DatetimeIndex; dtype: datetime64</p>
-<p><em>TimeSeries</em> is a subset of Series, therefore can be indexed, sliced, and selected, </p>
+<p>DatetimeIndex; dtype:&nbsp;datetime64</p>
+<p><em>TimeSeries</em> is a subset of Series, therefore can be indexed, sliced, and&nbsp;selected, </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line">index=pd.date_range(&#39;1/1/2000&#39;, periods=1000))</span>
 <span class="code-line"># truncate between two dates. </span>
@@ -752,20 +752,20 @@ e.g. <code>tips.groupby('smoker', group_keys=False).apply(top)</code></p>
 </pre></div>
 
 
-<p>duplicate indices </p>
+<p>duplicate&nbsp;indices </p>
 <div class="highlight"><pre><span class="code-line"><span></span># is_unique</span>
 </pre></div>
 
 
-<p><strong>Date ranges/frequencies/shifting</strong></p>
-<p>By default, <em>date_range</em> generates daily timestamp. </p>
+<p><strong>Date&nbsp;ranges/frequencies/shifting</strong></p>
+<p>By default, <em>date_range</em> generates daily&nbsp;timestamp. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. # BM last business day of month.</span>
 <span class="code-line">pd.date_range(&#39;1/1/2000&#39;, &#39;12/1/2000&#39;, freq=&#39;BM&#39;)</span>
 </pre></div>
 
 
 <p>By default, the time series has no fixed frequency. <em>base frequency</em>
-like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
+like &#8216;M&#8217;, &#8216;H&#8217;，&#8217;B&#8217;(business day),&#8217;Q-<span class="caps">JAN</span>&#8217;(quater end), &#8216;A-<span class="caps">JAN</span>&#8217;(year&nbsp;end)</p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> </span>
 <span class="code-line"><span class="c1"># import base frequencies</span></span>
 <span class="code-line"><span class="kn">from</span> <span class="nn">pandas.tseries.offsets</span> <span class="kn">import</span> <span class="n">Hour</span><span class="p">,</span> <span class="n">Minute</span></span>
@@ -778,14 +778,14 @@ like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
 </pre></div>
 
 
-<p><strong>Shifting Data</strong></p>
-<p>Applicaton: compute percent changes in time series in the form of ts / ts.shift(1) - 1.</p>
+<p><strong>Shifting&nbsp;Data</strong></p>
+<p>Applicaton: compute percent changes in time series in the form of ts / ts.shift(1) -&nbsp;1.</p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">ts.shift(1, freq=&#39;3D&#39;)</span>
 </pre></div>
 
 
-<p>Offsets can also be used to shift time</p>
+<p>Offsets can also be used to shift&nbsp;time</p>
 <div class="highlight"><pre><span class="code-line"><span></span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> </span>
 <span class="code-line"><span class="kn">from</span> <span class="nn">pandas.tseries.offsets</span> <span class="kn">import</span> <span class="n">Day</span><span class="p">,</span> <span class="n">MonthEnd</span></span>
 <span class="code-line"><span class="n">now</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">Day</span><span class="p">()</span></span>
@@ -797,9 +797,9 @@ like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
 
 <p><strong>Timezone</strong></p>
 <blockquote>
-<p>UTC: coordinated universal time </p>
-<p>Greenwich Mean Time </p>
-<p>DST: daylight savings time
+<p><span class="caps">UTC</span>: coordinated universal&nbsp;time </p>
+<p>Greenwich Mean&nbsp;Time </p>
+<p><span class="caps">DST</span>: daylight savings&nbsp;time
 </p>
 </blockquote>
 <p>In Python, time zone infor is stored in 3rd party module <em>pytz</em> </p>
@@ -807,7 +807,7 @@ like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
 </pre></div>
 
 
-<p>Localization &amp; Conversion</p>
+<p>Localization <span class="amp">&amp;</span>&nbsp;Conversion</p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">pd.date_range(&#39;3/9/2012 9:30&#39;, periods=10, freq=&#39;D&#39;, tz=&#39;UTC&#39;)</span>
 <span class="code-line">#localize  (tz_localize)</span>
@@ -817,7 +817,7 @@ like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
 </pre></div>
 
 
-<p>Timezone-aware Timestamp Objects </p>
+<p>Timezone-aware Timestamp&nbsp;Objects </p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">stamp_moscow = pd.Timestamp(&#39;2011-03-12 04:00&#39;, tz=&#39;Europe/Moscow&#39;)</span>
 <span class="code-line"></span>
@@ -826,8 +826,8 @@ like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
 </pre></div>
 
 
-<p>Operations between time zones </p>
-<p>When two time series are combined, the resulting timezone will be UTC. </p>
+<p>Operations between time&nbsp;zones </p>
+<p>When two time series are combined, the resulting timezone will be <span class="caps">UTC</span>. </p>
 <p><strong>Periods</strong></p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g.</span>
 <span class="code-line"># timespan from 1-1-2007 - 12-31-2007</span>
@@ -844,13 +844,13 @@ like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
 </pre></div>
 
 
-<p>Quaterly Period: </p>
+<p>Quaterly&nbsp;Period: </p>
 <div class="highlight"><pre><span class="code-line"><span></span># Fiscal year ending in Feb, Q4 runs from Nov to Feb, inclusive. </span>
 <span class="code-line">p = pd.Period(&#39;2012Q4&#39;, freq=&#39;Q-FEB&#39;)</span>
 </pre></div>
 
 
-<p><strong>Timestamp to Periods</strong></p>
+<p><strong>Timestamp to&nbsp;Periods</strong></p>
 <p><em>to_period</em></p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">rng = pd.date_range(&#39;1/29/2000&#39;, periods=6, freq=&#39;D&#39;)</span>
@@ -868,19 +868,19 @@ like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
 <ul>
 <li>Timestamp</li>
 </ul>
-<p><em>resample(methods)</em>,  methods include freq, how( such as mean, ohlc, sum,etc), axis, fill_method, etc. </p>
-<p><em>downsampling</em>: aggregation is needed.</p>
+<p><em>resample(methods)</em>,  methods include freq, how( such as mean, ohlc, sum,etc), axis, fill_method,&nbsp;etc. </p>
+<p><em>downsampling</em>: aggregation is&nbsp;needed.</p>
 <p><em>upsampling</em>: no aggregation is needed,missing values are filled. e.g. <code>frame.resample('D', fill_method='ffill', limit=2)</code></p>
 <ul>
 <li>Periods</li>
 </ul>
-<p>Same principles apply</p>
+<p>Same principles&nbsp;apply</p>
 <div class="highlight"><pre><span class="code-line"><span></span>e.g. </span>
 <span class="code-line">annual_frame.resample(&#39;Q-DEC&#39;, fill_method=&#39;ffill&#39;, convention=&#39;start&#39;)&#39;</span>
 </pre></div>
 
 
-<p>END. </p>
+<p><span class="caps">END</span>. </p>
         </div>
 
         <div class="meta">
@@ -898,7 +898,7 @@ like 'M', 'H'，'B'(business day),'Q-JAN'(quater end), 'A-JAN'(year end)</p>
       var disqus_shortname = 'linnus';
       var disqus_identifier = '/posts/2015/Oct/23/notes python for data analysis 2/';
       var disqus_url = 'http://linnus.net/posts/2015/Oct/23/notes python for data analysis 2/';
-      var disqus_title = 'Notes: Python for Data Analysis (Part 2)';
+      var disqus_title = 'Notes: Python for Data Analysis (Part&nbsp;2)';
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';

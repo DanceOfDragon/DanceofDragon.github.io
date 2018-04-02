@@ -6,7 +6,7 @@
         <meta name="author" content="JIN Lin">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <title>VBA-case study 1 | JIN Lin | Oh,Interesting</title>
+        <title><span class="caps">VBA</span>-case study&nbsp;1 | JIN Lin | Oh,Interesting</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -427,68 +427,68 @@ article .meta a.comments_btn:hover {
 <div class="container post">
     <article>
         <header>
-            <h1>VBA-case study 1</h1>
+            <h1><span class="caps">VBA</span>-case study&nbsp;1</h1>
             <time datetime="article.date.isoformat()" pubdate>Sun 30 August 2015</time>
         </header>
 
         <div class="article_content">
-            <p>This is the case study I was given at an interview with <a href="http://www.mars.com/global/index.aspx">Mars Singapore</a>. Only in real fight does the truth be revealed. Obviously, ~~I need to practice more, much more~~ Practicing!</p>
+            <p>This is the case study I was given at an interview with <a href="http://www.mars.com/global/index.aspx">Mars Singapore</a>. Only in real fight does the truth be revealed. Obviously, ~~I need to practice more, much more~~&nbsp;Practicing!</p>
 <p><strong>Objective</strong> </p>
 <blockquote>
-<p>At the end of the 1 hr, you should have created a chart to display <strong>retention rate</strong> per quarter, and you will also be asked to explain your steps / logic. May ignore quarters that aren't complete (e.g. Q3 2013)</p>
+<p>At the end of the 1 hr, you should have created a chart to display <strong>retention rate</strong> per quarter, and you will also be asked to explain your steps / logic. May ignore quarters that aren&#8217;t complete (e.g. Q3&nbsp;2013)</p>
 </blockquote>
 <p><strong>Definition</strong></p>
 <ul>
-<li>Retention rate is calculated for experience entrepreneurs (EE) only.</li>
-<li>Experienced entrepreneur (EE): Entrepreneur who has at least 3 months of sales data (i.e. He/She becomes EE at the end of the 3rd months with sales). Entrepreneurs with less than 3 months of experience are considered as new entrepreneurs (NE).</li>
-<li>Retention rate for EE: Out of all the EE that started a period, how many % ended that period. Calculation of retention rate = (EE at start of period - EE dropped during period) / EE at start of period</li>
-<li>EE at start of period + EE joined during period - EE dropped during period = EE at end of period</li>
-<li>How does an EE drop out? When there are 3 consecutive months of no sales (i.e. drops at the end of the 3rd month without sales)</li>
-<li>After an EE dropped and joins again, he is an EE immediately.</li>
+<li>Retention rate is calculated for experience entrepreneurs (<span class="caps">EE</span>)&nbsp;only.</li>
+<li>Experienced entrepreneur (<span class="caps">EE</span>): Entrepreneur who has at least 3 months of sales data (i.e. He/She becomes <span class="caps">EE</span> at the end of the 3rd months with sales). Entrepreneurs with less than 3 months of experience are considered as new entrepreneurs (<span class="caps">NE</span>).</li>
+<li>Retention rate for <span class="caps">EE</span>: Out of all the <span class="caps">EE</span> that started a period, how many % ended that period. Calculation of retention rate = (<span class="caps">EE</span> at start of period - <span class="caps">EE</span> dropped during period) / <span class="caps">EE</span> at start of&nbsp;period</li>
+<li><span class="caps">EE</span> at start of period + <span class="caps">EE</span> joined during period - <span class="caps">EE</span> dropped during period = <span class="caps">EE</span> at end of&nbsp;period</li>
+<li>How does an <span class="caps">EE</span> drop out? When there are 3 consecutive months of no sales (i.e. drops at the end of the 3rd month without&nbsp;sales)</li>
+<li>After an <span class="caps">EE</span> dropped and joins again, he is an <span class="caps">EE</span>&nbsp;immediately.</li>
 </ul>
 <p><strong>Examples</strong></p>
 <p><img alt="example" src="https://dl.dropboxusercontent.com/u/18094167/BlogImages/VBA%20Examples1.png"></p>
-<p>sample retention rate for Q2, Q3</p>
-<p>Q2: month4 - month6 </p>
-<p>EE at start of the period: 7</p>
-<p>EE dropped out during the period: 3</p>
-<p>retention rate:  4/7x100%  =  57%</p>
-<p>Q3:moth7 - month9</p>
-<p>EE at start of the period: 5</p>
-<p>EE dropped out during the period: 3</p>
-<p>retention rate: 40%</p>
-<p><strong>Full Dataset</strong></p>
-<p>Download full dataset <a href="https://dl.dropboxusercontent.com/u/18094167/VBA%20case%20study%201.xlsx">here @ VBA-case study 1</a>.</p>
-<p><strong>My Approach</strong></p>
+<p>sample retention rate for Q2,&nbsp;Q3</p>
+<p>Q2: month4 -&nbsp;month6 </p>
+<p><span class="caps">EE</span> at start of the period:&nbsp;7</p>
+<p><span class="caps">EE</span> dropped out during the period:&nbsp;3</p>
+<p>retention rate:  4/7x100%  =&nbsp;57%</p>
+<p>Q3:moth7 -&nbsp;month9</p>
+<p><span class="caps">EE</span> at start of the period:&nbsp;5</p>
+<p><span class="caps">EE</span> dropped out during the period:&nbsp;3</p>
+<p>retention rate:&nbsp;40%</p>
+<p><strong>Full&nbsp;Dataset</strong></p>
+<p>Download full dataset <a href="https://dl.dropboxusercontent.com/u/18094167/VBA%20case%20study%201.xlsx">here @ <span class="caps">VBA</span>-case study 1</a>.</p>
+<p><strong>My&nbsp;Approach</strong></p>
 <p><em>Analysis</em></p>
 <ul>
-<li>Q1 starts from January and ends in March,rigorously. The same logic applies to Q2,Q3,Q4. ( Each company has its own fisical year, define in this way to avoid complexity coming from random starting of a quarter. Otherwise, a more complex model to calcualte retention rate per month).</li>
+<li>Q1 starts from January and ends in March,rigorously. The same logic applies to Q2,Q3,Q4. ( Each company has its own fisical year, define in this way to avoid complexity coming from random starting of a quarter. Otherwise, a more complex model to calcualte retention rate per&nbsp;month).</li>
 <li>
 <p>Algorithm:</p>
 <ol>
-<li>Convert sales data to rating of the entrepreneurs (NE,EE or dropout). All data needed to calculate the retention rate should be by far ready.</li>
-<li>Count the EE at the start of each quater, N1_start;</li>
-<li>Count the EE dropouts within each quarter,N1_dropuouts; </li>
-<li>Count the newly joined EE during the period,N1_new;</li>
-<li>Calculate the retention rate for each quater,(N1_start -N1_dropuouts)/N1_start.  </li>
+<li>Convert sales data to rating of the entrepreneurs (<span class="caps">NE</span>,<span class="caps">EE</span> or dropout). All data needed to calculate the retention rate should be by far&nbsp;ready.</li>
+<li>Count the <span class="caps">EE</span> at the start of each quater,&nbsp;N1_start;</li>
+<li>Count the <span class="caps">EE</span> dropouts within each&nbsp;quarter,N1_dropuouts; </li>
+<li>Count the newly joined <span class="caps">EE</span> during the&nbsp;period,N1_new;</li>
+<li>Calculate the retention rate for each quater,(N1_start&nbsp;-N1_dropuouts)/N1_start.  </li>
 </ol>
 </li>
 <li>
-<p>divide and conquer the essential first step</p>
+<p>divide and conquer the essential first&nbsp;step</p>
 <ul>
-<li>EE: <ul>
-<li>at least 3 months of sales data (no need to be consecutive; 0 could indicate no sale, in Excel it will be empty cell);</li>
-<li>returning EE dropouts become EE immediately; </li>
+<li><span class="caps">EE</span>: <ul>
+<li>at least 3 months of sales data (no need to be consecutive; 0 could indicate no sale, in Excel it will be empty&nbsp;cell);</li>
+<li>returning <span class="caps">EE</span> dropouts become <span class="caps">EE</span>&nbsp;immediately; </li>
 </ul>
 </li>
-<li>NE: less than 3 months' sales; </li>
-<li>Dropuouts: 3 or more consecutive months of no sales;</li>
-<li>Entrepreneurs are independent from each other, so the method of converting sales data to rating will be apply to each one repeatedly.(Iteration) </li>
+<li><span class="caps">NE</span>: less than 3 months&#8217;&nbsp;sales; </li>
+<li>Dropuouts: 3 or more consecutive months of no&nbsp;sales;</li>
+<li>Entrepreneurs are independent from each other, so the method of converting sales data to rating will be apply to each one&nbsp;repeatedly.(Iteration) </li>
 </ul>
 </li>
 </ul>
 <p><strong>Note</strong>
-After checking abnormal results calculated from the codes, I found that some "empty-appearing" cells are actually not empty, which causes big problems. One way to solve the problem is to <em>clear contents</em> of those "empty cells". </p>
+After checking abnormal results calculated from the codes, I found that some &#8220;empty-appearing&#8221; cells are actually not empty, which causes big problems. One way to solve the problem is to <em>clear contents</em> of those &#8220;empty&nbsp;cells&#8221;. </p>
 <div class="highlight"><pre><span class="code-line"><span></span>sample code to clear contents of &#39;empty cell&#39;</span>
 <span class="code-line"></span>
 <span class="code-line">    For Each c In Selection</span>
@@ -660,9 +660,9 @@ After checking abnormal results calculated from the codes, I found that some "em
 </pre></div>
 
 
-<p>End Sub</p>
-<p><strong>Here's <a href="https://dl.dropboxusercontent.com/u/18094167/vba-case%20study%201-Code.bas">the code</a> </strong></p>
-<p>There's more could be done with this set of data. For example, evaluate the performance of the area officers based on the retention rate of the entrepreneurs.Or evaluate the performance of the entrepreneurs. </p>
+<p>End&nbsp;Sub</p>
+<p><strong>Here&#8217;s <a href="https://dl.dropboxusercontent.com/u/18094167/vba-case%20study%201-Code.bas">the&nbsp;code</a> </strong></p>
+<p>There&#8217;s more could be done with this set of data. For example, evaluate the performance of the area officers based on the retention rate of the entrepreneurs.Or evaluate the performance of the&nbsp;entrepreneurs. </p>
         </div>
 
         <div class="meta">
@@ -680,7 +680,7 @@ After checking abnormal results calculated from the codes, I found that some "em
       var disqus_shortname = 'linnus';
       var disqus_identifier = '/posts/2015/Aug/30/vba case study 1/';
       var disqus_url = 'http://linnus.net/posts/2015/Aug/30/vba case study 1/';
-      var disqus_title = 'VBA-case study 1';
+      var disqus_title = '<span class="caps">VBA</span>-case study&nbsp;1';
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = "//" + disqus_shortname + '.disqus.com/embed.js';
