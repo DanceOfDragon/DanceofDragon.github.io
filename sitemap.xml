@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://linnus.net/</loc>
-<lastmod>2018-04-02T23:19:22-00:00</lastmod>
+<lastmod>2018-04-15T11:35:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://linnus.net/archives.html</loc>
-<lastmod>2018-04-02T23:19:22-00:00</lastmod>
+<lastmod>2018-04-15T11:35:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://linnus.net/tags.html</loc>
-<lastmod>2018-04-02T23:19:22-00:00</lastmod>
+<lastmod>2018-04-15T11:35:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://linnus.net/categories.html</loc>
-<lastmod>2018-04-02T23:19:22-00:00</lastmod>
+<lastmod>2018-04-15T11:35:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -35,6 +35,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <loc>http://linnus.net/pages/about.html</loc>
 <lastmod>2018-04-02T23:05:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://linnus.net/posts/2018/Apr/14/the-barrier-is-within/</loc>
+<lastmod>2018-04-14T00:00:00+08:00</lastmod>
+<changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -362,14 +369,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://linnus.net/category/blogenglish.html</loc>
-<lastmod>2017-08-05T14:40:00+06:55</lastmod>
+<lastmod>2018-04-14T09:40:00+06:55</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://linnus.net/tag/random.html</loc>
-<lastmod>2017-08-05T14:40:00+06:55</lastmod>
+<lastmod>2018-04-14T09:40:00+06:55</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -404,7 +411,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://linnus.net/author/jin-lin.html</loc>
-<lastmod>2017-08-05T14:40:00+06:55</lastmod>
+<lastmod>2018-04-14T09:40:00+06:55</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
